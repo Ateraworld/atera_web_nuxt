@@ -1,0 +1,22 @@
+@import url("https://fonts.googleapis.com/css?family=DM+Sans");
+@import url("assets/css/button.css");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "montserrat-alt";
+  src:
+    local("montserrat-alt"),
+    url("assets/fonts/MontserratAlt1-Regular.ttf") format("truetype");
+}
+* {
+  z-index: 1;
+}
+
+body {
+  font-family: "DM Sans";
+  overflow: hidden;
+  @apply h-screen w-screen bg-back-950 text-white/90;
+}
