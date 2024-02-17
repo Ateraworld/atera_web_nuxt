@@ -1,6 +1,6 @@
 <template>
   <div class="flex flex-col items-center justify-center space-y-4">
-    <Card key="0" anim-y-trasl="-10px">
+    <Card key="0" anim-y-trasl="10px">
       <div class="mb-4 flex flex-col justify-center">
         <div class="mb-4 text-start text-lg">Lorem ipsum lorem ipsum</div>
         <button class="btn-secondary">Diventa un Ateriano</button>
@@ -36,6 +36,6 @@
 
 <style lang="css" scoped>
 .image-button {
-  @apply border-outline hover:border-accent h-[100px] w-[200px] items-center justify-center rounded-xl border-[1.5px] bg-transparent px-4 py-2 transition-all duration-[150ms] ease-out hover:scale-[102%];
+  @apply h-[100px] w-[200px] items-center justify-center rounded-xl border-[1.5px] border-outline bg-transparent px-4 py-2 transition-all duration-[150ms] ease-out hover:scale-[102%] hover:border-accent;
 }
 </style>

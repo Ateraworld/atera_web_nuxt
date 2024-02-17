@@ -23,7 +23,7 @@
           'left-[50%] font-semibold text-white ': !businessMode,
           'left-0 font-semibold text-white': businessMode,
         }"
-        >{{ businessMode ? "Business" : "User" }}</span
+        >{{ businessMode ? "Business" : "Utente" }}</span
       >
     </div>
   </div>

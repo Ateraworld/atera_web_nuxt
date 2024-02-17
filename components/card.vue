@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full">
+  <div v-if="mounted" class="w-full">
     <Transition ref="el" name="join" appear tag="div">
       <div class="card-wrapper" :style="rootStyle">
         <div
@@ -35,6 +35,11 @@
 const tiltAngle = 4;
 
 const el = ref(null);
+const mounted = ref(false);
+
+onMounted(() => {
+  mounted.value = true;
+});
 
 const renderingContext = reactive({
   rotateX: 0,
@@ -86,7 +91,7 @@ const rootStyle = computed(() => {
 <style lang="css" scoped>
 * {
   --border: 1px;
-  --parallax: 32px;
+  --parallax: 48px;
   --gradient-size: 16rem;
   --gradient-blur-size: 12rem;
 }
@@ -102,7 +107,7 @@ const rootStyle = computed(() => {
   border: var(--border) solid;
   transition-duration: 200ms;
   transform: rotateX(var(--rotate-x)) rotateY(var(--rotate-y));
-  @apply border-outline bg-surface rounded-xl p-8;
+  @apply rounded-xl border-outline bg-surface p-8;
 }
 
 .gradient-clipper {
@@ -128,6 +133,6 @@ const rootStyle = computed(() => {
   pointer-events: none;
   transform: translate(-50%, -50%);
   transition: opacity 1s ease;
-  @apply bg-accent/75 rounded-full blur-[var(--gradient-blur-size)];
+  @apply rounded-full bg-accent/75 blur-[var(--gradient-blur-size)];
 }
 </style>

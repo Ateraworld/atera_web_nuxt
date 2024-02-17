@@ -8,7 +8,7 @@
       <img src="/partner.svg" width="300" alt="" />
     </Card>
     <div
-      class="flex flex-row flex-wrap justify-center space-y-4 md:flex-nowrap md:space-x-4 md:space-y-0"
+      class="flex w-full flex-row flex-wrap justify-center space-y-4 md:flex-nowrap md:space-x-4 md:space-y-0"
     >
       <Card key="1" anim-delay="100ms" anim-y-trasl="10px" anim-x-trasl="-30px">
         <div class="mb-4 w-full text-center">Lorem ipsum lorem ipsum</div>

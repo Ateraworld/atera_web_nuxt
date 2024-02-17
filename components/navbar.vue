@@ -3,7 +3,13 @@
     <div class="basis-1/6"></div>
     <div class="basis-1/3">
       <div class="flex justify-start space-x-10">
-        <img src="/icons/bianco.svg" alt="Atera logo" width="50px" height="50px" />
+        <img
+          class="cursor-pointer transition-all duration-200 ease-out hover:scale-[115%]"
+          src="/icons/bianco.svg"
+          alt="Atera logo"
+          width="50px"
+          height="50px"
+        />
       </div>
     </div>
 

@@ -2,10 +2,10 @@
   <div class="flex flex-col items-stretch justify-center px-0 py-10">
     <div class="flex flex-col justify-stretch text-center">
       <h1 class="font-regular font-montserrat text-8xl text-white">ATERA</h1>
-      <h1 class="font-regular font-semibold text-surface-400">
+      <h1 class="font-regular text-surface-400 font-semibold">
         L'app per chi vuole di più.
       </h1>
-      <h1 class="font-regular font-semibold text-surface-400">
+      <h1 class="font-regular text-surface-400 font-semibold">
         Avendo solo l'essenziale
       </h1>
       <Switcher
@@ -14,12 +14,8 @@
         @toggle="onModeToggle"
       />
     </div>
-    <!-- <Transition name="fade" mode="out-in">
-        <div v-if="businessMode">Prova</div>
-        <div v-else>Edit</div>
-      </Transition> -->
     <div class="flex justify-center pt-12">
-      <div class="w-full max-w-[1024px] px-8">
+      <div class="w-full max-w-[1280px] px-8">
         <BusinessView v-if="businessMode"></BusinessView>
         <UserView v-else></UserView>
       </div>
