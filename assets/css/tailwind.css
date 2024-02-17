@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css?family=DM+Sans");
+
 @import url("assets/css/button.css");
+@import url("assets/css/palette.css");
+@import url("assets/css/scrollbar.css");
+@import url("assets/css/transition.css");
 
 @tailwind base;
 @tailwind components;
@@ -11,12 +15,16 @@
     local("montserrat-alt"),
     url("assets/fonts/MontserratAlt1-Regular.ttf") format("truetype");
 }
+
 * {
   z-index: 1;
 }
 
+html {
+  overflow-y: scroll;
+}
+
 body {
   font-family: "DM Sans";
-  overflow: hidden;
-  @apply h-screen w-screen bg-back-950 text-white/90;
+  @apply bg-background text-text;
 }

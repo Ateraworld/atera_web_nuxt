@@ -1,0 +1,10 @@
+.join-enter-from,
+.join-leave-to {
+  opacity: 0;
+  transform: translate(var(--x-tr), var(--y-tr));
+}
+.join-enter-active,
+.join-leave-active {
+  transition: all var(--duration) cubic-bezier(0.33, 1, 0.68, 1);
+  transition-delay: var(--delay);
+}

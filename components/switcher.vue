@@ -3,26 +3,33 @@
   <div class="container">
     <div class="wrapper">
       <div class="relative flex h-full w-full items-center">
-        <div @click="onClicked" class="flex w-full cursor-pointer justify-start pl-2 text-back-400">
-          <button>Are you a business?</button>
+        <div
+          @click="onClicked"
+          class="flex w-full cursor-pointer justify-start pl-4 text-back-400"
+        >
+          <button>Sei un business?</button>
         </div>
-        <div @click="onClicked" class="flex w-full cursor-pointer justify-end pr-2 text-back-400">
-          <button>Are you a user?</button>
+        <div
+          @click="onClicked"
+          class="flex w-full cursor-pointer justify-end pr-4 text-back-400"
+        >
+          <button>Sei un utente?</button>
         </div>
       </div>
 
-      <span class="switcher" :class="{
-        'left-1/2 font-semibold text-white': !businessMode,
-        'left-0 font-semibold text-white': businessMode,
-      }">{{ businessMode ?
-  "Business" :
-  "User" }}</span>
+      <span
+        class="switcher"
+        :class="{
+          'left-[50%] font-semibold text-white ': !businessMode,
+          'left-0 font-semibold text-white': businessMode,
+        }"
+        >{{ businessMode ? "Business" : "User" }}</span
+      >
     </div>
   </div>
 </template>
 
 <script lang="ts" setup>
-
 const props = defineProps<{ businessMode: boolean }>();
 const businessMode = ref(props.businessMode);
 
@@ -36,19 +43,17 @@ function onClicked() {
 <style lang="css" scoped>
 * {
   --height: 2rem;
-  --width: 24rem;
 }
 
 .container {
-  max-width: var(--width);
-  @apply flex w-full pt-12
+  @apply flex w-full max-w-[28rem] pt-12;
 }
 
 .wrapper {
-  @apply relative h-[var(--height)] w-full rounded-full
+  @apply bg-surface/50 relative h-[var(--height)] w-full rounded-lg;
 }
 
 .switcher {
-  @apply absolute top-0 flex h-[var(--height)] w-1/2 ease-out items-center justify-center rounded-full bg-accent-600 transition-all duration-300;
+  @apply bg-accent absolute top-0 flex h-full w-[50%] items-center justify-center rounded-lg transition-all duration-300 ease-out;
 }
 </style>

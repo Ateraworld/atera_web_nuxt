@@ -1,11 +1,11 @@
 <template>
   <head></head>
-
-  <body>
+  <body class="red">
     <Navbar></Navbar>
-    <Content>
-    </Content>
-    <div class="gradient"></div>
+    <Content> </Content>
+    <!-- <div class="overflow-hidden">
+      <div class="gradient"></div>
+    </div> -->
   </body>
 </template>
 
@@ -14,7 +14,6 @@ import { useMouse } from "@vueuse/core";
 const { x, y, sourceType } = useMouse();
 
 const gradientX = computed(() => `${x.value}px`);
-
 </script>
 
 <style lang="css" scoped>
@@ -22,7 +21,7 @@ const gradientX = computed(() => `${x.value}px`);
   --gradient-size: 512rem;
   --gradient-blur-size: 8rem;
   --gradient-top-dist: 28rem;
-  --gradient-color: theme("colors.surface.950/30");
+  --gradient-color: theme("colors.surface/30");
 }
 
 .gradient {
@@ -31,8 +30,9 @@ const gradientX = computed(() => `${x.value}px`);
   position: relative;
   z-index: 0;
   top: var(--gradient-top-dist);
-  transform: translateX(calc(v-bind(gradientX) - calc(var(--gradient-size) * 0.5)));
+  transform: translateX(
+    calc(v-bind(gradientX) - calc(var(--gradient-size) * 0.5))
+  );
   @apply rounded-full bg-[var(--gradient-color)] blur-[var(--gradient-blur-size)];
 }
 </style>
-<!-- @apply bottom-0 h-[500px] w-[500px] rounded-full bg-red-900 blur-[1]; -->

@@ -1,28 +1,29 @@
 <template>
-  <slot></slot>
-  <div class="flex flex-row items-center px-8 py-10">
-    <div class="basis-1/6"></div>
-    <div class="basis-2/3">
-      <div class="flex flex-grow flex-col items-center px-16 py-16">
-        <h1 class="font-montserrat font-regular text-8xl text-white">ATERA</h1>
-        <h1 class="font-regular font-semibold text-surface-400">
-          L'app per chi vuole di più.
-        </h1>
-        <h1 class="font-regular font-semibold text-surface-400">
-          Avendo solo l'essenziale
-        </h1>
-        <Switcher :business-mode="businessMode" @toggle="onModeToggle" />
-        <div class="pt-8 flex justify-center w-full">
-          <Transition name="fade">
-            <BusinessView class="absolute" v-if="businessMode" />
-          </Transition>
-          <Transition name="fade">
-            <UserView v-if="!businessMode" />
-          </Transition>
-        </div>
+  <div class="flex flex-col items-stretch justify-center px-0 py-10">
+    <div class="flex flex-col justify-stretch text-center">
+      <h1 class="font-regular font-montserrat text-8xl text-white">ATERA</h1>
+      <h1 class="font-regular font-semibold text-surface-400">
+        L'app per chi vuole di più.
+      </h1>
+      <h1 class="font-regular font-semibold text-surface-400">
+        Avendo solo l'essenziale
+      </h1>
+      <Switcher
+        class="self-center"
+        :business-mode="businessMode"
+        @toggle="onModeToggle"
+      />
+    </div>
+    <!-- <Transition name="fade" mode="out-in">
+        <div v-if="businessMode">Prova</div>
+        <div v-else>Edit</div>
+      </Transition> -->
+    <div class="flex justify-center pt-12">
+      <div class="w-full max-w-[1024px] px-8">
+        <BusinessView v-if="businessMode"></BusinessView>
+        <UserView v-else></UserView>
       </div>
     </div>
-    <div class="basis-1/6"></div>
   </div>
 </template>
 
@@ -35,13 +36,12 @@ function onModeToggle(status: boolean) {
 </script>
 
 <style lang="css" scoped>
-.fade-enter-active,
-.fade-leave-active {
-  transition: opacity 0.25s ease;
-}
-
 .fade-enter-from,
 .fade-leave-to {
   opacity: 0;
+}
+.fade-enter-active,
+.fade-leave-active {
+  transition: all var(--duration) cubic-bezier(0.25, 1, 0.5, 1);
 }
 </style>
