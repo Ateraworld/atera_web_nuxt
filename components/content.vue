@@ -1,30 +1,46 @@
 <template>
-  <div class="flex flex-col items-stretch justify-center px-0 py-10">
-    <div class="flex flex-col justify-stretch text-center">
-      <h1 class="font-regular font-montserrat text-8xl text-white">ATERA</h1>
-      <h1 class="font-regular text-surface-400 font-semibold">
-        L'app per chi vuole di più.
-      </h1>
-      <h1 class="font-regular text-surface-400 font-semibold">
-        Avendo solo l'essenziale
-      </h1>
-      <Switcher
-        class="self-center"
-        :business-mode="businessMode"
-        @toggle="onModeToggle"
-      />
-    </div>
-    <div class="flex justify-center pt-12">
-      <div class="w-full max-w-[1280px] px-8">
+  <div class="flex w-full flex-col items-center justify-center px-4 py-16">
+    <div class="flex w-full max-w-[var(--content-width)] flex-col">
+      <div class="flex flex-col text-center">
+        <Transition class="h-[16rem] px-8 pb-32" name="fade" mode="out-in">
+          <h1
+            v-if="businessMode"
+            class="text-surface-400 text-4xl font-semibold md:text-6xl"
+          >
+            <span>La potenza di </span>
+            <span class="text-accent">Atera<br /></span>
+            <span>a tua disposizione</span>
+          </h1>
+          <h1
+            v-else
+            class="text-surface-400 text-4xl font-semibold md:text-6xl"
+          >
+            <span>L'app per chi vuole di più<br /></span>
+            <span class="text-4xl text-accent">avendo solo l'essenziale</span>
+          </h1>
+        </Transition>
+
+        <Switcher
+          class="self-center"
+          :business-mode="businessMode"
+          @toggle="onModeToggle"
+        />
+      </div>
+      <div class="flex w-full justify-stretch pt-16">
         <BusinessView v-if="businessMode"></BusinessView>
         <UserView v-else></UserView>
       </div>
     </div>
   </div>
+  <div class="overscroll-none">
+    <div class="gradient" :style="{ '--x': x + 'px' }"></div>
+  </div>
 </template>
 
 <script lang="ts" setup>
 const businessMode = ref(true);
+
+const { x, y } = useMouse();
 
 function onModeToggle(status: boolean) {
   businessMode.value = status;
@@ -32,12 +48,20 @@ function onModeToggle(status: boolean) {
 </script>
 
 <style lang="css" scoped>
-.fade-enter-from,
-.fade-leave-to {
-  opacity: 0;
-}
-.fade-enter-active,
-.fade-leave-active {
-  transition: all var(--duration) cubic-bezier(0.25, 1, 0.5, 1);
+.gradient {
+  --size: 500rem;
+  --blur: 32rem;
+  position: fixed;
+  width: var(--size);
+  height: var(--size);
+  /* top: 100vh;
+  transform: translateY(-100%); */
+  bottom: calc(var(--size) * -0.975);
+  left: 0;
+  z-index: 0;
+  border-radius: 999rem;
+  transform: translateX(calc(var(--x) - var(--size) * 0.5));
+  filter: blur(var(--blur));
+  @apply bg-purple-900/20;
 }
 </style>

@@ -3,6 +3,7 @@
   <body class="red">
     <Navbar></Navbar>
     <Content> </Content>
+    <Footer></Footer>
   </body>
 </template>
 

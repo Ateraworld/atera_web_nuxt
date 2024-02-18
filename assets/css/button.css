@@ -1,7 +1,3 @@
 .btn-icon {
   @apply size-10 rounded-xl p-2 transition duration-150 hover:bg-white/10;
 }
-
-.btn-secondary {
-  @apply hover:bg-accent text-accent hover:text-text border-accent rounded-lg border-[1.5px] border-solid bg-transparent px-4 py-2 font-semibold duration-[250ms];
-}

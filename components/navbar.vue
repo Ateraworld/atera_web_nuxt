@@ -1,20 +1,18 @@
 <template>
-  <div class="flex flex-row items-center px-8 py-4">
-    <div class="basis-1/6"></div>
-    <div class="basis-1/3">
-      <div class="flex justify-start space-x-10">
+  <header class="flex justify-center py-8">
+    <div
+      class="flex w-full max-w-[var(--content-width)] items-center justify-between space-x-8 px-8 py-8"
+    >
+      <div class="flex">
         <img
-          class="cursor-pointer transition-all duration-200 ease-out hover:scale-[115%]"
-          src="/icons/bianco.svg"
+          class="cursor-pointer transition-all duration-200 ease-out hover:scale-[105%]"
+          src="/logo_text.svg"
           alt="Atera logo"
-          width="50px"
-          height="50px"
+          width="128"
         />
       </div>
-    </div>
 
-    <div class="basis-1/3">
-      <div class="flex justify-end space-x-2">
+      <div class="flex">
         <a href="https://github.com/Ateraworld" target="_blank">
           <icon class="btn-icon" icon="mdi:github" />
         </a>
@@ -23,8 +21,7 @@
         </a>
       </div>
     </div>
-    <div class="basis-1/6"></div>
-  </div>
+  </header>
 </template>
 
 <script lang="ts" setup>

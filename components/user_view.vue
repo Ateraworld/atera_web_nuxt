@@ -1,12 +1,12 @@
 <template>
-  <div class="flex flex-col items-center justify-center space-y-4">
-    <Card key="0" anim-y-trasl="10px">
-      <div class="mb-4 flex flex-col justify-center">
+  <div class="flex w-full flex-col items-center justify-stretch space-y-6">
+    <ParallaxCard key="0" anim-y-trasl="10px">
+      <div class="flex flex-col justify-center">
         <div class="mb-4 text-start text-lg">Lorem ipsum lorem ipsum</div>
-        <button class="btn-secondary">Diventa un Ateriano</button>
+        <PrimaryButton>Diventa un Ateriano</PrimaryButton>
       </div>
       <img src="/climber_stambecco.svg" width="300" alt="" />
-    </Card>
+    </ParallaxCard>
     <Transition name="join" appear tag="div">
       <div
         :style="{
@@ -15,7 +15,7 @@
           '--y-tr': '10px',
           '--x-tr': '0px',
         }"
-        class="flex w-full flex-row flex-wrap items-center justify-around"
+        class="flex w-full flex-row flex-wrap items-center justify-around space-y-2 lg:space-y-0"
       >
         <button class="cursor-pointer">
           <div class="image-button">

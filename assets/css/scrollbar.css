@@ -1,6 +1,6 @@
 /* Scroll bar stylings */
 ::-webkit-scrollbar {
-  width: 0px;
+  width: 8px;
 }
 
 /* Track */

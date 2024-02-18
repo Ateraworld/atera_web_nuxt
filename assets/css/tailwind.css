@@ -18,6 +18,11 @@
 
 * {
   z-index: 1;
+  user-select: none;
+}
+
+* {
+  --content-width: 1400px;
 }
 
 html {
@@ -27,4 +32,9 @@ html {
 body {
   font-family: "DM Sans";
   @apply bg-background text-text;
+}
+
+.card {
+  border: 1.25px solid;
+  @apply rounded-xl border-outline bg-surface p-8;
 }

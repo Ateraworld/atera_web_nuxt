@@ -90,11 +90,12 @@ const rootStyle = computed(() => {
 
 <style lang="css" scoped>
 * {
-  --border: 1px;
+  --border: 1.5px;
   --parallax: 48px;
-  --gradient-size: 16rem;
-  --gradient-blur-size: 12rem;
+  --gradient-size: 20rem;
+  --gradient-blur-size: 24rem;
 }
+
 .card-wrapper {
   perspective: 3000px;
   @apply w-full;
