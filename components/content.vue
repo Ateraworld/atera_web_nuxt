@@ -1,5 +1,8 @@
 <template>
-  <div class="flex w-full flex-col items-center justify-center px-4 py-16">
+  <div
+    v-if="mounted"
+    class="flex w-full flex-col items-center justify-center px-4 py-16"
+  >
     <div class="flex w-full max-w-[var(--content-width)] flex-col">
       <div class="flex flex-col text-center">
         <Transition class="h-[16rem] px-8 pb-32" name="fade" mode="out-in">
@@ -41,6 +44,7 @@
 const businessMode = ref(true);
 
 const { x, y } = useMouse();
+const mounted = useMounted();
 
 function onModeToggle(status: boolean) {
   businessMode.value = status;

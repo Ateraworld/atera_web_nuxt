@@ -12,7 +12,7 @@
         />
       </div>
 
-      <div class="flex">
+      <div class="flex space-x-4">
         <a href="https://github.com/Ateraworld" target="_blank">
           <icon class="btn-icon" icon="mdi:github" />
         </a>
