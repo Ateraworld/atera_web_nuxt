@@ -42,7 +42,9 @@
           subtitle="Sottotitolo"
           button-text="Scopri ora"
           body="Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum"
-        ></Topic>
+        >
+          <PhoneNotificationDisplay></PhoneNotificationDisplay>
+        </Topic>
         <Topic
           title="Titolo"
           subtitle="Sottotitolo"

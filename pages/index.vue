@@ -1,9 +1,9 @@
 <template>
   <head></head>
   <body class="red">
-    <Navbar></Navbar>
-    <Content> </Content>
-    <Footer></Footer>
+    <Headline></Headline>
+    <Content></Content>
+    <Footline></Footline>
   </body>
 </template>
 

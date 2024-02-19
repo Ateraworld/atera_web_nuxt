@@ -6,7 +6,7 @@
       :style="{ '--duration': '1000ms' }"
     >
       <div
-        class="mx-4 max-w-[100%] lg:max-w-[60%]"
+        class="mx-4 max-w-[100%] lg:max-w-[50%]"
         :class="{ 'order-last': invertOrder }"
       >
         <h3 class="text-xl font-semibold text-accent">{{ props.subtitle }}</h3>
@@ -19,7 +19,7 @@
         }}</SecondaryButton>
       </div>
       <div class="flex items-center justify-end">
-        <img src="/offline.svg" width="500" alt="" />
+        <slot></slot>
       </div>
     </div>
   </Transition>

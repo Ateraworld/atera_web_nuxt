@@ -60,7 +60,7 @@ function onModeToggle(status: boolean) {
   height: var(--size);
   /* top: 100vh;
   transform: translateY(-100%); */
-  bottom: calc(var(--size) * -0.975);
+  bottom: calc(var(--size) * -0.95);
   left: 0;
   z-index: 0;
   border-radius: 999rem;
