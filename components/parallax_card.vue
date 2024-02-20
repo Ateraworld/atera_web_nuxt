@@ -1,5 +1,5 @@
 <template>
-  <div v-if="mounted" class="w-full">
+  <div v-if="mounted">
     <Transition ref="el" name="join" appear tag="div">
       <div class="card-wrapper" :style="rootStyle">
         <div
@@ -91,6 +91,7 @@ const rootStyle = computed(() => {
 <style lang="css" scoped>
 * {
   --border: 1.5px;
+  --border-radius: 1.5rem;
   --parallax: 48px;
   --gradient-size: 20rem;
   --gradient-blur-size: 24rem;
@@ -98,7 +99,7 @@ const rootStyle = computed(() => {
 
 .card-wrapper {
   perspective: 3000px;
-  @apply w-full;
+  @apply h-full w-full;
 }
 
 .card {
@@ -108,7 +109,7 @@ const rootStyle = computed(() => {
   border: var(--border) solid;
   transition-duration: 200ms;
   transform: rotateX(var(--rotate-x)) rotateY(var(--rotate-y));
-  @apply rounded-xl border-outline bg-surface p-8;
+  @apply h-full rounded-[var(--border-radius)] border-outline bg-surface p-8;
 }
 
 .gradient-clipper {

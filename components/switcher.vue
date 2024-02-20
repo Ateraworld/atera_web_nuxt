@@ -5,15 +5,15 @@
       <div class="relative flex h-full w-full items-center">
         <div
           @click="onClicked"
-          class="flex w-full cursor-pointer justify-start pl-4 text-center text-back-400"
+          class="flex h-full w-full cursor-pointer justify-start pl-4 text-center text-back-400"
         >
           <button class="w-full text-center">Sei un business?</button>
         </div>
         <div
           @click="onClicked"
-          class="flex w-full cursor-pointer justify-end pr-4 text-back-400"
+          class="flex h-full w-full cursor-pointer justify-center pr-4 text-back-400"
         >
-          <button class="w-full text-center">Sei un utente?</button>
+          <button class="h-full text-center">Sei un utente?</button>
         </div>
       </div>
 

@@ -1,7 +1,7 @@
 <template>
   <div
     v-if="mounted"
-    class="flex w-full flex-col items-center justify-center px-4 py-16"
+    class="flex w-full flex-col items-center justify-center px-4 py-8"
   >
     <div class="flex w-full max-w-[var(--content-width)] flex-col">
       <div class="flex flex-col text-center">
@@ -29,7 +29,7 @@
           @toggle="onModeToggle"
         />
       </div>
-      <div class="flex w-full justify-stretch pt-16">
+      <div class="flex w-full justify-stretch px-8 pt-16">
         <BusinessView v-if="businessMode"></BusinessView>
         <UserView v-else></UserView>
       </div>

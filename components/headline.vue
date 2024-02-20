@@ -1,5 +1,5 @@
 <template>
-  <header class="flex justify-center py-8">
+  <header class="flex justify-center">
     <div
       class="flex w-full max-w-[var(--content-width)] items-center justify-between space-x-8 px-8 py-8"
     >

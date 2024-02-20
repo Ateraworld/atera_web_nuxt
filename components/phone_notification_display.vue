@@ -3,8 +3,8 @@
     <img src="/phone.svg" width="1024rem" alt="" />
 
     <div
-      @mouseenter="enter"
-      @mouseleave="exit"
+      @mouseenter="exit"
+      @mouseleave="enter"
       class="absolute left-[17%] top-[34.5%] h-[60%] w-[42%] overflow-clip rounded-xl"
     >
       <div id="animated" class="notification overflow-clip p-2 text-text/75">
