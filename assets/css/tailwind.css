@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=DM+Sans");
+@import url("https://fonts.googleapis.com/css?family=Poppins");
 
 @import url("assets/css/button.css");
 @import url("assets/css/palette.css");
@@ -27,11 +28,19 @@
 
 html {
   overflow-y: scroll;
+  @apply text-body;
 }
 
+h1 {
+  @apply mb-[1.75rem] text-title;
+}
+
+h2 {
+  @apply mb-[1.2rem] text-subtitle;
+}
 body {
-  font-family: "DM Sans";
-  @apply bg-background text-text;
+  font-family: "Poppins";
+  @apply text-neutral bg-background;
 }
 
 .card {

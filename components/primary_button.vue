@@ -31,17 +31,17 @@ const emit = defineEmits(["click"]);
   width: var(--length);
   height: 2px;
   transition: all var(--anim-duration) ease;
-  @apply origin-left translate-y-[-0.15px] scale-x-0 rounded-full bg-accent group-hover:scale-100 group-hover:bg-text;
+  @apply group-hover:bg-neutral origin-left translate-y-[-0.15px] scale-x-0 rounded-full bg-accent group-hover:scale-100;
 }
 .arrow-head {
   width: var(--icon-size);
   height: var(--icon-size);
   transform: translateX(calc(var(--length) * -1.2));
   transition: all var(--anim-duration) ease;
-  @apply text-accent group-hover:-translate-x-[2px] group-hover:text-text;
+  @apply group-hover:text-neutral text-accent group-hover:-translate-x-[2px];
 }
 .btn {
   transition: all var(--anim-duration) ease;
-  @apply rounded-lg border-[1.5px] border-solid border-accent bg-transparent py-2 pl-6 pr-4 font-semibold text-accent  hover:bg-accent hover:text-text;
+  @apply hover:text-neutral rounded-lg border-[1.5px] border-solid border-accent bg-transparent py-2 pl-6 pr-4 font-semibold  text-accent hover:bg-accent;
 }
 </style>

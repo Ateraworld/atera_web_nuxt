@@ -6,18 +6,12 @@
     <div class="flex w-full max-w-[var(--content-width)] flex-col">
       <div class="flex flex-col text-center">
         <Transition class="h-[16rem] px-8 pb-32" name="fade" mode="out-in">
-          <h1
-            v-if="businessMode"
-            class="text-surface-400 text-4xl font-semibold md:text-6xl"
-          >
+          <h1 v-if="businessMode" class="text-surface-400 font-semibold">
             <span>La potenza di </span>
             <span class="text-accent">Atera<br /></span>
             <span>a tua disposizione</span>
           </h1>
-          <h1
-            v-else
-            class="text-surface-400 text-4xl font-semibold md:text-6xl"
-          >
+          <h1 v-else class="text-surface-400 font-semibold">
             <span>L'app per chi vuole di più<br /></span>
             <span class="text-4xl text-accent">avendo solo l'essenziale</span>
           </h1>
@@ -66,6 +60,6 @@ function onModeToggle(status: boolean) {
   border-radius: 999rem;
   transform: translateX(calc(var(--x) - var(--size) * 0.5));
   filter: blur(var(--blur));
-  @apply bg-purple-900/20;
+  @apply bg-accent/20;
 }
 </style>

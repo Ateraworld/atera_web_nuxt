@@ -14,18 +14,16 @@
 
       <div class="flex space-x-4">
         <a href="https://github.com/Ateraworld" target="_blank">
-          <icon class="btn-icon" icon="mdi:github" />
+          <Icon class="btn-icon" name="mdi:github" />
         </a>
         <a href="https://www.instagram.com/ateraworld.app" target="_blank">
-          <icon class="btn-icon" icon="mdi:instagram" />
+          <Icon class="btn-icon" name="mdi:instagram" />
         </a>
       </div>
     </div>
   </header>
 </template>
 
-<script lang="ts" setup>
-import { Icon } from "@iconify/vue";
-</script>
+<script lang="ts" setup></script>
 
 <style></style>

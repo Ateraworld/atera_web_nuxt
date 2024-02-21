@@ -4,30 +4,48 @@ import type { Config } from "tailwindcss";
 export default <Partial<Config>>{
   darkMode: "class",
   theme: {
-    extend: {
-      fontFamily: {
-        montserrat: ["montserrat-alt"],
-      },
-      colors: {
-        back: {
-          "50": "#f5f7fa",
-          "100": "#eaeef4",
-          "200": "#d0dae7",
-          "300": "#a7bbd2",
-          "400": "#7798b9",
-          "500": "#567ba1",
-          "600": "#426187",
-          "700": "#374f6d",
-          "800": "#30445c",
-          "900": "#2c3b4e",
-          "950": "#0d1117",
+    fontFamily: { montserrat: ["montserrat-alt"], dm_sans: ["DM Sans"] },
+    fontSize: {
+      label: [
+        "0.75rem",
+        {
+          lineHeight: "0.75em",
+          letterSpacing: "-0.005em",
+          fontWeight: "400",
         },
-        accent: "rgba(var(--accent))",
-        background: "rgba(var(--background))",
-        outline: "rgba(var(--outline))",
-        surface: "rgba(var(--surface))",
-        text: "rgba(var(--text))",
-      },
+      ],
+      body: [
+        "1rem",
+        {
+          lineHeight: "1.2rem",
+          letterSpacing: "-0.005em",
+          fontWeight: "500",
+        },
+      ],
+      subtitle: [
+        "2rem",
+        {
+          lineHeight: "2.4rem",
+          letterSpacing: "-0.015em",
+          fontWeight: "700",
+        },
+      ],
+      title: [
+        "3rem",
+        {
+          lineHeight: "3.5rem",
+          letterSpacing: "-0.025em",
+          fontWeight: "700",
+        },
+      ],
+    },
+    colors: {
+      accent: "rgba(var(--accent))",
+      background: "rgba(var(--background))",
+      outline: "rgba(var(--outline))",
+      surface: "rgba(var(--surface))",
+      neutral: "rgba(var(--neutral))",
+      transparent: "rgba(0, 0, 0, 0)",
     },
   },
   plugins: [],

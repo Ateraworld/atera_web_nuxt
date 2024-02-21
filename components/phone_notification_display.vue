@@ -7,15 +7,15 @@
       @mouseleave="enter"
       class="absolute left-[17%] top-[34.5%] h-[60%] w-[42%] overflow-clip rounded-xl"
     >
-      <div id="animated" class="notification overflow-clip p-2 text-text/75">
+      <div id="animated" class="notification text-neutral/75 overflow-clip p-2">
         <div class="flex items-center space-x-1">
           <img src="/icons/bianco.svg" class="size-4" />
           <p class="text-[0.5rem]">Atera ● {{ currentNotification.time }}</p>
         </div>
-        <p class="mt-[0.35rem] text-[0.75rem] font-semibold text-text">
+        <p class="text-neutral mt-[0.35rem] text-[0.75rem] font-semibold">
           {{ currentNotification.title }}
         </p>
-        <p class="mt-[0.15rem] text-[0.6rem] text-text">
+        <p class="text-neutral mt-[0.15rem] text-[0.6rem]">
           {{ currentNotification.body }}
         </p>
       </div>

@@ -1,15 +1,19 @@
 <template>
   <div v-if="mounted" class="flex flex-col">
-    <div class="flex h-[38rem] w-full space-x-[var(--spacing)]">
-      <div class="flex flex-1 basis-[33%] items-stretch">
-        <ParallaxCard key="0" anim-y-trasl="-10px">
-          <div class="flex flex-col justify-center">
-            <div class="mb-4 text-start text-lg">Lorem ipsum lorem ipsum</div>
-            <div>
-              <PrimaryButton>Diventa un partner</PrimaryButton>
-            </div>
+    <div class="flex h-[32rem] w-full space-x-[var(--spacing)]">
+      <div class="flex w-full basis-[33%] items-stretch">
+        <ParallaxCard key="0" anim-y-trasl="0px" anim-x-trasl="0px">
+          <div class="flex h-full flex-col justify-between">
+            <section>
+              <h2>Marketing Contestualizzato</h2>
+              <p>Raggiungi il pubblico giusto al momento giusto</p>
+            </section>
+
+            <img
+              src="/local_shelter.svg"
+              class="absolute bottom-[-16px] scale-[125%]"
+            />
           </div>
-          <img src="/partner.svg" width="300" alt="" />
         </ParallaxCard>
       </div>
       <div
@@ -19,12 +23,12 @@
           key="1"
           class="flex-1"
           anim-delay="100ms"
-          anim-y-trasl="10px"
-          anim-x-trasl="-30px"
+          anim-y-trasl="0px"
+          anim-x-trasl="0px"
         >
-          <div class="mb-4 w-full text-center">Lorem ipsum lorem ipsum</div>
-          <div class="flex w-full justify-center">
-            <img src="/progress.svg" width="100" alt="" />
+          <div>
+            <h2>Coinvolgimento</h2>
+            <p>Raggiungi il pubblico giusto al momento giusto</p>
           </div>
         </ParallaxCard>
         <div
@@ -33,25 +37,28 @@
           <ParallaxCard
             class="flex-1"
             key="1"
-            anim-delay="100ms"
-            anim-y-trasl="10px"
-            anim-x-trasl="-30px"
+            anim-delay="200ms"
+            anim-y-trasl="0px"
+            anim-x-trasl="0px"
           >
-            <div class="mb-4 w-full text-center">Lorem ipsum lorem ipsum</div>
-            <div class="flex w-full justify-center">
-              <img src="/progress.svg" width="100" alt="" />
+            <div>
+              <h2>Aumenta le conversioni</h2>
+              <p>
+                Aumenta le conversioni nella tua realtà economica tramite
+                promozioni contestualizzate
+              </p>
             </div>
           </ParallaxCard>
           <ParallaxCard
             key="2"
             class="flex-1"
-            anim-delay="100ms"
-            anim-y-trasl="10px"
-            anim-x-trasl="30px"
+            anim-delay="300ms"
+            anim-y-trasl="0px"
+            anim-x-trasl="0px"
           >
-            <div class="mb-4 w-full text-center">Lorem ipsum lorem ipsum</div>
-            <div class="flex w-full justify-center">
-              <img src="/offline.svg" width="100" alt="" />
+            <div>
+              <h2>Passione e natura</h2>
+              <p>Raggiungi un pubblico di appassionati e avventurieri</p>
             </div>
           </ParallaxCard>
         </div>
@@ -95,7 +102,7 @@ onMounted(() => {
 
 <style lang="css" scoped>
 * {
-  --spacing: 2rem;
+  --spacing: 1.5rem;
   --border-radius: 1rem;
 }
 </style>

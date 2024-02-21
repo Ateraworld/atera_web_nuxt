@@ -1,5 +1,5 @@
 <template>
-  <div v-if="mounted">
+  <div v-if="mounted" class="h-full w-full">
     <Transition ref="el" name="join" appear tag="div">
       <div class="card-wrapper" :style="rootStyle">
         <div
@@ -93,8 +93,8 @@ const rootStyle = computed(() => {
   --border: 1.5px;
   --border-radius: 1.5rem;
   --parallax: 48px;
-  --gradient-size: 20rem;
-  --gradient-blur-size: 24rem;
+  --gradient-size: 16rem;
+  --gradient-blur-size: 10rem;
 }
 
 .card-wrapper {
@@ -109,7 +109,7 @@ const rootStyle = computed(() => {
   border: var(--border) solid;
   transition-duration: 200ms;
   transform: rotateX(var(--rotate-x)) rotateY(var(--rotate-y));
-  @apply h-full rounded-[var(--border-radius)] border-outline bg-surface p-8;
+  @apply h-full rounded-[var(--border-radius)] border-outline bg-surface p-10;
 }
 
 .gradient-clipper {
@@ -122,7 +122,7 @@ const rootStyle = computed(() => {
 
 .content {
   translate: 0 0 var(--parallax);
-  @apply flex flex-wrap items-start justify-center md:justify-between;
+  @apply flex h-full w-full flex-wrap items-start justify-center md:justify-between;
 }
 
 .gradient {
@@ -135,6 +135,6 @@ const rootStyle = computed(() => {
   pointer-events: none;
   transform: translate(-50%, -50%);
   transition: opacity 1s ease;
-  @apply rounded-full bg-accent/75 blur-[var(--gradient-blur-size)];
+  @apply rounded-full bg-accent/50 blur-[var(--gradient-blur-size)];
 }
 </style>
