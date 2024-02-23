@@ -1,25 +1,28 @@
 <template>
   <Transition name="join" appear tag="div">
     <div
-      class="flex w-full flex-col items-center justify-center py-12 lg:flex-row"
+      class="flex w-full flex-col items-center justify-between py-12 lg:flex-row"
       :class="{ 'text-end': props.inverted }"
       :style="{ '--duration': '1000ms' }"
     >
       <div
-        class="mx-4 max-w-[100%] lg:max-w-[50%]"
+        :style="{ '--text-percentage': props.textPercentage }"
+        class="content"
         :class="{ 'order-last': invertOrder }"
       >
-        <h3 class="text-xl font-semibold text-accent">{{ props.subtitle }}</h3>
-        <h1 class="pb-8 pt-4 text-6xl font-bold">{{ props.title }}</h1>
-        <p>
-          {{ props.body }}
-        </p>
-        <SecondaryButton @click="emit('click')" class="mt-4">{{
-          props.buttonText
-        }}</SecondaryButton>
+        <h3 class="font-semibold text-accent">
+          {{ props.subtitle }}
+        </h3>
+        <h1 class="font-bold">{{ props.title }}</h1>
+        <slot name="body"></slot>
+        <div v-if="(buttonText ?? '')?.length > 0">
+          <SecondaryButton @click="emit('click')" class="mt-4">{{
+            props.buttonText
+          }}</SecondaryButton>
+        </div>
       </div>
-      <div class="flex items-center justify-end">
-        <slot></slot>
+      <div class="flex items-center justify-center">
+        <slot name="content"></slot>
       </div>
     </div>
   </Transition>
@@ -40,9 +43,13 @@ const props = defineProps({
   title: { type: String, require: true },
   subtitle: { type: String, require: true },
   buttonText: { type: String, require: true },
-  body: { type: String, require: true },
+  textPercentage: { type: String, default: "80%" },
   inverted: { type: Boolean, require: false, default: false },
 });
 </script>
 
-<style></style>
+<style lang="css" scoped>
+.content {
+  @apply mx-4 max-w-[100%] lg:max-w-[var(--text-percentage)];
+}
+</style>

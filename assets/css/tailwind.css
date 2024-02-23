@@ -20,15 +20,18 @@
 * {
   z-index: 1;
   user-select: none;
-}
 
-* {
-  --content-width: 1400px;
+  --content-width: 1800px;
+  --topics-width: 1400px;
 }
 
 html {
   overflow-y: scroll;
   @apply text-body;
+}
+
+h3 {
+  @apply mb-[0.875rem] text-body;
 }
 
 h1 {
@@ -38,9 +41,10 @@ h1 {
 h2 {
   @apply mb-[1.2rem] text-subtitle;
 }
+
 body {
   font-family: "Poppins";
-  @apply text-neutral bg-background;
+  @apply bg-background text-body text-neutral;
 }
 
 .card {

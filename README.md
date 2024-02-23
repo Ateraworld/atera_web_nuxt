@@ -7,13 +7,16 @@
 </div>
 
 ### Getting started
-The package manager used is [bun](https://bun.sh/). 
+
+The package manager used is [bun](https://bun.sh/).
 Installation guide [here](https://bun.sh/docs/installation).
 
 Install and run:
+
 ```
 bun install
 ```
+
 ```
 bun run dev
 ```

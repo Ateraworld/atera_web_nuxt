@@ -1,41 +1,62 @@
 <template>
   <div class="flex w-full flex-col items-center justify-stretch space-y-6">
-    <ParallaxCard key="0" anim-y-trasl="10px">
-      <div class="flex flex-col justify-center">
-        <div class="mb-4 text-start text-lg">Lorem ipsum lorem ipsum</div>
-        <PrimaryButton>Diventa un Ateriano</PrimaryButton>
-      </div>
-      <img src="/climber_stambecco.svg" width="300" alt="" />
-    </ParallaxCard>
-    <Transition name="join" appear tag="div">
-      <div
-        :style="{
-          '--duration': '250ms',
-          '--delay': '150ms',
-          '--y-tr': '10px',
-          '--x-tr': '0px',
-        }"
-        class="flex w-full flex-row flex-wrap items-center justify-around space-y-2 lg:space-y-0"
-      >
-        <button class="cursor-pointer">
+    <div class="flex flex-row flex-wrap justify-center gap-8">
+      <ParallaxCard key="0" anim-y-trasl="10px">
+        <a
+          href="https://apps.apple.com/it/app/atera-ferrate-trekking/id6449359062"
+          target="_blank"
+        >
           <div class="image-button">
             <img src="/appstore.svg" alt="" class="h-full w-full" />
           </div>
-        </button>
-        <button class="cursor-pointer">
+        </a>
+      </ParallaxCard>
+      <ParallaxCard key="0" anim-y-trasl="10px">
+        <a
+          href="https://play.google.com/store/apps/details?id=com.ateraworld.atera"
+          target="_blank"
+        >
           <div class="image-button">
             <img src="/google_play.svg" class="h-full w-full" alt="" />
           </div>
-        </button>
-      </div>
-    </Transition>
+        </a>
+      </ParallaxCard>
+    </div>
+    <div class="h-[12rem]"></div>
+    <section class="max-w-[var(--topics-width)] px-8">
+      <Topic title="Coerenza" subtitle="Qualità delle informazioni">
+        <template #content>
+          <PhoneNotificationDisplay></PhoneNotificationDisplay>
+        </template>
+        <template #body>
+          A differenza delle applicazioni esistenti, per mantenere la qualità
+          delle informazioni, le attività vengono inserite dal team e da
+          collaboratori selezionati.
+        </template>
+        ></Topic
+      >
+      <Topic title="Coerenza" inverted subtitle="Qualità delle informazioni">
+        <template #content>
+          <img src="/map.svg" width="500px" />
+        </template>
+        <template #body>
+          A differenza delle applicazioni esistenti, per mantenere la qualità
+          delle informazioni, le attività vengono inserite dal team e da
+          collaboratori selezionati.
+        </template>
+        ></Topic
+      >
+    </section>
   </div>
 </template>
 
 <script lang="ts" setup></script>
 
 <style lang="css" scoped>
+* {
+  z-index: 1;
+}
 .image-button {
-  @apply h-[100px] w-[200px] items-center justify-center rounded-xl border-[1.5px] border-outline bg-transparent px-4 py-2 transition-all duration-[150ms] ease-out hover:scale-[102%] hover:border-accent;
+  @apply h-[100px] w-[200px] items-center justify-center rounded-xl bg-transparent px-4 py-2 transition-all duration-[150ms] ease-out hover:scale-[102%];
 }
 </style>

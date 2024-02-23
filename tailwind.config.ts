@@ -9,7 +9,7 @@ export default <Partial<Config>>{
       label: [
         "0.75rem",
         {
-          lineHeight: "0.75em",
+          lineHeight: "1em",
           letterSpacing: "-0.005em",
           fontWeight: "400",
         },
@@ -17,7 +17,7 @@ export default <Partial<Config>>{
       body: [
         "1rem",
         {
-          lineHeight: "1.2rem",
+          lineHeight: "1.35rem",
           letterSpacing: "-0.005em",
           fontWeight: "500",
         },
@@ -39,14 +39,17 @@ export default <Partial<Config>>{
         },
       ],
     },
-    colors: {
+    colors: ({ colors }) => ({
       accent: "rgba(var(--accent))",
       background: "rgba(var(--background))",
       outline: "rgba(var(--outline))",
       surface: "rgba(var(--surface))",
       neutral: "rgba(var(--neutral))",
       transparent: "rgba(0, 0, 0, 0)",
-    },
+      yellow: colors.yellow,
+      sky: colors.sky,
+      purple: colors.purple,
+    }),
   },
   plugins: [],
   content: [],

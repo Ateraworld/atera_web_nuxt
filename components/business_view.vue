@@ -1,91 +1,74 @@
 <template>
-  <div v-if="mounted" class="flex flex-col">
-    <div class="flex h-[32rem] w-full space-x-[var(--spacing)]">
-      <div class="flex w-full basis-[33%] items-stretch">
-        <ParallaxCard key="0" anim-y-trasl="0px" anim-x-trasl="0px">
-          <div class="flex h-full flex-col justify-between">
-            <section>
-              <h2>Marketing Contestualizzato</h2>
-              <p>Raggiungi il pubblico giusto al momento giusto</p>
-            </section>
-
-            <img
-              src="/local_shelter.svg"
-              class="absolute bottom-[-16px] scale-[125%]"
-            />
-          </div>
-        </ParallaxCard>
-      </div>
-      <div
-        class="flex basis-[66%] flex-col items-stretch space-y-[var(--spacing)]"
+  <div v-if="mounted" class="flex w-full flex-col items-center">
+    <div class="flex w-full flex-row flex-wrap justify-center gap-12">
+      <ParallaxCard
+        class="card-size"
+        key="0"
+        anim-delay="0ms"
+        anim-y-trasl="30px"
+        anim-x-trasl="0px"
       >
-        <ParallaxCard
-          key="1"
-          class="flex-1"
-          anim-delay="100ms"
-          anim-y-trasl="0px"
-          anim-x-trasl="0px"
-        >
-          <div>
-            <h2>Coinvolgimento</h2>
+        <div class="wrapper">
+          <section>
+            <h2>Marketing Contestualizzato</h2>
             <p>Raggiungi il pubblico giusto al momento giusto</p>
-          </div>
-        </ParallaxCard>
-        <div
-          class="flex flex-1 flex-row items-stretch justify-stretch space-x-[var(--spacing)]"
-        >
-          <ParallaxCard
-            class="flex-1"
-            key="1"
-            anim-delay="200ms"
-            anim-y-trasl="0px"
-            anim-x-trasl="0px"
-          >
-            <div>
-              <h2>Aumenta le conversioni</h2>
-              <p>
-                Aumenta le conversioni nella tua realtà economica tramite
-                promozioni contestualizzate
-              </p>
-            </div>
-          </ParallaxCard>
-          <ParallaxCard
-            key="2"
-            class="flex-1"
-            anim-delay="300ms"
-            anim-y-trasl="0px"
-            anim-x-trasl="0px"
-          >
-            <div>
-              <h2>Passione e natura</h2>
-              <p>Raggiungi un pubblico di appassionati e avventurieri</p>
-            </div>
-          </ParallaxCard>
+          </section>
+          <img src="/graph.svg" class="image" />
         </div>
-      </div>
-    </div>
-    <section class="px-8 py-16">
-      <Topic
-        title="Titolo"
-        subtitle="Sottotitolo"
-        button-text="Scopri ora"
-        body="Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum"
+      </ParallaxCard>
+      <ParallaxCard
+        class="card-size"
+        key="0"
+        anim-delay="100ms"
+        anim-y-trasl="30px"
+        anim-x-trasl="0px"
       >
-        <PhoneNotificationDisplay></PhoneNotificationDisplay>
-      </Topic>
-      <Topic
-        title="Titolo"
-        subtitle="Sottotitolo"
-        inverted
-        button-text="Scopri"
-        body="Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum"
-      ></Topic>
-      <Topic
-        title="Titolo"
-        subtitle="Sottotitolo"
-        button-text="Scopri"
-        body="Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum"
-      ></Topic>
+        <div class="wrapper">
+          <section>
+            <h2>Coinvolgimento</h2>
+            <p>
+              Coinvolgi al massimo il tuo pubblico con annunci perfettamente
+              integrati e non intrusivi: sarà l’utente a ricercare attivamente i
+              tuoi servizi
+            </p>
+          </section>
+          <img src="/local_shelter.svg" class="image" />
+        </div> </ParallaxCard
+      ><ParallaxCard
+        class="card-size"
+        key="0"
+        anim-delay="200ms"
+        anim-y-trasl="30px"
+        anim-x-trasl="0px"
+      >
+        <div class="wrapper">
+          <section>
+            <h2>Conversioni</h2>
+            <p>
+              Aumenta le conversioni nella tua realtà economica tramite
+              promozioni contestualizzate
+            </p>
+          </section>
+          <img src="/arrows.svg" class="image" />
+        </div>
+      </ParallaxCard>
+    </div>
+    <div class="h-[12rem]"></div>
+    <section class="max-w-[var(--topics-width)] px-8">
+      <Topic title="Titolo" subtitle="Sottotitolo" button-text="Scopri">
+        <template #content>
+          <PhoneNotificationDisplay></PhoneNotificationDisplay>
+        </template>
+        <template #body>
+          Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem
+          ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+          lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem
+          ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+          lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem
+          ipsum lorem ipsum
+        </template>
+        ></Topic
+      >
     </section>
   </div>
 </template>
@@ -102,7 +85,18 @@ onMounted(() => {
 
 <style lang="css" scoped>
 * {
-  --spacing: 1.5rem;
+  --spacing: 0.5rem;
   --border-radius: 1rem;
+}
+
+.card-size {
+  @apply h-[450px] w-[385px];
+}
+.wrapper {
+  @apply flex h-full w-full flex-col items-center justify-between text-start;
+}
+.image {
+  z-index: 0;
+  @apply relative bottom-[-3%] w-[300px] scale-[135%];
 }
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <div v-if="mounted" class="h-full w-full">
+  <div v-if="mounted">
     <Transition ref="el" name="join" appear tag="div">
       <div class="card-wrapper" :style="rootStyle">
         <div
@@ -32,7 +32,7 @@
 </template>
 
 <script lang="ts" setup>
-const tiltAngle = 4;
+const tiltAngle = 8;
 
 const el = ref(null);
 const mounted = ref(false);
@@ -91,14 +91,14 @@ const rootStyle = computed(() => {
 <style lang="css" scoped>
 * {
   --border: 1.5px;
-  --border-radius: 1.5rem;
-  --parallax: 48px;
+  --border-radius: 2rem;
+  --parallax: 52px;
   --gradient-size: 16rem;
   --gradient-blur-size: 10rem;
 }
 
 .card-wrapper {
-  perspective: 3000px;
+  perspective: 2000px;
   @apply h-full w-full;
 }
 
@@ -109,7 +109,7 @@ const rootStyle = computed(() => {
   border: var(--border) solid;
   transition-duration: 200ms;
   transform: rotateX(var(--rotate-x)) rotateY(var(--rotate-y));
-  @apply h-full rounded-[var(--border-radius)] border-outline bg-surface p-10;
+  @apply h-full w-full rounded-[var(--border-radius)] border-outline bg-surface p-10;
 }
 
 .gradient-clipper {

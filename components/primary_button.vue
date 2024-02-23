@@ -1,6 +1,6 @@
 <template>
   <button class="btn group" @click="emit('click')">
-    <div class="flex justify-center space-x-2">
+    <div class="flex items-center justify-center space-x-2">
       <p><slot></slot></p>
       <div class="icon-wrapper">
         <div class="-translate-y-[0.15px]">
@@ -31,17 +31,17 @@ const emit = defineEmits(["click"]);
   width: var(--length);
   height: 2px;
   transition: all var(--anim-duration) ease;
-  @apply group-hover:bg-neutral origin-left translate-y-[-0.15px] scale-x-0 rounded-full bg-accent group-hover:scale-100;
+  @apply origin-left translate-y-[-0.15px] scale-x-0 rounded-full bg-accent group-hover:scale-100 group-hover:bg-neutral;
 }
 .arrow-head {
   width: var(--icon-size);
   height: var(--icon-size);
   transform: translateX(calc(var(--length) * -1.2));
   transition: all var(--anim-duration) ease;
-  @apply group-hover:text-neutral text-accent group-hover:-translate-x-[2px];
+  @apply text-accent group-hover:-translate-x-[2px] group-hover:text-neutral;
 }
 .btn {
   transition: all var(--anim-duration) ease;
-  @apply hover:text-neutral rounded-lg border-[1.5px] border-solid border-accent bg-transparent py-2 pl-6 pr-4 font-semibold  text-accent hover:bg-accent;
+  @apply rounded-xl border-[1.5px] border-solid border-accent bg-transparent py-2 pl-6 pr-4 font-semibold text-accent hover:bg-accent hover:text-neutral;
 }
 </style>
