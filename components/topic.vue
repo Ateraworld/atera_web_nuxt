@@ -1,12 +1,11 @@
 <template>
   <Transition name="join" appear tag="div">
     <div
-      class="flex w-full flex-col items-center justify-between py-12 lg:flex-row"
-      :class="{ 'text-end': props.inverted }"
+      class="flex w-full flex-col items-center justify-between py-32 lg:flex-row"
       :style="{ '--duration': '1000ms' }"
     >
       <div
-        :style="{ '--text-percentage': props.textPercentage }"
+        :style="{ '--text-percentage': props.textPercentage + '%' }"
         class="content"
         :class="{ 'order-last': invertOrder }"
       >
@@ -21,7 +20,10 @@
           }}</SecondaryButton>
         </div>
       </div>
-      <div class="flex items-center justify-center">
+      <div
+        class="flex w-[60%] items-center justify-center"
+        :class="'w-[' + (100 - props.textPercentage) + '%]'"
+      >
         <slot name="content"></slot>
       </div>
     </div>
@@ -43,13 +45,13 @@ const props = defineProps({
   title: { type: String, require: true },
   subtitle: { type: String, require: true },
   buttonText: { type: String, require: true },
-  textPercentage: { type: String, default: "80%" },
+  textPercentage: { type: Number, default: 60 },
   inverted: { type: Boolean, require: false, default: false },
 });
 </script>
 
 <style lang="css" scoped>
 .content {
-  @apply mx-4 max-w-[100%] lg:max-w-[var(--text-percentage)];
+  @apply mx-4 max-w-[100%] lg:w-[var(--text-percentage)];
 }
 </style>

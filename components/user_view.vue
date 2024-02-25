@@ -23,30 +23,6 @@
       </ParallaxCard>
     </div>
     <div class="h-[12rem]"></div>
-    <section class="max-w-[var(--topics-width)] px-8">
-      <Topic title="Coerenza" subtitle="Qualità delle informazioni">
-        <template #content>
-          <PhoneNotificationDisplay></PhoneNotificationDisplay>
-        </template>
-        <template #body>
-          A differenza delle applicazioni esistenti, per mantenere la qualità
-          delle informazioni, le attività vengono inserite dal team e da
-          collaboratori selezionati.
-        </template>
-        ></Topic
-      >
-      <Topic title="Coerenza" inverted subtitle="Qualità delle informazioni">
-        <template #content>
-          <img src="/map.svg" width="500px" />
-        </template>
-        <template #body>
-          A differenza delle applicazioni esistenti, per mantenere la qualità
-          delle informazioni, le attività vengono inserite dal team e da
-          collaboratori selezionati.
-        </template>
-        ></Topic
-      >
-    </section>
   </div>
 </template>
 

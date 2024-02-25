@@ -23,9 +23,9 @@ export default <Partial<Config>>{
         },
       ],
       subtitle: [
-        "2rem",
+        "1.75rem",
         {
-          lineHeight: "2.4rem",
+          lineHeight: "2.25rem",
           letterSpacing: "-0.015em",
           fontWeight: "700",
         },

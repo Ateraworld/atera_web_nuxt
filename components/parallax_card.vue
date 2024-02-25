@@ -1,5 +1,5 @@
 <template>
-  <div v-if="mounted">
+  <div @click="click" v-if="mounted" class="cursor-pointer">
     <Transition ref="el" name="join" appear tag="div">
       <div class="card-wrapper" :style="rootStyle">
         <div
@@ -37,6 +37,10 @@ const tiltAngle = 8;
 const el = ref(null);
 const mounted = ref(false);
 
+function click(event: MouseEvent) {
+  emit("click", event);
+}
+
 onMounted(() => {
   mounted.value = true;
 });
@@ -58,6 +62,10 @@ const props = defineProps({
   animXTrasl: { type: String, require: false, default: "0px" },
   animYTrasl: { type: String, require: false, default: "0px" },
 });
+
+const emit = defineEmits<{
+  (e: "click", event: MouseEvent): void;
+}>();
 
 function mouseEnter(event: MouseEvent) {
   renderingContext.gradientOpacity = 1;

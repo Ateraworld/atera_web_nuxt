@@ -9,7 +9,12 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+@layer components {
+  .card {
+    border: 1.25px solid;
+    @apply rounded-xl border-outline bg-surface p-8;
+  }
+}
 @font-face {
   font-family: "montserrat-alt";
   src:
@@ -44,10 +49,5 @@ h2 {
 
 body {
   font-family: "Poppins";
-  @apply bg-background text-body text-neutral;
-}
-
-.card {
-  border: 1.25px solid;
-  @apply rounded-xl border-outline bg-surface p-8;
+  @apply h-screen bg-background text-body text-neutral;
 }
