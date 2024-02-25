@@ -10,7 +10,9 @@
           <span>L'app per chi vuole di più<br /></span>
           <span class="text-4xl text-accent">avendo solo l'essenziale</span>
         </h1>
-
+        <p>
+          Atera è la piattaforma dedicata alle escursioni outdoor con l'obbiettivo di mettere in contatto gli appassionati con i professionisti del settore
+        </p>
         <Switcher
           class="self-center"
           :business-mode="mode.$state.businessMode"

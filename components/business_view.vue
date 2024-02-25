@@ -11,10 +11,9 @@
       >
         <div class="wrapper">
           <section>
-            <h2>Pubblico</h2>
+            <h2>Contesto</h2>
             <p>
-              Raggiungi le persone con i giusti interessi, al momento migliore e
-              tramite le metodologie più efficaci
+              Raggiungi gli appassionati durante le attivià nel tuo territorio, in un modo efficacie e non intrusivo
             </p>
           </section>
           <img src="/graph.svg" class="image" />
@@ -30,7 +29,7 @@
       >
         <div class="wrapper">
           <section>
-            <h2>Performance</h2>
+            <h2>Conversione</h2>
             <p>
               Incentiva le conversioni tramite promozioni contestualizzate ed
               adattate al tuo business
@@ -51,7 +50,7 @@
             <h2>Visibilità</h2>
             <p>
               Aumenta la visibiltà della tua realtà economica tramite
-              piazzamenti personalizzati e perfettamente integrati
+              inserzioni personalizzate ed integrate
             </p>
           </section>
           <img src="/arrows.svg" class="image" />
@@ -62,29 +61,25 @@
     <section class="max-w-[var(--topics-width)]">
       <Topic
         id="audience"
-        title="Pubblico"
+        title="Contesto"
         subtitle="Raggiungi gli utenti giusti al momento giusto"
       >
         <template #content>
           <PhoneNotificationDisplay></PhoneNotificationDisplay>
         </template>
         <template #body>
-          Gli utenti di Atera sono appassionati di montagna e di attività
-          all'aperto. Il pubblico per le campagne è quindi automaticamente
-          mirato ad utenti interessati al settore. <br /><br />
-          La tecnologia di Atera permette agli annunci di essere emessi al
-          momento migliore, calcolato per ogni utente. Questo permette di
-          incrementare automaticamente il tasso di conversione.<br /><br />
-          I piazzamenti all'interno di Atera sono perfettamente integrati con lo
-          stile e l'esperienza dell'utente.<br />
+          Tramite la tecnologia di Atera, gli annunci non sono semplicemente personalizzati alle preferenze dell'utente, 
+          ma l'emissione degli annunci sono calcolati in base alle attività svolte dall'utente. 
+          Un annuncio può essere emesso anche durante il termine di un escursione, così da incrementare la conversione.<br /><br />
+          I piazzamenti all'interno di Atera sono perfettamente integrati con lo stile e l'esperienza dell'utente.
           Niente più annunci fastidiosi ed intrusivi: è l'utente stesso a
-          ricercare gli annunci per ottenere un beneficio reale.
+          ricercare gli annunci per una migliore esperienza outdoor.
         </template>
         ></Topic
       >
 
       <Topic
-        title="Performance"
+        title="Conversione"
         id="performance"
         subtitle="Incentiva le conversioni con promozioni personalizzate"
       >
@@ -127,12 +122,10 @@
       >
         <template #content> </template>
         <template #body>
-          Atera mette a disposizione posizioni pubblicitarie all'interno
-          dell'applicazione.<br /><br />
-          Ad esempio, ottenendo un piazzamento pubblicitario nella scheda di un
+          Ottenendo un piazzamento pubbliciitario nella nella scheda di un
           attività vicina alla propria realtà economica, è possibile aumentare
           la propria visibilità tra gli utenti di una specifica area.<br />
-          Gli utenti che ricercano e guardano quella specifica attività
+          Gli appassionati che ricercano e visualizzano quella attività,
           entreranno a conoscenza della realtà economica in maniera automatica e
           perfettamente integrata.
         </template>
