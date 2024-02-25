@@ -1,7 +1,7 @@
 <template>
   <Transition name="join" appear tag="div">
     <div
-      class="flex w-full flex-col items-center justify-between py-32 lg:flex-row"
+      class="flex w-full flex-col items-center justify-between py-24 lg:flex-row"
       :style="{ '--duration': '1000ms' }"
     >
       <div
@@ -45,7 +45,7 @@ const props = defineProps({
   title: { type: String, require: true },
   subtitle: { type: String, require: true },
   buttonText: { type: String, require: true },
-  textPercentage: { type: Number, default: 60 },
+  textPercentage: { type: Number, default: 40 },
   inverted: { type: Boolean, require: false, default: false },
 });
 </script>

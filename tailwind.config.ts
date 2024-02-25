@@ -39,6 +39,7 @@ export default <Partial<Config>>{
         },
       ],
     },
+
     colors: ({ colors }) => ({
       accent: "rgba(var(--accent))",
       background: "rgba(var(--background))",

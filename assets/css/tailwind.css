@@ -12,7 +12,7 @@
 @layer components {
   .card {
     border: 1.25px solid;
-    @apply rounded-xl border-outline bg-surface p-8;
+    @apply rounded-[var(--border-radius)] border-outline bg-surface p-8;
   }
 }
 @font-face {

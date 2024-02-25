@@ -13,7 +13,8 @@
           <section>
             <h2>Contesto</h2>
             <p>
-              Raggiungi gli appassionati durante le attivià nel tuo territorio, in un modo efficacie e non intrusivo
+              Raggiungi gli appassionati durante le attività nel tuo territorio,
+              in un modo efficace e non intrusivo
             </p>
           </section>
           <img src="/graph.svg" class="image" />
@@ -49,15 +50,30 @@
           <section>
             <h2>Visibilità</h2>
             <p>
-              Aumenta la visibiltà della tua realtà economica tramite
-              inserzioni personalizzate ed integrate
+              Aumenta la visibiltà della tua realtà economica tramite inserzioni
+              personalizzate ed integrate
             </p>
           </section>
           <img src="/arrows.svg" class="image" />
         </div>
       </ParallaxCard>
     </div>
-    <div class="h-[12rem]"></div>
+    <Transition name="fade" appear mode="out-in">
+      <div
+        class="group mt-12 flex cursor-pointer flex-col rounded-[2rem] bg-accent/10 p-8 transition-all duration-200"
+      >
+        <h2>Entra a far parte di Atera</h2>
+        <p>
+          Compila ora il modulo di contatto con le informazioni relative al tuo
+          business.
+        </p>
+        <AnimatedArrow class="pt-4"
+          ><p class="font-semibold text-accent">Iscriviti ora</p></AnimatedArrow
+        >
+      </div>
+    </Transition>
+    <div class="h-[8rem]"></div>
+
     <section class="max-w-[var(--topics-width)]">
       <Topic
         id="audience"
@@ -68,52 +84,59 @@
           <PhoneNotificationDisplay></PhoneNotificationDisplay>
         </template>
         <template #body>
-          Tramite la tecnologia di Atera, gli annunci non sono semplicemente personalizzati alle preferenze dell'utente, 
-          ma l'emissione degli annunci sono calcolati in base alle attività svolte dall'utente. 
-          Un annuncio può essere emesso anche durante il termine di un escursione, così da incrementare la conversione.<br /><br />
-          I piazzamenti all'interno di Atera sono perfettamente integrati con lo stile e l'esperienza dell'utente.
-          Niente più annunci fastidiosi ed intrusivi: è l'utente stesso a
-          ricercare gli annunci per una migliore esperienza outdoor.
+          In Atera gli annunci sono contestualizzati. <br />
+          Oltre alle preferenze dell'utente, ogni inserzione tiene conto anche
+          degli itinerari svolti dall'utente in un determinato posto ad una
+          specifica ora. Gli annunci emessi al termine di un escursione,
+          ottengono conversioni maggiori.<br /><br />
+          Atera integra perfettamente gli annunci con lo stile e l'esperienza
+          d'uso dell'utente. <br />Niente più pubblicità fastidiosa ed
+          intrusiva: gli annunnci sono a tutti gli effetti dei consigli, sarà
+          l'utente stesso a ricercarli.
         </template>
         ></Topic
       >
 
-      <Topic
-        title="Conversione"
-        id="performance"
-        subtitle="Incentiva le conversioni con promozioni personalizzate"
-      >
-        <template #content> </template>
-        <template #body>
-          Con Atera è possibile creare delle promozioni per gli utenti
-          personalizzate per la propria realtà economica.<br /><br />
+      <div class="w-full py-24 text-center">
+        <h1>Conversione</h1>
 
-          <ul>
-            <li>
-              <h2>Coupon sconto</h2>
-              Fornisci degli sconti agli utenti di Atera per aumentare il
-              traffico
-            </li>
-            <br />
-            <li>
-              <h2>Promozioni a tempo</h2>
-              Fai sapere agli utenti interessati di una promozione a tempo
-              presente nella tua realtà economica
-            </li>
-            <br />
-            <li>
-              <h2>Offerte contestualizzate</h2>
-              Massimizza le conversioni facendo sapere agli utenti che hanno
-              appena completato un'attività nella tua zona delle tue offerte e
-              dei tuoi prodotti.
-            </li>
-            <br />
-          </ul>
-          Queste sono solo alcune delle promozioni che è possibile mettere a
-          disposizione tramite Atera!
-        </template>
-        ></Topic
-      >
+        <div class="flex flex-row flex-wrap justify-center gap-[4.5rem] pt-16">
+          <div class="conversion-cell group">
+            <Icon
+              class="icon group-hover:scale-[120%]"
+              name="icon-park-outline:shopping-bag-one"
+            ></Icon>
+            <h2>Coupon sconto</h2>
+            <p>
+              Aumenta il traffico fornendo agli utenti sconti riscattabili
+              direttamente in app
+            </p>
+          </div>
+          <div class="conversion-cell group">
+            <Icon
+              class="icon group-hover:scale-[120%]"
+              name="material-symbols:auto-timer-rounded"
+            ></Icon>
+            <h2>Promozioni a tempo</h2>
+            <p>
+              Comunica agli utenti interessati le promozioni attive nella tua
+              realtà economica
+            </p>
+          </div>
+          <div class="conversion-cell group">
+            <Icon
+              class="icon group-hover:scale-[120%]"
+              name="zondicons:radar"
+            ></Icon>
+            <h2>Offerte contestualizzate</h2>
+            <p>
+              Massimizza le conversioni tramite annunci che fanno leva sulle
+              attività di ogni singolo utente
+            </p>
+          </div>
+        </div>
+      </div>
+
       <Topic
         id="visibility"
         title="Visibilità"
@@ -122,37 +145,17 @@
       >
         <template #content> </template>
         <template #body>
-          Ottenendo un piazzamento pubbliciitario nella nella scheda di un
-          attività vicina alla propria realtà economica, è possibile aumentare
-          la propria visibilità tra gli utenti di una specifica area.<br />
+          In Atera sono disponibili spazi pubblicitari di vario tipo.<br />
+          Ottenendo un piazzamento pubblicitario nella scheda di un itinerario
+          vicino ad una realtà economica, è possibile aumentare la visibilità
+          tra gli utenti di una specifica area.<br /><br />
           Gli appassionati che ricercano e visualizzano quella attività,
           entreranno a conoscenza della realtà economica in maniera automatica e
-          perfettamente integrata.
+          perfettamente integrata con l'esperienza d'uso.
         </template>
         ></Topic
       >
     </section>
-    <ParallaxCard
-      class="h-[20rem]"
-      key="0"
-      anim-delay="200ms"
-      anim-y-trasl="30px"
-      anim-x-trasl="0px"
-    >
-      <div class="wrapper">
-        <section>
-          <h2>Contattaci!</h2>
-          <p>
-            Ti piace il progetto e vuoi entrare a far parte di Atera? <br />
-            Compila ora il form per la richiesta e ti risponderemo il più presto
-            possibile.
-          </p>
-        </section>
-        <PrimaryButton @click="$router.push('/business_form')"
-          >Compila il form</PrimaryButton
-        >
-      </div>
-    </ParallaxCard>
   </div>
 </template>
 
@@ -186,5 +189,13 @@ onMounted(() => {
 .image {
   z-index: 0;
   @apply relative bottom-[-3%] w-[300px] scale-[135%];
+}
+
+.conversion-cell {
+  @apply w-[24rem] rounded-xl;
+
+  .icon {
+    @apply mb-4 size-[5rem] rounded-xl bg-accent p-5 transition-all duration-150 ease-out;
+  }
 }
 </style>

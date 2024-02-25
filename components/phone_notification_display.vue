@@ -4,7 +4,7 @@
     <div
       @mouseenter="exit"
       @mouseleave="enter"
-      class="absolute left-[12.2%] top-[34.25%] h-[60%] w-[37.5%] overflow-clip rounded-[2rem]"
+      class="absolute left-[14.5%] top-[30.25%] h-[60%] w-[43.5%] overflow-clip rounded-[2rem]"
     >
       <div id="animated" class="notification overflow-clip p-2 text-neutral/75">
         <div class="flex flex-row items-center justify-between">
