@@ -1,14 +1,14 @@
 .user {
   --background: 13, 17, 23;
-  --accent: 204, 39, 85;
-  --surface: 28, 33, 41;
+  --accent: 175, 20, 80;
+  --surface: 25, 29, 36;
   --outline: 50, 60, 72;
-  --neutral: 211, 213, 207;
+  --neutral: 220, 218, 214;
 }
 .business {
   --background: 13, 17, 23;
-  --accent: 25, 181, 160;
-  --surface: 28, 33, 41;
+  --accent: 20, 163, 163;
+  --surface: 25, 29, 36;
   --outline: 50, 60, 72;
-  --neutral: 211, 213, 207;
+  --neutral: 220, 218, 214;
 }

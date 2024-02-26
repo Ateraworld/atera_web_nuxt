@@ -1,8 +1,7 @@
 <template>
   <Transition name="join" appear tag="div">
     <div
-      class="flex w-full flex-col items-center justify-between py-24 lg:flex-row"
-      :style="{ '--duration': '1000ms' }"
+      class="flex w-full flex-col items-center justify-center py-24 lg:flex-row"
     >
       <div
         :style="{ '--text-percentage': props.textPercentage + '%' }"

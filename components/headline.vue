@@ -1,7 +1,7 @@
 <template>
   <header class="flex justify-center">
     <div
-      class="flex w-full max-w-[var(--content-width)] items-center justify-between space-x-8 px-16 py-8"
+      class="flex w-full max-w-[var(--content-width)] items-center justify-between space-x-8 px-12 py-8"
     >
       <div class="flex items-center">
         <NuxtLink to="/">
@@ -13,13 +13,14 @@
           />
         </NuxtLink>
         <div
-          class="mx-8 rounded-xl border-[2px] border-accent px-2 py-1 text-label text-accent"
+          class="mx-4 rounded-xl border-[2px] border-accent px-2 py-1 text-label text-accent"
         >
-          Pre-beta
+          <icon name="mdi:beta" class="size-4"></icon>
+          Beta
         </div>
       </div>
 
-      <div class="flex space-x-4">
+      <div class="flex gap-4">
         <a href="https://github.com/Ateraworld" target="_blank">
           <Icon class="icon-button" name="mdi:github" />
         </a>

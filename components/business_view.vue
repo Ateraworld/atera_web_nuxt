@@ -5,7 +5,7 @@
         class="card-size"
         @click="(e) => cardClicked(e, 'context')"
         key="0"
-        anim-delay="0ms"
+        anim-delay="150ms"
         anim-y-trasl="30px"
         anim-x-trasl="0px"
       >
@@ -24,7 +24,7 @@
         class="card-size"
         key="0"
         @click="(e) => cardClicked(e, 'conversion')"
-        anim-delay="100ms"
+        anim-delay="50ms"
         anim-y-trasl="30px"
         anim-x-trasl="0px"
       >
@@ -42,7 +42,7 @@
         class="card-size"
         @click="(e) => cardClicked(e, 'visibility')"
         key="0"
-        anim-delay="200ms"
+        anim-delay="150ms"
         anim-y-trasl="30px"
         anim-x-trasl="0px"
       >
@@ -58,11 +58,9 @@
         </div>
       </ParallaxCard>
     </div>
-    <Transition name="fade" appear mode="out-in">
-      <NuxtLink to="business_form">
-        <div
-          class="group mt-16 flex cursor-pointer flex-col rounded-[var(--card-border-radius)] bg-accent/10 p-8 transition-all duration-200"
-        >
+    <NuxtLink to="business_form">
+      <Transition name="join" appear>
+        <div class="accent-card group mt-16">
           <h2>Entra a far parte di Atera</h2>
           <p>
             Compila ora il modulo di contatto con le informazioni relative al
@@ -74,8 +72,8 @@
             </p></AnimatedArrow
           >
         </div>
-      </NuxtLink>
-    </Transition>
+      </Transition>
+    </NuxtLink>
     <div class="h-[8rem]"></div>
 
     <section class="max-w-[var(--content-width)]">
@@ -147,7 +145,7 @@
         inverted
         subtitle="Ottieni visibilità tramite campagne ottimizzate ed integrate"
       >
-        <template #content> </template>
+        <template #content><MapDisplay></MapDisplay> </template>
         <template #body>
           In Atera sono disponibili spazi pubblicitari di vario tipo.<br />
           Ottenendo un piazzamento pubblicitario nella scheda di un itinerario
@@ -198,7 +196,7 @@ onMounted(() => {
   @apply w-[24rem] rounded-xl;
 
   .icon {
-    @apply mb-4 size-[5rem] rounded-xl bg-accent p-5 transition-all duration-150 ease-out;
+    @apply mb-8 size-[5rem] rounded-xl bg-accent p-5 transition-all duration-150 ease-out;
   }
 }
 </style>

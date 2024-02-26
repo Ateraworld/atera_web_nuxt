@@ -58,7 +58,7 @@ const { x, y, top, right, bottom, left, width, height } =
 
 const props = defineProps({
   animDelay: { type: String, require: false, default: "0ms" },
-  animDuration: { type: String, require: false, default: "300ms" },
+  animDuration: { type: String, require: false, default: "400ms" },
   animXTrasl: { type: String, require: false, default: "0px" },
   animYTrasl: { type: String, require: false, default: "0px" },
 });
@@ -88,8 +88,8 @@ function mouseMove(event: MouseEvent) {
 
 const rootStyle = computed(() => {
   return {
-    "--delay": props.animDelay,
-    "--duration": props.animDuration,
+    "--delay-tr": props.animDelay,
+    "--duration-tr": props.animDuration,
     "--x-tr": props.animXTrasl,
     "--y-tr": props.animYTrasl,
   };
@@ -116,7 +116,7 @@ const rootStyle = computed(() => {
   border: var(--border) solid;
   transition-duration: 200ms;
   transform: rotateX(var(--rotate-x)) rotateY(var(--rotate-y));
-  @apply h-full w-full rounded-[var(--card-border-radius)] border-outline bg-surface p-10;
+  @apply rounded-card h-full w-full border-outline bg-surface p-10;
 }
 
 .gradient-clipper {

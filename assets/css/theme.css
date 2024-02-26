@@ -1,5 +1,20 @@
 * {
   --content-width: 1600px;
-  --card-border-radius: 2.5rem;
+  --card-border-radius: 2rem;
   --border-radius: 1rem;
+}
+
+@layer components {
+  .rounded-card {
+    @apply rounded-[var(--card-border-radius)];
+  }
+  .rounded-default {
+    @apply rounded-[var(--border-radius)];
+  }
+  .accent-card {
+    --y-tr: 30px;
+    --duration-tr: 500ms;
+    --delay-tr: 100ms;
+    @apply rounded-card flex cursor-pointer flex-col bg-accent/[.12] p-8;
+  }
 }

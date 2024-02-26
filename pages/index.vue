@@ -3,6 +3,10 @@
 </template>
 
 <script lang="ts" setup>
+useSeoMeta({
+  title: "Atera - Ferrate & Trekking",
+});
+
 const mode = ref(false);
 const { x, y } = useMouse();
 

@@ -7,13 +7,17 @@
           @click="onClicked"
           class="text-back-400 flex h-full w-full cursor-pointer justify-start pl-4 text-center"
         >
-          <button class="w-full text-center">Sei un business?</button>
+          <button class="w-full text-center text-label md:text-body">
+            Hai un'attività?
+          </button>
         </div>
         <div
           @click="onClicked"
           class="text-back-400 flex h-full w-full cursor-pointer justify-center pr-4"
         >
-          <button class="h-full text-center">Sei un utente?</button>
+          <button class="h-full text-center text-label md:text-body">
+            Sei un appassionato?
+          </button>
         </div>
       </div>
 
@@ -46,16 +50,14 @@ function onClicked() {
 }
 
 .container {
-  @apply flex w-full max-w-[20rem] pt-12 lg:max-w-[24rem];
+  @apply flex w-full max-w-[22rem] pt-12 md:max-w-[30rem];
 }
 
 .wrapper {
-  border-radius: var(--border-radius);
-  @apply relative h-[var(--height)] w-full bg-surface/50;
+  @apply rounded-default relative h-[var(--height)] w-full bg-surface/50;
 }
 
 .switcher {
-  border-radius: var(--border-radius);
-  @apply absolute top-0 flex h-full w-[50%] items-center justify-center bg-accent transition-all duration-300 ease-out;
+  @apply rounded-default absolute top-0 flex h-full w-[50%] items-center justify-center bg-accent transition-all duration-300 ease-out;
 }
 </style>

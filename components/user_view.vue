@@ -1,7 +1,7 @@
 <template>
-  <div class="flex w-full flex-col items-center justify-stretch space-y-6">
+  <div class="flex w-full flex-col items-center justify-stretch gap-6">
     <div class="flex flex-row flex-wrap justify-center gap-8">
-      <ParallaxCard key="0" anim-y-trasl="10px">
+      <ParallaxCard key="0" anim-x-trasl="-30px">
         <a
           href="https://apps.apple.com/it/app/atera-ferrate-trekking/id6449359062"
           target="_blank"
@@ -11,7 +11,7 @@
           </div>
         </a>
       </ParallaxCard>
-      <ParallaxCard key="0" anim-y-trasl="10px">
+      <ParallaxCard key="0" anim-x-trasl="30px">
         <a
           href="https://play.google.com/store/apps/details?id=com.ateraworld.atera"
           target="_blank"
@@ -22,7 +22,20 @@
         </a>
       </ParallaxCard>
     </div>
-    <div class="h-[12rem]"></div>
+    <Transition name="join" appear>
+      <div class="accent-card group">
+        <h2>Hai gia scaricato Atera?</h2>
+        <p>
+          Compila ora il modulo di feedback per farci sapere cosa ne pensi.<br />
+          Il tuo aiuto è fondamentale per migliorare sempre di più Atera!
+        </p>
+        <AnimatedArrow class="pt-4"
+          ><p class="font-semibold text-accent">
+            Dicci ciò che pensi
+          </p></AnimatedArrow
+        >
+      </div>
+    </Transition>
   </div>
 </template>
 

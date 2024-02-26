@@ -17,7 +17,7 @@
             :style="{ '--y-tr': '-4px' }"
           >
             La piattaforma dedicata alle escursioni outdoor che mette in
-            contatto gli appassionati con i professionisti del settore
+            contatto gli appassionati con gli imprenditori del settore
           </p>
           <p v-else class="max-w-[48rem]" :style="{ '--y-tr': '4px' }">
             Scopri gli itinerari più adatti a te, attesta il completamento delle
