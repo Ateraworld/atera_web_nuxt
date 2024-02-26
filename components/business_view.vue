@@ -3,7 +3,7 @@
     <div class="flex w-full flex-row flex-wrap justify-center gap-16">
       <ParallaxCard
         class="card-size"
-        @click="(e) => cardClicked(e, 'audience')"
+        @click="(e) => cardClicked(e, 'context')"
         key="0"
         anim-delay="0ms"
         anim-y-trasl="30px"
@@ -23,7 +23,7 @@
       <ParallaxCard
         class="card-size"
         key="0"
-        @click="(e) => cardClicked(e, 'performance')"
+        @click="(e) => cardClicked(e, 'conversion')"
         anim-delay="100ms"
         anim-y-trasl="30px"
         anim-x-trasl="0px"
@@ -59,24 +59,28 @@
       </ParallaxCard>
     </div>
     <Transition name="fade" appear mode="out-in">
-      <div
-        class="group mt-12 flex cursor-pointer flex-col rounded-[2rem] bg-accent/10 p-8 transition-all duration-200"
-      >
-        <h2>Entra a far parte di Atera</h2>
-        <p>
-          Compila ora il modulo di contatto con le informazioni relative al tuo
-          business.
-        </p>
-        <AnimatedArrow class="pt-4"
-          ><p class="font-semibold text-accent">Iscriviti ora</p></AnimatedArrow
+      <NuxtLink to="business_form">
+        <div
+          class="group mt-16 flex cursor-pointer flex-col rounded-[var(--card-border-radius)] bg-accent/10 p-8 transition-all duration-200"
         >
-      </div>
+          <h2>Entra a far parte di Atera</h2>
+          <p>
+            Compila ora il modulo di contatto con le informazioni relative al
+            tuo business.
+          </p>
+          <AnimatedArrow class="pt-4"
+            ><p class="font-semibold text-accent">
+              Iscriviti ora
+            </p></AnimatedArrow
+          >
+        </div>
+      </NuxtLink>
     </Transition>
     <div class="h-[8rem]"></div>
 
-    <section class="max-w-[var(--topics-width)]">
+    <section class="max-w-[var(--content-width)]">
       <Topic
-        id="audience"
+        id="context"
         title="Contesto"
         subtitle="Raggiungi gli utenti giusti al momento giusto"
       >
@@ -97,7 +101,7 @@
         ></Topic
       >
 
-      <div class="w-full py-24 text-center">
+      <div id="conversion" class="w-full py-24 text-center">
         <h1>Conversione</h1>
 
         <div class="flex flex-row flex-wrap justify-center gap-[4.5rem] pt-16">
@@ -177,7 +181,6 @@ onMounted(() => {
 <style lang="css" scoped>
 * {
   --spacing: 0.5rem;
-  --border-radius: 1rem;
 }
 
 .card-size {

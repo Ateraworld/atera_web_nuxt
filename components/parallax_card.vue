@@ -99,7 +99,6 @@ const rootStyle = computed(() => {
 <style lang="css" scoped>
 * {
   --border: 1.5px;
-  --border-radius: 2rem;
   --parallax: 52px;
   --gradient-size: 16rem;
   --gradient-blur-size: 10rem;
@@ -117,7 +116,7 @@ const rootStyle = computed(() => {
   border: var(--border) solid;
   transition-duration: 200ms;
   transform: rotateX(var(--rotate-x)) rotateY(var(--rotate-y));
-  @apply h-full w-full rounded-[var(--border-radius)] border-outline bg-surface p-10;
+  @apply h-full w-full rounded-[var(--card-border-radius)] border-outline bg-surface p-10;
 }
 
 .gradient-clipper {

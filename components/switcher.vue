@@ -5,13 +5,13 @@
       <div class="relative flex h-full w-full items-center">
         <div
           @click="onClicked"
-          class="flex h-full w-full cursor-pointer justify-start pl-4 text-center text-back-400"
+          class="text-back-400 flex h-full w-full cursor-pointer justify-start pl-4 text-center"
         >
           <button class="w-full text-center">Sei un business?</button>
         </div>
         <div
           @click="onClicked"
-          class="flex h-full w-full cursor-pointer justify-center pr-4 text-back-400"
+          class="text-back-400 flex h-full w-full cursor-pointer justify-center pr-4"
         >
           <button class="h-full text-center">Sei un utente?</button>
         </div>
@@ -20,8 +20,8 @@
       <span
         class="switcher"
         :class="{
-          'left-[50%] font-semibold text-white ': !businessMode,
-          'left-0 font-semibold text-white': businessMode,
+          'text-white left-[50%] font-semibold ': !businessMode,
+          'text-white left-0 font-semibold': businessMode,
         }"
         >{{ businessMode ? "Business" : "Utente" }}</span
       >
@@ -43,7 +43,6 @@ function onClicked() {
 <style lang="css" scoped>
 * {
   --height: 2.75rem;
-  --border-radius: 8rem;
 }
 
 .container {
