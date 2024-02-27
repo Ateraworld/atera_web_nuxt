@@ -2,7 +2,7 @@
   <!-- <AnimatedSvg></AnimatedSvg> -->
   <div
     v-if="mounted"
-    class="flex w-full flex-col items-center justify-start px-4 pt-12"
+    class="flex w-full flex-col items-center justify-start px-4 py-12"
   >
     <div class="flex w-full max-w-[var(--content-width)] flex-col">
       <div class="flex flex-col items-center text-center">

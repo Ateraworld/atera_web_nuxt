@@ -1,5 +1,9 @@
 <template>
-  <div ref="elementRef" class="relative flex h-full w-full justify-center">
+  <div
+    ref="elementRef"
+    @click="restartAnimation"
+    class="relative flex h-full w-full cursor-pointer justify-center"
+  >
     <img src="/map.svg" class="h-full w-full" />
 
     <Transition name="join" appear mode="out-in">
@@ -54,13 +58,17 @@ onUnmounted(() => {
   observer?.disconnect();
 });
 
+function restartAnimation() {
+  animatedSvg.animator.stop();
+  checkpointReached.value = false;
+  animatedSvg.animator.start(8, ease);
+}
+
 onMounted(() => {
   const pathElements = document.querySelectorAll<SVGPathElement>("#map-path");
   observer = new IntersectionObserver((entries) => {
     if (entries[0].isIntersecting) {
-      animatedSvg.animator.stop();
-      checkpointReached.value = false;
-      animatedSvg.animator.start(8, ease);
+      restartAnimation();
     }
   });
   observer?.observe(elementRef.value!);

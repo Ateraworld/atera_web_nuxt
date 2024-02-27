@@ -3,7 +3,7 @@
     <img src="/phone.svg" class="h-full w-full" alt="" />
     <div
       @click="click"
-      class="absolute left-[14%] top-[28.5%] h-[62%] w-[44%] cursor-pointer overflow-clip rounded-[2rem]"
+      class="absolute left-[14.25%] top-[29%] h-[62%] w-[43.75%] cursor-pointer overflow-clip rounded-[2rem]"
     >
       <div id="animated" class="notification overflow-clip p-2 text-neutral/75">
         <div class="flex flex-row items-center justify-between">

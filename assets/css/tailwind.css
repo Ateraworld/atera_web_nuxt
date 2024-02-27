@@ -54,5 +54,21 @@ html {
 
 body {
   font-family: "Poppins";
-  @apply h-full bg-background text-body text-neutral;
+  @apply h-screen bg-background text-body text-neutral;
+}
+
+input {
+  @apply rounded-default border-[2px] border-outline bg-transparent px-4 py-3 outline-none hover:border-accent focus:border-accent;
+}
+
+select {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  accent-color: red;
+
+  @apply rounded-default border-[2px] border-outline bg-surface px-4 py-3  outline-none transition-all duration-150 hover:border-accent focus:border-accent;
+}
+option {
+  @apply rounded-default border-[2px] border-outline bg-transparent px-4 py-3 outline-none transition-all duration-150 hover:border-accent focus:border-accent;
 }

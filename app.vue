@@ -6,7 +6,7 @@
       user: !mode.$state.businessMode,
     }"
   >
-    <div class="overscroll-none">
+    <div v-if="mounted" class="overscroll-none">
       <div class="gradient" :style="{ '--x': x + 'px' }"></div>
     </div>
     <Transition name="fade" mode="out-in">
