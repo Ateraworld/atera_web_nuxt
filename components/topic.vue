@@ -1,13 +1,9 @@
 <template>
   <Transition name="join" appear tag="div">
     <div
-      class="flex w-full flex-col items-center justify-center py-[10rem] lg:flex-row"
+      class="py-[var(--content-padding) flex w-full flex-col items-center justify-center gap-[4rem] lg:flex-row"
     >
-      <div
-        :style="{ '--text-percentage': props.textPercentage + '%' }"
-        class="content"
-        :class="{ 'order-last': invertOrder }"
-      >
+      <div class="basis-[40%]" :class="{ 'order-last': invertOrder }">
         <h3 class="font-semibold text-accent">
           {{ props.subtitle }}
         </h3>
@@ -19,11 +15,10 @@
           }}</SecondaryButton>
         </div>
       </div>
-      <div
-        class="flex w-[60%] items-center justify-center"
-        :class="'w-[' + (100 - props.textPercentage) + '%]'"
-      >
-        <slot name="content"></slot>
+      <div class="">
+        <div class="basis-[60%]">
+          <slot name="content"></slot>
+        </div>
       </div>
     </div>
   </Transition>
@@ -35,7 +30,6 @@ const emit = defineEmits(["click"]);
 const media = useBreakpoints(breakpointsTailwind);
 
 const invertOrder = computed(() => {
-  console.log(media.smallerOrEqual("lg").value);
   if (media.smallerOrEqual("lg").value) return false;
   return props.inverted;
 });
@@ -44,13 +38,8 @@ const props = defineProps({
   title: { type: String, require: true },
   subtitle: { type: String, require: true },
   buttonText: { type: String, require: true },
-  textPercentage: { type: Number, default: 40 },
   inverted: { type: Boolean, require: false, default: false },
 });
 </script>
 
-<style lang="css" scoped>
-.content {
-  @apply mx-4 max-w-[100%] lg:w-[var(--text-percentage)];
-}
-</style>
+<style lang="css" scoped></style>

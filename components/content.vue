@@ -10,7 +10,7 @@
           <span>Tutto il mondo dell'outdoor.<br /></span>
           <span class="text-4xl text-accent">Un'unica piattaforma.</span>
         </h1>
-        <Transition name="join" mode="out-in" appear>
+        <Transition class="min-h-[4rem]" name="join" mode="out-in" appear>
           <p
             v-if="mode.$state.businessMode"
             class="max-w-[48rem]"

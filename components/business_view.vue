@@ -58,24 +58,20 @@
         </div>
       </ParallaxCard>
     </div>
-    <NuxtLink to="business_form">
-      <Transition name="join" appear>
-        <div class="accent-card group mt-16">
-          <h2>Entra a far parte di Atera</h2>
-          <p>
-            Compila ora il modulo di contatto con le informazioni relative al
-            tuo business.
-          </p>
-          <AnimatedArrow class="pt-4"
-            ><p class="font-semibold text-accent">
-              Iscriviti ora
-            </p></AnimatedArrow
-          >
-        </div>
-      </Transition>
-    </NuxtLink>
+    <Transition name="join" appear>
+      <div class="accent-card group mt-16">
+        <h2>Entra a far parte di Atera</h2>
+        <p>
+          Compila ora il modulo di contatto con le informazioni relative al tuo
+          business.
+        </p>
+        <AnimatedArrow class="pt-4"
+          ><p class="font-semibold text-accent">Iscriviti ora</p></AnimatedArrow
+        >
+      </div>
+    </Transition>
 
-    <section class="max-w-[var(--content-width)]">
+    <section class="max-w-[var(--content-width)] py-[var(--content-padding)]">
       <Topic
         id="context"
         title="Contesto"
@@ -98,10 +94,13 @@
         ></Topic
       >
 
-      <div id="conversion" class="w-full py-[8rem] text-center">
+      <div
+        id="conversion"
+        class="w-full py-[var(--content-padding)] text-center"
+      >
         <h1>Conversione</h1>
 
-        <div class="flex flex-row flex-wrap justify-center gap-[4.5rem] pt-16">
+        <div class="flex flex-row flex-wrap justify-center gap-[4.5rem] pt-12">
           <div class="conversion-cell group">
             <Icon
               class="icon group-hover:scale-[120%]"
