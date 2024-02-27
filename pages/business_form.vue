@@ -1,5 +1,7 @@
 <template>
-  <div>Compila il form</div>
+  <div>
+    <input type="text" />
+  </div>
 </template>
 
 <script lang="ts" setup></script>

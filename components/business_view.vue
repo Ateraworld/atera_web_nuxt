@@ -74,7 +74,6 @@
         </div>
       </Transition>
     </NuxtLink>
-    <div class="h-[8rem]"></div>
 
     <section class="max-w-[var(--content-width)]">
       <Topic
@@ -99,7 +98,7 @@
         ></Topic
       >
 
-      <div id="conversion" class="w-full py-24 text-center">
+      <div id="conversion" class="w-full py-[8rem] text-center">
         <h1>Conversione</h1>
 
         <div class="flex flex-row flex-wrap justify-center gap-[4.5rem] pt-16">

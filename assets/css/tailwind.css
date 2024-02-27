@@ -1,10 +1,11 @@
 @import url("https://fonts.googleapis.com/css?family=DM+Sans");
 @import url("https://fonts.googleapis.com/css?family=Poppins");
 
+@import url("assets/css/globals.css");
 @import url("assets/css/palette.css");
 @import url("assets/css/scrollbar.css");
 @import url("assets/css/transition.css");
-@import url("assets/css/theme.css");
+@import url("assets/css/utilities.css");
 
 @tailwind base;
 @tailwind components;
@@ -17,20 +18,6 @@
     url("assets/fonts/MontserratAlt1-Regular.ttf") format("truetype");
 }
 
-* {
-  z-index: 1;
-  user-select: none;
-}
-
-html {
-  overflow-y: scroll;
-  @apply text-body;
-}
-
-h3 {
-  @apply mb-[0.875rem] text-body;
-}
-
 h1 {
   @apply mb-[1.75rem] text-title;
 }
@@ -39,7 +26,19 @@ h2 {
   @apply mb-[1.2rem] text-subtitle;
 }
 
+h3 {
+  @apply mb-[0.875rem] text-body;
+}
+
+html {
+  @apply overflow-y-scroll text-body text-neutral;
+}
+* {
+  z-index: 1;
+  user-select: none;
+}
+
 body {
   font-family: "Poppins";
-  @apply h-screen bg-background text-body text-neutral;
+  @apply h-full bg-background text-body text-neutral;
 }

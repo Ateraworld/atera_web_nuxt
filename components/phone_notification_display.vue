@@ -2,8 +2,6 @@
   <div class="relative">
     <img src="/phone.svg" class="h-full w-full" alt="" />
     <div
-      @mouseenter="exit"
-      @mouseleave="enter"
       class="absolute left-[14.5%] top-[30.25%] h-[60%] w-[43.5%] overflow-clip rounded-[2rem]"
     >
       <div id="animated" class="notification overflow-clip p-2 text-neutral/75">
@@ -49,7 +47,7 @@ const notifications = [
 ];
 
 const animated = computed(() => document.getElementById("animated"));
-const isShowing = ref(true);
+const isShowing = ref(false);
 const currentNotification: any = ref({ title: "", body: "" });
 
 function updateNotification() {
@@ -62,7 +60,7 @@ function updateNotification() {
 }
 
 onMounted(() => {
-  updateNotification();
+  enter();
 });
 
 function exit() {
@@ -72,6 +70,7 @@ function exit() {
   el?.classList.remove("anim-enter");
   el?.classList.add("anim-exit");
   isShowing.value = false;
+  setTimeout(enter, 500);
 }
 
 function enter() {
@@ -82,6 +81,7 @@ function enter() {
   el?.classList.remove("anim-exit");
   el?.classList.add("anim-enter");
   isShowing.value = true;
+  setTimeout(exit, Math.round(Math.random() * 2500 + 5000));
 }
 </script>
 

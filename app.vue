@@ -9,17 +9,29 @@
     <div class="overscroll-none">
       <div class="gradient" :style="{ '--x': x + 'px' }"></div>
     </div>
-    <div class="flex h-full flex-col justify-start">
-      <Headline></Headline>
-      <NuxtPage class="flex-1"> </NuxtPage>
-      <Footline></Footline>
-    </div>
+    <Transition name="fade" mode="out-in">
+      <div
+        v-if="mounted"
+        :style="{ '--duration-tr': '250ms' }"
+        class="flex h-full flex-col justify-start"
+      >
+        <Headline></Headline>
+        <NuxtPage class="flex-1"> </NuxtPage>
+        <Footline></Footline>
+      </div>
+      <div v-else class="flex h-screen w-screen items-center justify-center">
+        <img src="/icons/bianco.svg" class="h-[16rem] w-[16rem]" />
+      </div>
+    </Transition>
+
+    <!-- <NuxtPage class="flex-1"> </NuxtPage> -->
   </body>
 </template>
 
 <script lang="ts" setup>
 const { x, y } = useMouse();
 const mode = useMode();
+const mounted = useMounted();
 </script>
 
 <style lang="css" scoped>
