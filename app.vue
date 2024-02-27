@@ -21,6 +21,7 @@
       </div>
       <div v-else class="flex h-screen w-screen items-center justify-center">
         <img src="/icons/bianco.svg" class="h-[16rem] w-[16rem]" />
+        <NuxtPage v-show="false" class="flex-1"> </NuxtPage>
       </div>
     </Transition>
 

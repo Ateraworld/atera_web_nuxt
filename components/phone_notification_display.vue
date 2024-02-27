@@ -2,7 +2,8 @@
   <div class="relative">
     <img src="/phone.svg" class="h-full w-full" alt="" />
     <div
-      class="absolute left-[14.5%] top-[30.25%] h-[60%] w-[43.5%] overflow-clip rounded-[2rem]"
+      @click="click"
+      class="absolute left-[14%] top-[28.5%] h-[62%] w-[44%] cursor-pointer overflow-clip rounded-[2rem]"
     >
       <div id="animated" class="notification overflow-clip p-2 text-neutral/75">
         <div class="flex flex-row items-center justify-between">
@@ -49,6 +50,7 @@ const notifications = [
 const animated = computed(() => document.getElementById("animated"));
 const isShowing = ref(false);
 const currentNotification: any = ref({ title: "", body: "" });
+let timeout: NodeJS.Timeout | null = null;
 
 function updateNotification() {
   if (notifications.length > 0) {
@@ -63,6 +65,15 @@ onMounted(() => {
   enter();
 });
 
+function click(event: MouseEvent) {
+  if (timeout !== null) clearTimeout(timeout);
+  if (!isShowing) {
+    enter();
+  } else {
+    exit();
+  }
+}
+
 function exit() {
   if (!isShowing) return;
   let el = animated.value;
@@ -70,7 +81,7 @@ function exit() {
   el?.classList.remove("anim-enter");
   el?.classList.add("anim-exit");
   isShowing.value = false;
-  setTimeout(enter, 500);
+  timeout = setTimeout(enter, 500);
 }
 
 function enter() {
@@ -81,7 +92,7 @@ function enter() {
   el?.classList.remove("anim-exit");
   el?.classList.add("anim-enter");
   isShowing.value = true;
-  setTimeout(exit, Math.round(Math.random() * 2500 + 5000));
+  timeout = setTimeout(exit, Math.round(Math.random() * 2500 + 5000));
 }
 </script>
 
@@ -110,7 +121,7 @@ function enter() {
   }
 }
 .animate-ping {
-  animation: ping 2s ease-out infinite;
+  animation: ping 1.5s ease-out infinite;
 }
 .anim-enter {
   animation: enter var(--duration) ease-out forwards;

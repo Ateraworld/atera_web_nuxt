@@ -5,11 +5,25 @@
 @import url("assets/css/palette.css");
 @import url("assets/css/scrollbar.css");
 @import url("assets/css/transition.css");
-@import url("assets/css/utilities.css");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer utilities {
+  .rounded-card {
+    @apply rounded-[var(--card-border-radius)];
+  }
+  .rounded-default {
+    @apply rounded-[var(--border-radius)];
+  }
+  .accent-card {
+    --y-tr: 30px;
+    --duration-tr: 500ms;
+    --delay-tr: 100ms;
+    @apply rounded-card flex cursor-pointer flex-col bg-accent/[.12] p-8;
+  }
+}
 
 @font-face {
   font-family: "montserrat-alt";
@@ -31,7 +45,7 @@ h3 {
 }
 
 html {
-  @apply overflow-y-scroll text-body text-neutral;
+  @apply text-body text-neutral;
 }
 * {
   z-index: 1;
