@@ -2,11 +2,11 @@
   <!-- <AnimatedSvg></AnimatedSvg> -->
   <div
     v-if="mounted"
-    class="flex w-full flex-col items-center justify-start px-4 py-12"
+    class="flex w-full flex-col items-center justify-start px-6 py-12 sm:px-8"
   >
     <div class="flex w-full max-w-[var(--content-width)] flex-col">
       <div class="flex flex-col items-center text-center">
-        <h1 class="text-surface-400 font-semibold">
+        <h1 class="font-semibold">
           <span>Tutto il mondo dell'outdoor.<br /></span>
           <span class="text-4xl text-accent">Un'unica piattaforma.</span>
         </h1>
@@ -30,7 +30,7 @@
           @toggle="onModeToggle"
         />
       </div>
-      <div class="flex w-full justify-stretch px-8 pt-16">
+      <div class="flex w-full pt-20">
         <BusinessView v-if="mode.$state.businessMode"></BusinessView>
         <UserView v-else></UserView>
       </div>

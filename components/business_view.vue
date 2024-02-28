@@ -1,6 +1,6 @@
 <template>
   <div v-if="mounted" class="flex w-full flex-col items-center">
-    <div class="flex w-full flex-row flex-wrap justify-center gap-16">
+    <div class="flex w-full flex-row flex-wrap justify-center gap-6 sm:gap-16">
       <ParallaxCard
         class="card-size"
         @click="(e) => cardClicked(e, 'context')"
@@ -71,7 +71,7 @@
       </div>
     </Transition>
 
-    <section class="max-w-[var(--content-width)] py-[var(--content-padding)]">
+    <section class="max-w-[var(--content-width)]">
       <Topic
         id="context"
         title="Contesto"
@@ -96,7 +96,7 @@
 
       <div
         id="conversion"
-        class="w-full py-[var(--content-padding)] text-center"
+        class="my-[var(--content-padding)] w-full pt-4 text-center"
       >
         <h1>Conversione</h1>
 
@@ -185,13 +185,8 @@ onMounted(() => {
 .wrapper {
   @apply flex h-full w-full flex-col items-center justify-between text-start;
 }
-.image {
-  z-index: 0;
-  @apply relative bottom-[-3%] w-[300px] scale-[135%];
-}
-
 .conversion-cell {
-  @apply w-[24rem] rounded-xl;
+  @apply max-w-[26rem] rounded-xl;
 
   .icon {
     @apply mb-8 size-[5rem] rounded-xl bg-accent p-5 transition-all duration-150 ease-out;

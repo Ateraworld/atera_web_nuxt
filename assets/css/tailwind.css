@@ -54,7 +54,8 @@ html {
 
 body {
   font-family: "Poppins";
-  @apply h-screen bg-background text-body text-neutral;
+  box-sizing: border-box;
+  @apply m-0 h-screen bg-background text-body text-neutral;
 }
 
 input {
