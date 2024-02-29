@@ -2,13 +2,12 @@
   <div
     ref="elementRef"
     @click="restartAnimation"
-    class="rounded-card relative flex cursor-pointer justify-center border-[4px] border-outline lg:min-w-[32rem]"
+    class="rounded-card relative flex cursor-pointer justify-center border-[4px] border-outline p-12 lg:min-w-[32rem]"
   >
     <div class="relative">
       <svg
         viewBox="0 0 143 212"
         width="100%"
-        class="p-[4rem]"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
@@ -24,13 +23,13 @@
       <!-- <img src="/map.svg" class="h-[75%] w-[75%]" /> -->
       <div
         v-if="animatedSvg.animator.p.value >= 0.65"
-        class="absolute left-[64%] top-[86%] h-[.75rem] w-[1.5rem] animate-ping bg-accent"
+        class="animate-pop absolute left-[78%] top-[86%] h-[2%] w-[5%] bg-accent"
       ></div>
       <Transition name="join" appear mode="out-in">
         <div
           v-if="animatedSvg.animator.p.value >= 0.7"
           :style="{ '--y-tr': '20px', '--duration-tr': '250ms' }"
-          class="point-label left-[74%] top-[84%]"
+          class="point-label left-[76%] top-[92%]"
         >
           <icon class="size-8 text-accent" name="material-symbols:hotel"></icon>
           <p class="font-semibold">Hotel</p>
@@ -39,13 +38,13 @@
 
       <div
         v-if="animatedSvg.animator.p.value >= 0.95"
-        class="absolute left-[26.5%] top-[55%] h-[.75rem] w-[1.5rem] animate-ping bg-accent"
+        class="animate-pop absolute left-[14%] top-[55%] h-[4%] w-[5%] bg-accent"
       ></div>
       <Transition name="join" appear mode="out-in">
         <div
           v-if="animatedSvg.animator.p.value >= 0.975"
           :style="{ '--y-tr': '20px', '--duration-tr': '250ms' }"
-          class="point-label left-[25.5%] top-[46%]"
+          class="point-label left-[4%] top-[43%]"
         >
           <icon
             class="size-8 text-accent"
@@ -57,13 +56,13 @@
 
       <div
         v-if="animatedSvg.animator.p.value >= 0.1"
-        class="absolute left-[52%] top-[16%] h-[.75rem] w-[1.5rem] animate-ping bg-accent"
+        class="animate-pop absolute left-[68%] top-[12%] h-[3%] w-[8%] bg-accent"
       ></div>
       <Transition name="join" appear mode="out-in">
         <div
           v-if="animatedSvg.animator.p.value >= 0.15"
           :style="{ '--y-tr': '20px', '--duration-tr': '250ms' }"
-          class="point-label left-[51%] top-[7%]"
+          class="point-label left-[54%] top-[0%]"
         >
           <icon
             class="size-8 text-accent"
@@ -77,14 +76,14 @@
 </template>
 
 <script lang="ts" setup>
-const elementRef = ref<Element>();
-var observer: IntersectionObserver | null = null;
+const elementRef = ref<HTMLElement | null>();
+useIntersectionObserver(elementRef, (entries) => {
+  if (entries[0].isIntersecting) {
+    restartAnimation();
+  }
+});
 const animatedSvg = useSvgAnimator("#map-path");
 const tw = useTailwind();
-
-onUnmounted(() => {
-  observer?.disconnect();
-});
 
 function restartAnimation() {
   animatedSvg.animator.stop();
@@ -92,13 +91,6 @@ function restartAnimation() {
 }
 
 onMounted(() => {
-  const pathElements = document.querySelectorAll<SVGPathElement>("#map-path");
-  observer = new IntersectionObserver((entries) => {
-    if (entries[0].isIntersecting) {
-      restartAnimation();
-    }
-  });
-  observer?.observe(elementRef.value!);
   animatedSvg.preload();
 });
 
@@ -110,20 +102,5 @@ function ease(x: number): number {
 <style lang="css" scoped>
 .point-label {
   @apply absolute flex items-center justify-start gap-2 rounded-xl border-outline text-label md:text-body;
-}
-
-@keyframes ping {
-  0% {
-    transform: scale(1);
-  }
-  20% {
-    transform: scale(2);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-.animate-ping {
-  animation: ping 250ms cubic-bezier(0, 0, 0.2, 1);
 }
 </style>

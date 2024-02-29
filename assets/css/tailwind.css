@@ -5,12 +5,13 @@
 @import url("assets/css/palette.css");
 @import url("assets/css/scrollbar.css");
 @import url("assets/css/transition.css");
+@import url("assets/css/animation.css");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@layer utilities {
+@layer components {
   .rounded-card {
     @apply rounded-[var(--card-border-radius)];
   }

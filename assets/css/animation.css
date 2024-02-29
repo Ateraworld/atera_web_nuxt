@@ -1,0 +1,16 @@
+@layer components {
+  @keyframes pop {
+    0% {
+      transform: scale(1);
+    }
+    20% {
+      transform: scale(var(--pop-scale, 2));
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  .animate-pop {
+    animation: pop 250ms cubic-bezier(0, 0, 0.2, 1);
+  }
+}

@@ -13,7 +13,7 @@
           />
         </NuxtLink>
         <div
-          class="mx-4 rounded-xl border-[2px] border-accent px-2 py-1 text-label text-accent"
+          class="mx-4 rounded-xl border-[2px] border-accent px-2 py-1 text-label text-accent hover:bg-accent hover:text-neutral"
         >
           Beta
         </div>

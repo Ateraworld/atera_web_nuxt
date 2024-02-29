@@ -1,6 +1,6 @@
 <template>
   <div v-if="mounted" class="flex w-full flex-col items-center">
-    <div class="flex w-full flex-row flex-wrap justify-center gap-6 sm:gap-16">
+    <div class="flex w-full flex-row flex-wrap justify-center gap-8 sm:gap-16">
       <ParallaxCard
         class="card-size"
         @click="(e) => cardClicked(e, 'context')"
@@ -10,14 +10,16 @@
         anim-x-trasl="0px"
       >
         <div class="wrapper">
-          <section>
+          <div>
             <h2>Contesto</h2>
             <p>
               Raggiungi gli appassionati durante le attività nel tuo territorio,
               in un modo efficace e non intrusivo
             </p>
-          </section>
-          <img src="/graph.svg" class="image" />
+          </div>
+          <div class="h-0 w-full flex-1 p-4">
+            <img src="/context.svg" class="h-full w-full object-contain" />
+          </div>
         </div>
       </ParallaxCard>
       <ParallaxCard
@@ -36,7 +38,9 @@
               adattate al tuo business
             </p>
           </section>
-          <img src="/local_shelter.svg" class="image" />
+          <div class="h-0 w-full flex-1 p-4">
+            <img src="/conversione.svg" class="h-full w-full object-contain" />
+          </div>
         </div> </ParallaxCard
       ><ParallaxCard
         class="card-size"
@@ -54,7 +58,9 @@
               personalizzate ed integrate
             </p>
           </section>
-          <img src="/arrows.svg" class="image" />
+          <div class="h-0 w-full flex-1 p-4">
+            <img src="/visibility.svg" class="h-full w-full object-contain" />
+          </div>
         </div>
       </ParallaxCard>
     </div>
@@ -95,12 +101,16 @@
       >
 
       <div
+        ref="conversionEl"
         id="conversion"
         class="my-[var(--content-padding)] w-full pt-4 text-center"
       >
         <h1>Conversione</h1>
 
-        <div class="flex flex-row flex-wrap justify-center gap-[4.5rem] pt-12">
+        <div
+          ref="conversionEl"
+          class="flex flex-row flex-wrap justify-center gap-[4.5rem] pt-12"
+        >
           <div class="conversion-cell group">
             <Icon
               class="icon group-hover:scale-[120%]"
@@ -160,7 +170,7 @@
 </template>
 
 <script lang="ts" setup>
-const mounted = ref(false);
+const mounted = useMounted();
 
 function cardClicked(event: MouseEvent, id: string) {
   let el = document.getElementById(id);
@@ -168,10 +178,6 @@ function cardClicked(event: MouseEvent, id: string) {
   el.scrollIntoView({ behavior: "smooth" });
   console.log(id);
 }
-
-onMounted(() => {
-  mounted.value = true;
-});
 </script>
 
 <style lang="css" scoped>
@@ -180,16 +186,16 @@ onMounted(() => {
 }
 
 .card-size {
-  @apply h-[450px] w-[385px];
+  @apply h-[24rem] w-[20rem] md:h-[28rem] md:w-[24rem];
 }
 .wrapper {
-  @apply flex h-full w-full flex-col items-center justify-between text-start;
+  @apply flex h-full w-full flex-col items-stretch justify-between  text-start;
 }
 .conversion-cell {
   @apply max-w-[26rem] rounded-xl;
 
   .icon {
-    @apply mb-8 size-[5rem] rounded-xl bg-accent p-5 transition-all duration-150 ease-out;
+    @apply mb-8 size-[5rem] rounded-xl bg-accent p-5 duration-200;
   }
 }
 </style>

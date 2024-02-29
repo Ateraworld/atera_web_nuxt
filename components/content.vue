@@ -2,7 +2,7 @@
   <!-- <AnimatedSvg></AnimatedSvg> -->
   <div
     v-if="mounted"
-    class="flex w-full flex-col items-center justify-start px-6 py-12 sm:px-8"
+    class="flex w-full flex-col items-center justify-start px-6 py-8 sm:px-8"
   >
     <div class="flex w-full max-w-[var(--content-width)] flex-col">
       <div class="flex flex-col items-center text-center">
@@ -30,7 +30,7 @@
           @toggle="onModeToggle"
         />
       </div>
-      <div class="flex w-full pt-20">
+      <div class="flex w-full pt-16">
         <BusinessView v-if="mode.$state.businessMode"></BusinessView>
         <UserView v-else></UserView>
       </div>
