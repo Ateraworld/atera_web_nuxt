@@ -55,12 +55,12 @@
       </Transition>
 
       <div
-        v-if="animatedSvg.animator.p.value >= 0.1"
+        v-if="animatedSvg.animator.p.value >= 0.15"
         class="animate-pop absolute left-[68%] top-[12%] h-[3%] w-[8%] bg-accent"
       ></div>
       <Transition name="join" appear mode="out-in">
         <div
-          v-if="animatedSvg.animator.p.value >= 0.15"
+          v-if="animatedSvg.animator.p.value >= 0.2"
           :style="{ '--y-tr': '20px', '--duration-tr': '250ms' }"
           class="point-label left-[54%] top-[0%]"
         >

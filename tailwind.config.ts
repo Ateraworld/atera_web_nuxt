@@ -16,7 +16,7 @@ export default <Partial<Config>>{
         },
       ],
       body: [
-        "1rem",
+        "1.05rem",
         {
           lineHeight: "1.35rem",
           letterSpacing: "-0.005em",
@@ -32,9 +32,9 @@ export default <Partial<Config>>{
         },
       ],
       title: [
-        "3rem",
+        "2.9rem",
         {
-          lineHeight: "3.5rem",
+          lineHeight: "3.15rem",
           letterSpacing: "-0.025em",
           fontWeight: "700",
         },

@@ -1,7 +1,7 @@
 <template>
   <Transition name="join" appear tag="div">
     <div
-      class="my-[var(--content-padding)] flex w-full flex-col items-center justify-center gap-[4rem] pt-4 lg:flex-row"
+      class="flex w-full flex-col items-center justify-center gap-[4rem] pt-4 lg:flex-row"
     >
       <div class="basis-[40%]" :class="{ 'order-last': invertOrder }">
         <h3 class="font-semibold text-accent">

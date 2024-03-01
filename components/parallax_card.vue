@@ -129,7 +129,7 @@ const rootStyle = computed(() => {
 
 .content {
   translate: 0 0 var(--parallax);
-  @apply flex h-full w-full flex-wrap items-start justify-center md:justify-between;
+  @apply flex h-full w-full flex-wrap items-start justify-center transition-all duration-150 ease-out hover:scale-[102%];
 }
 
 .gradient {

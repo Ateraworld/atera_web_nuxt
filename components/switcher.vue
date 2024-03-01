@@ -50,7 +50,7 @@ function onClicked() {
 }
 
 .container {
-  @apply flex w-full max-w-[22rem] pt-12 md:max-w-[30rem];
+  @apply flex w-full max-w-[22rem]  md:max-w-[30rem];
 }
 
 .wrapper {
