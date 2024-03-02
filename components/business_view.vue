@@ -111,7 +111,7 @@
         ref="conversionEl"
         class="flex flex-row flex-wrap justify-center gap-[4.5rem] pt-12"
       >
-        <div class="conversion-cell group">
+        <div class="interactive-cell group">
           <Icon
             class="icon group-hover:scale-[120%]"
             name="icon-park-outline:shopping-bag-one"
@@ -122,7 +122,7 @@
             direttamente in app
           </p>
         </div>
-        <div class="conversion-cell group">
+        <div class="interactive-cell group">
           <Icon
             class="icon group-hover:scale-[120%]"
             name="material-symbols:auto-timer-rounded"
@@ -133,7 +133,7 @@
             realtà economica
           </p>
         </div>
-        <div class="conversion-cell group">
+        <div class="interactive-cell group">
           <Icon
             class="icon group-hover:scale-[120%]"
             name="zondicons:radar"
@@ -189,12 +189,5 @@ function cardClicked(event: MouseEvent, id: string) {
 }
 .wrapper {
   @apply flex h-full w-full flex-col items-stretch justify-between  text-start;
-}
-.conversion-cell {
-  @apply max-w-[26rem] rounded-xl;
-
-  .icon {
-    @apply mb-8 size-[5rem] rounded-xl bg-accent p-5 duration-200;
-  }
 }
 </style>

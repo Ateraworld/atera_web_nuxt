@@ -4,11 +4,11 @@
     v-if="mounted"
     class="flex w-full flex-col items-center justify-start px-6 sm:px-8"
   >
-    <div class="flex w-full max-w-[var(--content-width)] flex-col">
+    <div class="flex w-full max-w-[var(--content-width)] flex-col pt-8">
       <div class="flex flex-col items-center text-center">
         <Transition
           name="join"
-          class="flex min-h-[14rem] items-center sm:min-h-0"
+          class="flex min-h-[14rem] items-end md:min-h-[8rem]"
           mode="out-in"
           appear
         >

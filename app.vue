@@ -17,7 +17,7 @@
       >
         <Headline></Headline>
         <NuxtPage class="flex-1"> </NuxtPage>
-        <Footline></Footline>
+        <Footline class="mt-24"></Footline>
       </div>
       <div v-else class="flex h-screen w-screen items-center justify-center">
         <img src="/icons/bianco.svg" class="h-[12rem] w-[12rem]" />

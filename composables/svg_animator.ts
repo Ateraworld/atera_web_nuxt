@@ -2,12 +2,15 @@ export const useSvgAnimator = (pathId: string) => {
   const animator = useAnimator();
   const pathLengths = ref<any>({});
 
-  watch(animator.p, () => {
+  watch(animator.percentage, () => {
     const pathElements = document.querySelectorAll<SVGPathElement>(pathId);
     if (pathElements == null) return;
     pathElements.forEach((e) => {
       let pl = pathLengths.value[e.id];
-      e.style.strokeDashoffset = (pl - animator.p.value * pl).toString();
+      e.style.strokeDashoffset = (
+        pl -
+        animator.percentage.value * pl
+      ).toString();
     });
   });
 

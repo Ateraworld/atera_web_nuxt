@@ -1,30 +1,49 @@
+export interface AnimationParams {
+  easingCallback?: (x: number) => number;
+  currentDuration?: number;
+  inverse?: boolean;
+  onComplete?: () => void;
+}
 export const useAnimator = (delta: number = 1000 / 60) => {
   const p = ref(0);
 
   var t = 0;
-  var easingCallback: ((x: number) => number) | null = null;
-  var currentDuration: number = 0;
+
+  var params: AnimationParams = {};
+
   var intervalId: NodeJS.Timeout | null = null;
+
+  const percentage = computed(() =>
+    params.inverse ?? false ? 1 - p.value : p.value,
+  );
+
+  function getDuration(): number {
+    return params.currentDuration ?? 500;
+  }
 
   const update = () => {
     t += delta;
-    if (easingCallback === null) {
-      p.value = t / currentDuration;
+    if (params.easingCallback === null) {
+      p.value = t / getDuration();
     } else {
-      p.value = Math.min(Math.max(easingCallback(t / currentDuration), 0), 1);
+      p.value = Math.min(
+        Math.max(params.easingCallback!(t / getDuration()), 0),
+        1,
+      );
+      console.log(t / getDuration());
     }
-    if (t > currentDuration && intervalId !== null) {
+    if (t > getDuration() && intervalId !== null) {
       clearInterval(intervalId);
     }
   };
-  const start = (
-    duration: number,
-    easing: ((x: number) => number) | null = null,
-  ) => {
-    currentDuration = duration * 1000;
-    easingCallback = easing;
+  const set = (x: number) => {
+    p.value = Math.min(Math.max(x, 0), 1);
+  };
+  const start = (options: AnimationParams) => {
+    params = options;
     t = 0;
     p.value = t;
+    stop();
     intervalId = setInterval(update, delta);
   };
   const stop = () => {
@@ -33,5 +52,5 @@ export const useAnimator = (delta: number = 1000 / 60) => {
     }
   };
 
-  return { start, stop, p };
+  return { start, stop, percentage, set };
 };

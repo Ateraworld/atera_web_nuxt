@@ -11,6 +11,14 @@
 @tailwind components;
 @tailwind utilities;
 
+.interactive-cell {
+  @apply max-w-[26rem] rounded-xl;
+
+  .icon {
+    @apply mb-8 size-[5rem] rounded-xl bg-accent p-5 duration-200;
+  }
+}
+
 @layer components {
   .rounded-card {
     @apply rounded-[var(--card-border-radius)];
@@ -49,7 +57,6 @@ html {
   @apply text-body text-neutral;
 }
 * {
-  z-index: 1;
   user-select: none;
 }
 

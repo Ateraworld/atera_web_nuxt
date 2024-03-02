@@ -22,12 +22,12 @@
       </svg>
       <!-- <img src="/map.svg" class="h-[75%] w-[75%]" /> -->
       <div
-        v-if="animatedSvg.animator.p.value >= 0.65"
+        v-if="animatedSvg.animator.percentage.value >= 0.65"
         class="animate-pop absolute left-[78%] top-[86%] h-[2%] w-[5%] bg-accent"
       ></div>
       <Transition name="join" appear mode="out-in">
         <div
-          v-if="animatedSvg.animator.p.value >= 0.7"
+          v-if="animatedSvg.animator.percentage.value >= 0.7"
           :style="{ '--y-tr': '20px', '--duration-tr': '250ms' }"
           class="point-label left-[76%] top-[92%]"
         >
@@ -37,12 +37,12 @@
       </Transition>
 
       <div
-        v-if="animatedSvg.animator.p.value >= 0.95"
+        v-if="animatedSvg.animator.percentage.value >= 0.95"
         class="animate-pop absolute left-[14%] top-[55%] h-[4%] w-[5%] bg-accent"
       ></div>
       <Transition name="join" appear mode="out-in">
         <div
-          v-if="animatedSvg.animator.p.value >= 0.975"
+          v-if="animatedSvg.animator.percentage.value >= 0.975"
           :style="{ '--y-tr': '20px', '--duration-tr': '250ms' }"
           class="point-label left-[4%] top-[43%]"
         >
@@ -55,12 +55,12 @@
       </Transition>
 
       <div
-        v-if="animatedSvg.animator.p.value >= 0.15"
+        v-if="animatedSvg.animator.percentage.value >= 0.15"
         class="animate-pop absolute left-[68%] top-[12%] h-[3%] w-[8%] bg-accent"
       ></div>
       <Transition name="join" appear mode="out-in">
         <div
-          v-if="animatedSvg.animator.p.value >= 0.2"
+          v-if="animatedSvg.animator.percentage.value >= 0.2"
           :style="{ '--y-tr': '20px', '--duration-tr': '250ms' }"
           class="point-label left-[54%] top-[0%]"
         >
@@ -87,7 +87,7 @@ const tw = useTailwind();
 
 function restartAnimation() {
   animatedSvg.animator.stop();
-  animatedSvg.animator.start(8, ease);
+  animatedSvg.animator.start({ currentDuration: 8000, easingCallback: ease });
 }
 
 onMounted(() => {

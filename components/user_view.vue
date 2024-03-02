@@ -56,7 +56,7 @@
       <h2>Per chi vuole di più, avendo solo l'essenziale</h2>
 
       <div class="flex flex-row flex-wrap justify-center gap-[4.5rem] pt-12">
-        <div class="conversion-cell group">
+        <div class="interactive-cell group">
           <Icon
             class="icon group-hover:scale-[120%]"
             name="material-symbols-light:map"
@@ -67,7 +67,7 @@
             utilizzare
           </p>
         </div>
-        <div class="conversion-cell group">
+        <div class="interactive-cell group">
           <Icon
             class="icon group-hover:scale-[120%]"
             name="ph:magnifying-glass-bold"
@@ -77,7 +77,7 @@
             Scopri nuovi itinerari e attività con sistemi di ricerca avanzati
           </p>
         </div>
-        <div class="conversion-cell group">
+        <div class="interactive-cell group">
           <Icon
             class="icon group-hover:scale-[120%]"
             name="material-symbols:bar-chart-4-bars-rounded"
@@ -87,7 +87,7 @@
             Informazioni coerenti e controllate dal team per le tue attività
           </p>
         </div>
-        <div class="conversion-cell group">
+        <div class="interactive-cell group">
           <Icon
             class="icon group-hover:scale-[120%]"
             name="streamline:discount-percent-coupon-solid"
@@ -98,7 +98,7 @@
             con facendo ciò che ami
           </p>
         </div>
-        <div class="conversion-cell group">
+        <div class="interactive-cell group">
           <Icon
             class="icon group-hover:scale-[120%]"
             name="zondicons:radar"
@@ -176,12 +176,5 @@
 <style lang="css" scoped>
 .image-button {
   @apply flex h-[100px] items-center justify-center rounded-xl transition-all duration-[150ms] ease-out;
-}
-.conversion-cell {
-  @apply max-w-[26rem] rounded-xl;
-
-  .icon {
-    @apply mb-8 size-[5rem] rounded-xl bg-accent p-5 duration-200;
-  }
 }
 </style>

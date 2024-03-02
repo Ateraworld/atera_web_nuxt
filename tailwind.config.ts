@@ -34,7 +34,7 @@ export default <Partial<Config>>{
       title: [
         "2.9rem",
         {
-          lineHeight: "3.15rem",
+          lineHeight: "3.25rem",
           letterSpacing: "-0.025em",
           fontWeight: "700",
         },

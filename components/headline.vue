@@ -18,23 +18,92 @@
           Beta
         </div>
       </div>
+      <div class="flex items-center gap-12">
+        <div
+          v-if="breakpoints.greaterOrEqual('lg').value"
+          class="flex flex-row gap-12"
+        >
+          <NuxtLink to="/team">
+            <PrimaryButton> La nascita di Atera </PrimaryButton>
+          </NuxtLink>
+        </div>
+        <div ref="el" class="relative" v-else>
+          <button @click="menuOpened = !menuOpened">
+            <Icon
+              class="icon-button"
+              name="material-symbols:menu-rounded"
+            ></Icon>
+          </button>
+          <Transition name="fade" appear>
+            <div v-if="menuOpened" class="menu">
+              <button @click="menuOpened = false">
+                <NuxtLink to="/team">
+                  <PrimaryButton class="text-label">
+                    La nascita di Atera
+                  </PrimaryButton>
+                </NuxtLink>
+              </button>
 
-      <div class="flex gap-4">
-        <a href="https://github.com/Ateraworld" target="_blank">
-          <Icon class="icon-button" name="mdi:github" />
-        </a>
-        <a href="https://www.instagram.com/ateraworld.app" target="_blank">
-          <Icon class="icon-button" name="mdi:instagram" />
-        </a>
+              <div class="flex flex-row justify-center gap-4">
+                <a href="https://github.com/Ateraworld" target="_blank">
+                  <Icon class="icon-button" name="mdi:github" />
+                </a>
+                <a
+                  href="https://www.instagram.com/ateraworld.app"
+                  target="_blank"
+                >
+                  <Icon class="icon-button" name="mdi:instagram" />
+                </a>
+                <a href="mailto:" target="_blank">
+                  <Icon class="icon-button" name="mdi:email" />
+                </a>
+              </div>
+            </div>
+          </Transition>
+        </div>
+        <div
+          v-if="breakpoints.greaterOrEqual('lg').value"
+          class="flex flex-row gap-4"
+        >
+          <a href="https://github.com/Ateraworld" target="_blank">
+            <Icon class="icon-button" name="mdi:github" />
+          </a>
+          <a href="https://www.instagram.com/ateraworld.app" target="_blank">
+            <Icon class="icon-button" name="mdi:instagram" />
+          </a>
+          <a href="mailto:" target="_blank">
+            <Icon class="icon-button" name="mdi:email" />
+          </a>
+        </div>
       </div>
     </div>
   </header>
 </template>
 
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+import { breakpointsTailwind } from "@vueuse/core";
+const breakpoints = useBreakpoints(breakpointsTailwind);
+const el = ref<HTMLElement | null>(null);
+const menuOpened = ref(false);
+
+function click(event: MouseEvent) {
+  if (event.target !== null && !el.value?.contains(event.target as Node)) {
+    menuOpened.value = false;
+  }
+}
+
+onMounted(() => {
+  document.addEventListener("click", click);
+});
+</script>
 
 <style lang="css" scoped>
 .icon-button {
-  @apply size-10 rounded-xl p-2 transition duration-150 hover:bg-neutral/10;
+  @apply size-12 rounded-xl p-2 transition duration-150 hover:bg-neutral/10;
+}
+
+.menu {
+  z-index: 10;
+  @apply rounded-default absolute top-0 m-auto flex translate-x-[-100%] flex-col gap-4 text-nowrap bg-surface px-8 py-6;
 }
 </style>
