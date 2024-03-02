@@ -57,10 +57,11 @@ const { x, y, top, right, bottom, left, width, height } =
   useElementBounding(el);
 
 const props = defineProps({
-  animDelay: { type: String, require: false, default: "0ms" },
-  animDuration: { type: String, require: false, default: "400ms" },
-  animXTrasl: { type: String, require: false, default: "0px" },
-  animYTrasl: { type: String, require: false, default: "0px" },
+  animDelay: { type: String, requirec: false, default: "0ms" },
+  animDuration: { type: String, requirec: false, default: "400ms" },
+  animXTrasl: { type: String, requirec: false, default: "0px" },
+  animYTrasl: { type: String, requirec: false, default: "0px" },
+  padding: { type: String, required: false, default: "p-8" },
 });
 
 const emit = defineEmits<{
@@ -116,7 +117,7 @@ const rootStyle = computed(() => {
   border: var(--border) solid;
   transition-duration: 200ms;
   transform: rotateX(var(--rotate-x)) rotateY(var(--rotate-y));
-  @apply rounded-card h-full w-full border-outline bg-surface p-10;
+  @apply rounded-card h-full w-full border-outline bg-surface p-8 md:p-10 lg:p-12;
 }
 
 .gradient-clipper {

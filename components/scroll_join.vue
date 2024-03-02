@@ -1,5 +1,5 @@
 <template>
-  <div ref="el">
+  <div :key="key" ref="el">
     <div
       class="animated"
       :style="{
@@ -14,9 +14,6 @@
 </template>
 
 <script lang="ts" setup>
-import { breakpointsTailwind } from "@vueuse/core";
-const breakpoints = useBreakpoints(breakpointsTailwind);
-
 const props = defineProps({
   yTrasl: { type: Number, required: false, default: 0 },
   xTrasl: { type: Number, required: false, default: 0 },
@@ -25,8 +22,13 @@ const props = defineProps({
 });
 const el = ref<HTMLElement | null>(null);
 const animator = useAnimator();
-const windowSize = useWindowSize();
 const visible = ref(props.initVisible);
+const key = ref(0);
+const window = useWindowSize();
+
+const rootMargin = computed(() => {
+  return "0% 0% -40% 0%";
+});
 
 const opacity = computed(() => (visible.value ? animator.percentage.value : 0));
 const translationX = computed(
@@ -43,7 +45,7 @@ useIntersectionObserver(
     var rect = el.value?.getBoundingClientRect();
     if (entries[0].isIntersecting) {
       visible.value = true;
-      if (rect?.top != null && rect?.top > windowSize.height.value / 4) {
+      if (rect?.top != null && rect?.top > 20) {
         animator.start({
           currentDuration: props.duration,
           easingCallback: ease,
@@ -52,22 +54,25 @@ useIntersectionObserver(
         animator.set(1);
       }
     } else {
-      if (rect?.top != null && rect?.top > windowSize.height.value / 4) {
+      if (rect?.top != null && rect?.top > 20) {
         animator.start({
           currentDuration: props.duration,
           easingCallback: ease,
           inverse: true,
-          onComplete: () => (visible.value = false),
+          onComplete: () => {
+            key.value++;
+            visible.value = false;
+          },
         });
       } else {
         visible.value = false;
+        key.value++;
       }
     }
   },
   {
     threshold: 0,
-    rootMargin:
-      "0% 0% " + (breakpoints.smallerOrEqual("sm") ? "-20%" : "-40%") + " 0%",
+    rootMargin: rootMargin.value,
   },
 );
 
