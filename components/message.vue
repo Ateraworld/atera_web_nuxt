@@ -1,5 +1,5 @@
 <template>
-  <ScrollJoin :x-trasl="props.inverted ? 75 : -75">
+  <ScrollJoin :x-trasl="xTrasl">
     <div
       class="flex flex-1 flex-row items-center gap-4"
       :class="{ 'justify-end': props.inverted }"
@@ -23,6 +23,22 @@
 </template>
 
 <script lang="ts" setup>
+import { breakpointsTailwind } from "@vueuse/core";
+const breakpoints = useBreakpoints(breakpointsTailwind);
+
+const xTrasl = computed(() => {
+  let trasl = 0;
+  if (breakpoints.smallerOrEqual("md").value) {
+    trasl = 10;
+  } else {
+    trasl = 60;
+  }
+  if (!props.inverted) {
+    trasl *= -1;
+  }
+  return trasl;
+});
+
 const props = defineProps({
   inverted: { type: Boolean, required: false, default: false },
   photoUrl: { type: String, required: true },

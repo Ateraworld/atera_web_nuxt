@@ -1,7 +1,7 @@
 <template>
   <div
     v-if="mounted"
-    class="flex w-full max-w-[100rem] flex-col place-items-center self-center p-4 md:p-12"
+    class="flex w-full max-w-[110rem] flex-col place-items-center self-center p-4 md:p-12"
   >
     <div class="relative">
       <div class="background">
@@ -22,43 +22,45 @@
       </div>
       <h1 class="text-center">Val Gelada, Tuenno (TN)</h1>
       <h3 class="text-center text-accent">Lago di Tovel</h3>
-      <div class="flex w-full flex-col gap-4 overflow-clip py-8">
-        <Message photo-url="/trat.png">
+      <div
+        class="flex w-full flex-col gap-4 overflow-hidden px-[10px] py-8 md:px-[60px]"
+      >
+        <Message photo-url="/trat.webp">
           <p>Erì, ma sei sicuro che il sentiero era il CAI 312?</p>
         </Message>
 
-        <Message inverted photo-url="/eri.png">
+        <Message inverted photo-url="/eri.webp">
           <p>
             Il 312? Veramente ora noi siamo sul 309...<br />Mi sa ci tocca
             continuare ormai
           </p></Message
         >
-        <Message photo-url="/trat.png">
+        <Message photo-url="/trat.webp">
           <p>
             Si ok ma continuiamo per dove? <br />Ci arriviamo alla Malga Tuenna?
           </p>
         </Message>
-        <Message inverted photo-url="/eri.png"> <p>...</p></Message>
+        <Message inverted photo-url="/eri.webp"> <p>...</p></Message>
 
         <ScrollJoin :y-trasl="-50">
           <h2 class="py-8 text-center">Un bel po' dopo</h2>
         </ScrollJoin>
 
-        <Message photo-url="/trat.png">
+        <Message photo-url="/trat.webp">
           <p>
             Alla fine abbiamo allungato di un bel po'... Ma siamo arrivati 🫠
           </p>
         </Message>
-        <Message photo-url="/trat.png">
+        <Message photo-url="/trat.webp">
           <p>
             Comunque questa ferrata non mi è sembrata così difficile come
             dicevano...
           </p>
         </Message>
-        <Message inverted photo-url="/eri.png">
+        <Message inverted photo-url="/eri.webp">
           <p>Almeno il panorama è mozzafiato 😍</p>
         </Message>
-        <Message inverted photo-url="/eri.png" photo hide-background>
+        <Message inverted photo-url="/eri.webp" photo hide-background>
           <div class="flex justify-end">
             <img
               class="rounded-card w-[32rem] max-w-[100%]"
@@ -66,16 +68,16 @@
             />
           </div>
         </Message>
-        <Message photo-url="/trat.png">
+        <Message photo-url="/trat.webp">
           <p>Ecco il libro delle firme, scriviamoci qualcosa</p>
         </Message>
-        <Message inverted photo-url="/eri.png">
+        <Message inverted photo-url="/eri.webp">
           <p>
             Top, aspetta che faccio una foto cosi ci ricordiamo esattamente a
             che ora l'abbiamo completata!
           </p>
         </Message>
-        <Message inverted photo-url="/eri.png">
+        <Message inverted photo-url="/eri.webp">
           <p>Non riesco mai a farmi un diario preciso dove segno tutto...</p>
         </Message>
 
@@ -83,28 +85,28 @@
           <h2 class="py-8 text-center">Sulla strada di ritorno</h2>
         </ScrollJoin>
 
-        <Message photo-url="/trat.png">
+        <Message photo-url="/trat.webp">
           <p>
             Erì, comunque dopo aver allungato di 4 ore e dopo tutta questa
             fatica un aperitivo e tagliere non me lo toglie nessuno 🥹
           </p>
         </Message>
-        <Message inverted photo-url="/eri.png">
+        <Message inverted photo-url="/eri.webp">
           <p>Ci sta, sarebbe la cosa perfetta per chiudere la giornata!</p>
         </Message>
-        <Message inverted photo-url="/eri.png">
+        <Message inverted photo-url="/eri.webp">
           <p>Sai dove possiamo andare?</p>
         </Message>
-        <Message photo-url="/trat.png">
+        <Message photo-url="/trat.webp">
           <p>...</p>
         </Message>
-        <Message photo-url="/trat.png">
+        <Message photo-url="/trat.webp">
           <p>
             Non saprei, non conosco queste zone, cerchiamo qualcosa quando
             arriviamo
           </p>
         </Message>
-        <Message inverted photo-url="/eri.png">
+        <Message inverted photo-url="/eri.webp">
           <p>
             Trat, ma pensavo...<br />
             Pensa se ci fosse un app che ti aiuta sui sentieri con
@@ -114,10 +116,10 @@
             <b>il posto perfetto dove concludere una giornata</b> come questa!
           </p>
         </Message>
-        <Message photo-url="/trat.png">
+        <Message photo-url="/trat.webp">
           <p>Effettivamente sarebbe una figata 🤔</p>
         </Message>
-        <Message photo-url="/trat.png">
+        <Message photo-url="/trat.webp">
           <p>
             Erì ma scusa, io sono un informatico, tu pure... <br />
             Siamo entrambi appassionati di montagna, ma che stiamo aspettando?
@@ -150,16 +152,16 @@
           <div
             class="h-[10rem] w-[10rem] cursor-pointer overflow-clip rounded-full transition-all duration-300 ease-out hover:scale-[120%]"
           >
-            <img src="/trat.png" />
+            <img src="/trat.webp" />
           </div>
           <section class="flex flex-col gap-2">
             <p class="text-body text-neutral">Matteo</p>
             <p class="text-label text-accent">Trat</p>
             <p class="text-label italic text-neutral/75">
-              B.Sc. Computer Engineering
+              M.Sc. Computer Science
             </p>
             <p class="text-label italic text-neutral/75">
-              M.Sc. Computer Science
+              B.Sc. Computer Engineering
             </p>
           </section>
         </div>
@@ -167,16 +169,16 @@
           <div
             class="h-[10rem] w-[10rem] cursor-pointer overflow-clip rounded-full transition-all duration-300 ease-out hover:scale-[120%]"
           >
-            <img src="/eri.png" />
+            <img src="/eri.webp" />
           </div>
           <section class="flex flex-col gap-2">
             <p class="text-body text-neutral">Enrico</p>
             <p class="text-label text-accent">Erì</p>
             <p class="text-label italic text-neutral/75">
-              B.Sc. Computer Engineering
+              M.Sc. Computer Science
             </p>
             <p class="text-label italic text-neutral/75">
-              M.Sc. Computer Science
+              B.Sc. Computer Engineering
             </p>
           </section>
         </div>

@@ -20,7 +20,7 @@
         <Footline class="mt-24"></Footline>
       </div>
       <div v-else class="flex h-screen w-screen items-center justify-center">
-        <img src="/bianco.svg" class="h-[12rem] w-[12rem]" />
+        <img src="/bianco.svg" class="h-[8rem] w-[8rem]" />
         <NuxtPage v-show="false" class="flex-1"> </NuxtPage>
       </div>
     </Transition>

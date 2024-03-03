@@ -112,7 +112,7 @@
 
       <div
         ref="conversionEl"
-        class="flex flex-row flex-wrap justify-center gap-[4.5rem] pt-12"
+        class="flex flex-row flex-wrap justify-center gap-[3.5rem] pt-8"
       >
         <div class="interactive-cell group">
           <Icon
@@ -188,7 +188,7 @@ function cardClicked(event: MouseEvent, id: string) {
 }
 
 .card-size {
-  @apply h-[24rem] w-[20rem] md:h-[26rem] md:w-[24rem];
+  @apply h-[20rem] w-[20rem] md:h-[26rem] md:w-[24rem];
 }
 .wrapper {
   @apply flex h-full w-full flex-col items-stretch justify-between  text-start;
