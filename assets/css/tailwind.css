@@ -1,25 +1,42 @@
 @import url("https://fonts.googleapis.com/css?family=DM+Sans");
 @import url("https://fonts.googleapis.com/css?family=Poppins");
 
-@import url("assets/css/globals.css");
 @import url("assets/css/palette.css");
 @import url("assets/css/scrollbar.css");
 @import url("assets/css/transition.css");
-@import url("assets/css/animation.css");
 
-@tailwind base;
 @tailwind components;
+@tailwind base;
 @tailwind utilities;
 
-.interactive-cell {
-  @apply max-w-[26rem] rounded-xl;
+* {
+  --content-width: 1800px;
+  --card-border-radius: 2rem;
+  --border-radius: 1rem;
+  --content-padding: 6rem;
+}
 
-  .icon {
-    @apply mb-8 size-[5rem] rounded-xl bg-accent p-5 duration-200;
+@media screen(lg) {
+  * {
+    --content-padding: 12rem;
   }
 }
 
 @layer components {
+  @keyframes pop {
+    0% {
+      transform: scale(1);
+    }
+    20% {
+      transform: scale(var(--pop-scale, 2));
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  .animate-pop {
+    animation: pop 250ms cubic-bezier(0, 0, 0.2, 1);
+  }
   .rounded-card {
     @apply rounded-[var(--card-border-radius)];
   }
@@ -31,6 +48,14 @@
     --duration-tr: 500ms;
     --delay-tr: 100ms;
     @apply rounded-card flex cursor-pointer flex-col bg-accent/[.12] p-8;
+  }
+}
+
+.interactive-cell {
+  @apply max-w-[26rem] rounded-xl;
+
+  .icon {
+    @apply mb-8 size-[5rem] rounded-xl bg-accent p-5 duration-200;
   }
 }
 

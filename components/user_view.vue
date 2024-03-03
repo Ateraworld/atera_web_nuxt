@@ -175,6 +175,6 @@
 
 <style lang="css" scoped>
 .image-button {
-  @apply flex h-[4rem] items-center justify-center rounded-xl transition-all duration-[150ms] ease-out md:h-[10rem];
+  @apply flex h-[4rem] items-center justify-center rounded-xl transition-all duration-[150ms] ease-out md:h-[8rem];
 }
 </style>

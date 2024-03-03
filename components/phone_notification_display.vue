@@ -8,7 +8,7 @@
       <div id="animated" class="notification overflow-clip p-2 text-neutral/75">
         <div class="flex flex-row items-center justify-between">
           <div class="flex flex-row items-center space-x-1">
-            <img src="/icons/bianco.svg" class="size-4" />
+            <img src="/bianco.svg" class="size-4" />
             <p class="text-[0.5rem]">Atera ● {{ currentNotification.time }}</p>
           </div>
           <div

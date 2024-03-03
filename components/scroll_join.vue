@@ -45,7 +45,7 @@ useIntersectionObserver(
     var rect = el.value?.getBoundingClientRect();
     if (entries[0].isIntersecting) {
       visible.value = true;
-      if (rect?.top != null && rect?.top > 20) {
+      if (rect?.top != null && rect?.top > 250) {
         animator.start({
           currentDuration: props.duration,
           easingCallback: ease,
@@ -54,7 +54,7 @@ useIntersectionObserver(
         animator.set(1);
       }
     } else {
-      if (rect?.top != null && rect?.top > 20) {
+      if (rect?.top != null && rect?.top > 250) {
         animator.start({
           currentDuration: props.duration,
           easingCallback: ease,

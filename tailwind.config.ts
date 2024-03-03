@@ -4,6 +4,7 @@ import plugin from "tailwindcss/plugin";
 // Default are on https://tailwindcss.nuxtjs.org/tailwind/config#default-configuration
 export default <Partial<Config>>{
   darkMode: "class",
+
   theme: {
     fontFamily: { montserrat: ["montserrat-alt"], dm_sans: ["DM Sans"] },
     fontSize: {

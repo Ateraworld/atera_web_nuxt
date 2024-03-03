@@ -20,7 +20,7 @@
               in un modo efficace e non intrusivo
             </p>
           </div>
-          <div class="h-0 w-full flex-1 p-4">
+          <div class="h-0 w-full flex-1 p-0">
             <img src="/context.svg" class="h-full w-full object-contain" />
           </div>
         </div>
@@ -61,8 +61,11 @@
               personalizzate ed integrate
             </p>
           </section>
-          <div class="h-0 w-full flex-1 p-4">
-            <img src="/visibility.svg" class="h-full w-full object-contain" />
+          <div class="h-0 w-full flex-1 p-0">
+            <img
+              src="/local_shelter.svg"
+              class="h-full w-full scale-[110%] object-contain"
+            />
           </div>
         </div>
       </ParallaxCard>
