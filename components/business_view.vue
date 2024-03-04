@@ -16,8 +16,8 @@
           <div>
             <h2>Contesto</h2>
             <p>
-              Raggiungi gli appassionati durante le attività nel tuo territorio,
-              in un modo efficace e non intrusivo
+              Raggiungi gli appassionati durante le loro attività nel tuo
+              territorio, in modo efficace e non intrusivo
             </p>
           </div>
           <div class="h-0 w-full flex-1 p-0">
@@ -58,7 +58,7 @@
             <h2>Visibilità</h2>
             <p>
               Aumenta la visibiltà della tua realtà economica tramite inserzioni
-              personalizzate ed integrate
+              personalizzate e perfettamente integrate
             </p>
           </section>
           <div class="h-0 w-full flex-1 p-0">
@@ -97,11 +97,11 @@
         In Atera gli annunci sono contestualizzati. <br />
         Oltre alle preferenze dell'utente, ogni inserzione tiene conto anche
         degli itinerari svolti dall'utente in un determinato posto ad una
-        specifica ora. Gli annunci emessi al termine di un escursione, ottengono
-        conversioni maggiori.<br /><br />
+        specifica ora. Gli annunci emessi al termine di un escursione ad
+        esempio, ottengono conversioni maggiori.<br /><br />
         Atera integra perfettamente gli annunci con lo stile e l'esperienza
         d'uso dell'utente. <br />Niente più pubblicità fastidiosa ed intrusiva:
-        gli annunnci sono a tutti gli effetti dei consigli, sarà l'utente stesso
+        gli annunci sono a tutti gli effetti dei consigli, sarà l'utente stesso
         a ricercarli.
       </template>
       ></Topic
@@ -112,7 +112,7 @@
 
       <div
         ref="conversionEl"
-        class="flex flex-row flex-wrap justify-center gap-[3.5rem] pt-8"
+        class="flex flex-row flex-wrap justify-center gap-[3rem] pt-8"
       >
         <div class="interactive-cell group">
           <Icon
@@ -133,7 +133,7 @@
           <h2>Promozioni a tempo</h2>
           <p>
             Comunica agli utenti interessati le promozioni attive nella tua
-            realtà economica
+            attività economica
           </p>
         </div>
         <div class="interactive-cell group">
@@ -160,11 +160,11 @@
       <template #body>
         In Atera sono disponibili spazi pubblicitari di vario tipo.<br />
         Ottenendo un piazzamento pubblicitario nella scheda di un itinerario
-        vicino ad una realtà economica, è possibile aumentare la visibilità tra
-        gli utenti di una specifica area.<br /><br />
-        Gli appassionati che ricercano e visualizzano quella attività,
-        entreranno a conoscenza della realtà economica in maniera automatica e
-        perfettamente integrata con l'esperienza d'uso.
+        vicino alla propria attività economica, è possibile aumentare la
+        visibilità e raggiungere gli utenti di una specifica area.<br /><br />
+        Gli appassionati che ricercano e visualizzano l'itinerario, entrano a
+        conoscenza della realtà economica in maniera automatica e perfettamente
+        integrata con l'esperienza d'uso.
       </template>
       ></Topic
     >

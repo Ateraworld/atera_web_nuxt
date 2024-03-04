@@ -55,7 +55,7 @@
     <div class="w-full text-center">
       <h2>Per chi vuole di più, avendo solo l'essenziale</h2>
 
-      <div class="flex flex-row flex-wrap justify-center gap-[4.5rem] pt-12">
+      <div class="flex flex-row flex-wrap justify-center gap-[3rem] pt-12">
         <div class="interactive-cell group">
           <Icon
             class="icon group-hover:scale-[120%]"
@@ -95,7 +95,7 @@
           <h2>Sconti e benefici</h2>
           <p>
             Negozi, rifugi, ristoranti e molto altro: ottieni sconti e benefici
-            con facendo ciò che ami
+            facendo ciò che ami
           </p>
         </div>
         <div class="interactive-cell group">
@@ -119,7 +119,8 @@
         <img class="max-h-[34rem]" src="/phone2.svg" />
       </template>
       <template #body>
-        Atera ti fornisce l'essenziale per farti godere al meglio la natura.
+        Atera ti fornisce l'essenziale per permetterti di godere al meglio la
+        natura.
         <br />
         Le mappe disponibili sono estremamente semplici da usare.<br />
         All'interno puoi trovare tutti i punti d'interesse come rifugi,
@@ -141,10 +142,12 @@
       </template>
       <template #body>
         Attesta il completamento delle attività e sali di livello! <br />
-        Con Atera ti salvi gli itinerari preferiti cosi da poter accedere alle
-        informazioni ed alla mappa in qualunque situazione.<br />
-        Tieni traccia di tutte le attività che hai completato: porsi degli
-        obiettivi è il primo passo per completarli!<br />
+        Con Atera salvi i tuoi itinerari preferiti cosi da poter accedere alle
+        informazioni ed alla mappa in qualunque situazione, anche in assenza di
+        rete.<br />
+        Tieni traccia di tutte le attività che hai completato e trovane di nuove
+        grazie ai sistemi di ricerca avanzati.<br />Porsi degli obiettivi è il
+        primo passo per completarli!<br />
       </template>
       ></Topic
     >

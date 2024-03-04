@@ -53,12 +53,18 @@
         </Message>
         <Message photo-url="/trat.webp">
           <p>
-            Comunque questa ferrata non mi è sembrata così difficile come
-            dicevano...
+            Che posto fantastico... Comunque questa ferrata non mi è sembrata
+            difficile come dicevano
           </p>
         </Message>
         <Message inverted photo-url="/eri.webp">
-          <p>Almeno il panorama è mozzafiato 😍</p>
+          <p>
+            Si hai ragione, da quello che dicevano, sarebbe dovuta essere molto
+            più impegnativa.
+          </p>
+        </Message>
+        <Message inverted photo-url="/eri.webp">
+          <p>Ma dai, comunque guarda che panorama mozzafiato 😍</p>
         </Message>
         <Message inverted photo-url="/eri.webp" photo hide-background>
           <div class="flex justify-end">
@@ -130,22 +136,22 @@
     <div class="rounded-default h-[2px] w-full bg-outline"></div>
     <section class="max-w-[48rem] pt-12">
       <h1 class="text-center">La nascita di Atera</h1>
-      <p class="text-justify">
+      <p class="text-start">
         Già dopo la prima escursione assieme è nata l'idea di creare un progetto
         utile e innovativo assieme.<br /><br />
-        Iniaizlmente per passione sia in ambito tecnico informatico che per la
-        montagna, abbiamo deciso di partire subito con la creazione di Atera.<br />
+        La combinazione delle passioni per la montagna e per l'informatica ci ha
+        permesso di partire subito con lo sviluppo di Atera.<br />
         La creazione della prima versione ha richiesto molta fatica e tempo, ma
-        ci ha permesso di imparare molto e di portare avanti un progetto che
-        spaziasse in entrambe le nostre passioni.<br />
+        ci ha permesso di imparare molto e di portare avanti un progetto di cui
+        andiamo molto fieri.<br /><br />
         Con il passare del tempo, ci siamo resi conto di essere in perfetta
-        sincronia. Entrambi abbiamo gli stessi obiettivi e condividiamo le
-        metodologie per raggiungerli.<br />
-        Rendendoci conto dell'incredibile potenziale di ciù che abbiamo creato,
-        il portarlo al livello successivo è assolutamente la nostra priorità al
-        momento.<br />Crediamo molto nei nostri ideali e pensiamo che Atera
-        abbia la possibilità di portare benefici a tutta la comunità del mondo
-        dell'outdoor.
+        sincronia. Entrambi abbiamo gli stessi obiettivi e ci troviamo sempre
+        d'accordo sulle metodologie per raggiungerli.<br />
+        Rendendoci conto dell'incredibile potenziale di ciò che abbiamo creato,
+        siamo determinati a portare il tutto al livello successivo.
+        <br />Sappiamo che Atera ha la possibilità di portare benefici reali a
+        tutta la comunità del mondo dell'outdoor dagli appassionati agli
+        imprenditori.
       </p>
       <div class="flex flex-row flex-wrap justify-center gap-16 py-16">
         <div class="flex flex-col justify-center gap-6 text-center">
@@ -209,7 +215,7 @@ onMounted(() => {
 }
 
 .background {
-  z-index: 0;
+  z-index: -1;
   @apply pointer-events-none absolute top-0 flex h-[100%] w-full items-start justify-center;
 }
 </style>

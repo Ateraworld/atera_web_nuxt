@@ -15,7 +15,9 @@
             class="mr-[0.3rem] h-[0.65rem] w-[0.65rem] animate-ping rounded-full bg-accent duration-700"
           ></div>
         </div>
-        <p class="mt-[0.35rem] text-[0.7rem] font-semibold text-neutral">
+        <p
+          class="mt-[0.35rem] text-[0.7rem] font-semibold leading-[0.85rem] text-neutral"
+        >
           {{ currentNotification.title }}
         </p>
         <p
@@ -31,7 +33,7 @@
 const notifications = [
   {
     title: "Aperitivo? \u{1F914}",
-    body: "La Malga Prealpi ti propone il <b>10%</b> di sconto su un aperitivo! Raggiungi la malga per festeggiare l'itinerario appena completato!",
+    body: "Alla Malga Prealpi hai il <b>10%</b> di sconto! Raggiungi la malga per festeggiare l'itinerario appena completato!",
   },
   {
     title: "Hai fame? \u{1F372}",
@@ -39,23 +41,29 @@ const notifications = [
   },
   {
     title: "Rinnova la tua attrezzatura \u{1F3D4}\uFE0F",
-    body: "Wow hai appena completato una ferrata incredibile!<br/>Passa al negozio di attrezzatura e riscatta il tuo sconto del <b>20%!</b>",
+    body: "Hai appena completato una ferrata incredibile!<br/>Passa al negozio di attrezzatura e riscatta il tuo sconto del <b>20%!</b>",
   },
   {
     title: "Si è fatto tardi \u{1F303}",
     body: "Oggi sei andato per le lunghe!<br/>L'hotel <b>Dolomiti</b> ha già preparato un letto caldo per te!",
   },
+  {
+    title: "Ancora in quota? 🏡",
+    body: "Ehi scalatore, è piuttosto tardi, il rifugio <b>Roccia Bianca</b> è sempre pronto ad accoglierti! ",
+  },
 ];
 
 const animated = computed(() => document.getElementById("animated"));
 const isShowing = ref(false);
+const currentNotificationIndex = ref(0);
 const currentNotification: any = ref({ title: "", body: "" });
 let timeout: NodeJS.Timeout | null = null;
 
 function updateNotification() {
   if (notifications.length > 0) {
-    let index: number = Math.round(Math.random() * (notifications.length - 1));
-    currentNotification.value = notifications[index];
+    currentNotificationIndex.value =
+      (currentNotificationIndex.value + 1) % notifications.length;
+    currentNotification.value = notifications[currentNotificationIndex.value];
     currentNotification.value["time"] =
       Math.round(Math.random() * 58 + 1) + " m";
   }
