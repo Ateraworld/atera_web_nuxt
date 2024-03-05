@@ -1,7 +1,7 @@
 ## Atera web built with Nuxt.ts
 
 <div align="center">
-  <img src="public\icons\bianco.svg" width=128>
+  <img src="public\bianco.svg" width=128>
   <br>
   <img src="https://nuxt.com/assets/design-kit/logo-green-white.svg" width=128>
 </div>
