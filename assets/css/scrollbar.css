@@ -1,5 +1,6 @@
 /* Scroll bar stylings */
 ::-webkit-scrollbar {
+  display: none;
   width: 0px;
 }
 

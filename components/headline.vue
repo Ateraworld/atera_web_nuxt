@@ -1,8 +1,15 @@
 <template>
-  <header class="flex justify-center">
+  <header class="headline">
     <div
-      class="flex w-full max-w-[var(--content-width)] items-center justify-between space-x-8 px-4 py-8 md:px-12"
+      class="flex w-full max-w-[var(--content-width)] items-center justify-between px-4 py-8 md:px-12"
     >
+      <!-- <Transition name="fade" appear mode="out-in">
+        <div
+          v-if="scroll.y.value > 0"
+          class="shadow"
+          :style="{ '--shadow-blur': shadowBlur, '--duration-tr': '500ms' }"
+        ></div>
+      </Transition> -->
       <div class="flex items-center">
         <NuxtLink to="/">
           <img
@@ -85,6 +92,14 @@ import { breakpointsTailwind } from "@vueuse/core";
 const breakpoints = useBreakpoints(breakpointsTailwind);
 const el = ref<HTMLElement | null>(null);
 const menuOpened = ref(false);
+const scroll = useScrollProgress();
+
+const shadowBlur = computed(() => {
+  if (scroll.y.value > 0) {
+    return "16px";
+  }
+  return "0px";
+});
 
 function click(event: MouseEvent) {
   if (event.target !== null && !el.value?.contains(event.target as Node)) {
@@ -99,7 +114,18 @@ onMounted(() => {
 
 <style lang="css" scoped>
 .icon-button {
-  @apply rounded-default size-10 p-2 transition duration-150 hover:bg-neutral/10 md:size-12;
+  @apply rounded-default size-10 p-2 transition duration-150 hover:bg-neutral/10;
+}
+
+.shadow {
+  z-index: 100;
+  box-shadow: rgba(var(--accent), 0.2) 0px 0px var(--shadow-blur, 0px);
+  @apply pointer-events-none absolute left-0 top-0 h-full w-full;
+}
+
+.headline {
+  z-index: 100;
+  @apply flex h-[6rem] w-full justify-center bg-background;
 }
 
 .menu {

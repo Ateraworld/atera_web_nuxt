@@ -19,8 +19,14 @@
           stroke-linecap="round"
           stroke-linejoin="round"
         />
-        <!-- <circle r="4" fill="rgba(var(--accent))">
-          <animateMotion  keyPoints="0;0.5;1" keyTimes="0;0.15;1">
+        <!-- <circle r="4" cx="0" cy="0" fill="rgba(var(--accent))">
+          <animateMotion
+            :keyPoints="keyPointsAnim"
+            keyTimes="0;1"
+            begin="0s"
+            dur="8s"
+            repeatCount="infinite"
+          >
             <mpath href="#map-path" />
           </animateMotion>
         </circle> -->
@@ -96,6 +102,11 @@ function restartAnimation() {
   animatedSvg.animator.start({ currentDuration: 8000, easingCallback: ease });
 }
 
+const keyPointsAnim = computed(() => {
+  let v = animatedSvg.animator.percentage.value;
+  return `${v};${v}`;
+});
+
 onMounted(() => {
   animatedSvg.preload();
 });
@@ -110,11 +121,6 @@ function ease(x: number): number {
   @apply absolute flex items-center justify-start gap-2 rounded-xl border-outline text-label md:text-body;
 }
 
-.follow {
-  offset-path: url("#map-path");
-  animation: move 5000ms infinite alternate linear;
-  @apply absolute left-0 top-0 h-2 w-2 bg-accent;
-}
 @keyframes move {
   0% {
     offset-distance: 0%;

@@ -18,6 +18,11 @@
         <Headline></Headline>
         <NuxtPage class="flex-1"> </NuxtPage>
         <Footline class="mt-24"></Footline>
+        <div
+          v-if="breakpoints.greaterOrEqual('md').value"
+          class="scroll-indicator"
+          :style="{ '--scale': scale }"
+        ></div>
       </div>
       <div v-else class="flex h-screen w-screen items-center justify-center">
         <img src="/bianco.svg" class="h-[8rem] w-[8rem]" />
@@ -30,21 +35,31 @@
 </template>
 
 <script lang="ts" setup>
+import { breakpointsTailwind } from "@vueuse/core";
 const { x, y } = useMouse();
+const breakpoints = useBreakpoints(breakpointsTailwind);
 const mode = useMode();
 const mounted = useMounted();
+const scroll = useScrollProgress();
+
+const scale = computed(() => scroll.y.value);
 </script>
 
 <style lang="css" scoped>
+.scroll-indicator {
+  height: calc(var(--scale, 0) * 100%);
+  @apply fixed right-0 top-0 w-[0.4rem] rounded-b-full bg-accent/100;
+}
+
 .gradient {
-  --size: 400rem;
-  --blur: 24rem;
+  --size: 300rem;
+  --blur: 18rem;
   position: fixed;
   width: var(--size);
   height: var(--size);
   /* top: 100vh;
     transform: translateY(-100%); */
-  bottom: calc(var(--size) * -0.975);
+  bottom: calc(var(--size) * -0.95);
   left: 0;
   z-index: 0;
   transform: translateX(calc(var(--x) - var(--size) * 0.5));

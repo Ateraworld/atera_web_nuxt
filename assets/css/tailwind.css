@@ -14,11 +14,12 @@
   --card-border-radius: 2rem;
   --border-radius: 1rem;
   --content-padding: 6rem;
+  --headline-height: 6rem;
 }
 
 @media screen(lg) {
   * {
-    --content-padding: 12rem;
+    --content-padding: 8rem;
   }
 }
 
