@@ -145,13 +145,14 @@
         ci ha permesso di imparare molto e di portare avanti un progetto di cui
         andiamo molto fieri.<br /><br />
         Con il passare del tempo, ci siamo resi conto di essere in perfetta
-        sincronia. Entrambi abbiamo gli stessi obiettivi e ci troviamo sempre
+        sintonia. Entrambi abbiamo gli stessi obiettivi e ci troviamo sempre
         d'accordo sulle metodologie per raggiungerli.<br />
-        Rendendoci conto dell'incredibile potenziale di ciò che abbiamo creato,
-        siamo determinati a portare il tutto al livello successivo.
-        <br />Sappiamo che Atera ha la possibilità di portare benefici reali a
-        tutta la comunità del mondo dell'outdoor dagli appassionati agli
-        imprenditori.
+        Siamo coscienti di aver creato una piattaforma che ha un'incredibile
+        potenziale. A partire dal marketing contestualizzato per aiutare gli
+        imprenditori di questo mondo, fino ad arrivare agli utenti fornendo
+        un'app semplice ed essenziale.<br />
+        Proprio per questo motivo, ora il nostro obiettivo è portare questa
+        piattaforma al livello successivo.
       </p>
       <div class="flex flex-row flex-wrap justify-center gap-16 py-16">
         <div class="flex flex-col justify-center gap-6 text-center">
