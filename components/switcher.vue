@@ -7,7 +7,10 @@
           @click="onClicked"
           class="text-back-400 flex h-full w-full cursor-pointer justify-start pl-4 text-center"
         >
-          <button class="w-full text-center text-label md:text-body">
+          <button
+            aria-label="Business mode"
+            class="w-full text-center text-label md:text-body"
+          >
             Hai un'attività?
           </button>
         </div>
@@ -15,7 +18,10 @@
           @click="onClicked"
           class="text-back-400 flex h-full w-full cursor-pointer justify-center pr-4"
         >
-          <button class="h-full text-center text-label md:text-body">
+          <button
+            aria-label="User mode"
+            class="h-full text-center text-label md:text-body"
+          >
             Sei un appassionato?
           </button>
         </div>

@@ -18,21 +18,33 @@
       <div class="flex flex-row flex-wrap justify-stretch gap-4 sm:gap-8">
         <ParallaxCard class="flex-1" key="0" anim-x-trasl="-30px">
           <a
-            href="https://apps.apple.com/it/app/atera-ferrate-trekking/id6449359062"
+            href="https://apps.apple.com/it/app/Atera-ferrate-trekking/id6449359062"
             target="_blank"
           >
             <div class="image-button">
-              <img src="/appstore.svg " alt="" class="h-full w-full" />
+              <img
+                src="/appstore.svg "
+                width="100px"
+                height="100px"
+                alt="Apple store link"
+                class="h-full w-full"
+              />
             </div>
           </a>
         </ParallaxCard>
         <ParallaxCard class="flex-1" key="0" anim-x-trasl="30px">
           <a
-            href="https://play.google.com/store/apps/details?id=com.ateraworld.atera"
+            href="https://play.google.com/store/apps/details?id=com.Ateraworld.Atera"
             target="_blank"
           >
             <div class="image-button">
-              <img src="/google_play.svg" class="h-full w-full" alt="" />
+              <img
+                width="100px"
+                height="100px"
+                alt="Google Play Store link"
+                src="/google_play.svg"
+                class="h-full w-full"
+              />
             </div>
           </a>
         </ParallaxCard>
@@ -116,7 +128,13 @@
       subtitle="Goditi la natura, sapendo di avere in tasca un fedele compagno"
     >
       <template #content>
-        <img class="max-h-[34rem]" src="/phone2.svg" />
+        <img
+          class="max-h-[34rem]"
+          width="100px"
+          height="100px"
+          alt="Offline maps"
+          src="/phone2.svg"
+        />
       </template>
       <template #body>
         Atera ti fornisce l'essenziale per permetterti di godere al meglio la
@@ -138,7 +156,13 @@
       subtitle="Tieni traccia dei tuoi itinerari e salva le mappe"
     >
       <template #content>
-        <img class="max-h-[26rem]" src="/attestation.svg" />
+        <img
+          class="max-h-[26rem]"
+          width="100px"
+          height="100px"
+          alt="Activities attestation"
+          src="/attestation.svg"
+        />
       </template>
       <template #body>
         Attesta il completamento delle attività e sali di livello! <br />
@@ -157,7 +181,13 @@
     >
       <template #content>
         <div class="p-[4rem]">
-          <img class="max-h-[16rem]" src="/coupon.svg" />
+          <img
+            class="max-h-[16rem]"
+            width="100px"
+            height="100px"
+            alt="Discounts and benefits"
+            src="/coupon.svg"
+          />
         </div>
       </template>
       <template #body>

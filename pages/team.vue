@@ -69,6 +69,9 @@
         <Message inverted photo-url="/eri.webp" photo hide-background>
           <div class="flex justify-end">
             <img
+              width="100px"
+              height="100px"
+              alt="Panorama Bocchetta Tre Sassi"
               class="rounded-card w-[32rem] max-w-[100%]"
               src="/bocchetta.webp"
             />
@@ -159,7 +162,12 @@
           <div
             class="h-[10rem] w-[10rem] cursor-pointer overflow-clip rounded-full transition-all duration-300 ease-out hover:scale-[120%]"
           >
-            <img src="/trat.webp" />
+            <img
+              width="100px"
+              height="100px"
+              alt="Avatar Tratteo"
+              src="/trat.webp"
+            />
           </div>
           <section class="flex flex-col gap-2">
             <p class="text-body text-neutral">Matteo</p>
@@ -176,7 +184,12 @@
           <div
             class="h-[10rem] w-[10rem] cursor-pointer overflow-clip rounded-full transition-all duration-300 ease-out hover:scale-[120%]"
           >
-            <img src="/eri.webp" />
+            <img
+              width="100px"
+              height="100px"
+              alt="Avatar Erì"
+              src="/eri.webp"
+            />
           </div>
           <section class="flex flex-col gap-2">
             <p class="text-body text-neutral">Enrico</p>
@@ -207,6 +220,11 @@ watch(scroll.y, () => {
 
 onMounted(() => {
   animator.preload();
+});
+
+useSeoMeta({
+  description: "Atera, la nascita della nostra idea e il team",
+  ogDescription: "Atera, la nascita della nostra idea e il team",
 });
 </script>
 

@@ -25,7 +25,13 @@
         ></div>
       </div>
       <div v-else class="flex h-screen w-screen items-center justify-center">
-        <img src="/bianco.svg" class="h-[8rem] w-[8rem]" />
+        <img
+          src="/bianco.svg"
+          alt="Logo"
+          width="100px"
+          height="100px"
+          class="h-[8rem] w-[8rem]"
+        />
         <NuxtPage v-show="false" class="flex-1"> </NuxtPage>
       </div>
     </Transition>
@@ -43,6 +49,31 @@ const mounted = useMounted();
 const scroll = useScrollProgress();
 
 const scale = computed(() => scroll.y.value);
+
+useHead({
+  title: "Atera",
+  meta: [
+    { charset: "utf-8" },
+    {
+      name: "subtitle",
+      content:
+        "Che tu sia un imprenditore on un appassionato, migliora la tua esperienza outdoor con Atera",
+    },
+  ],
+  htmlAttrs: { lang: "it" },
+});
+
+useSeoMeta({
+  title: "Atera",
+  ogTitle: "Atera",
+  description:
+    "Ferrate & Trekking, trova il tuo prossimo itinerario e riscatta sconti e benefici facendo ciò che ami",
+  ogDescription:
+    "Ferrate & Trekking, trova il tuo prossimo itinerario e riscatta sconti e benefici facendo ciò che ami",
+  keywords: "Ferrate, Trekking, Avventura, Viaggi, Montagna, Outdoor",
+  author: "Ateraworld",
+  viewport: "width=device-width, initial-scale=1.0",
+});
 </script>
 
 <style lang="css" scoped>

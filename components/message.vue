@@ -8,7 +8,12 @@
         <div
           class="h-[3rem] w-[3rem] overflow-clip rounded-full md:h-[4.5rem] md:w-[4.5rem]"
         >
-          <img :src="props.photoUrl" />
+          <img
+            width="100px"
+            height="100px"
+            alt="Avatar"
+            :src="props.photoUrl"
+          />
         </div>
       </div>
       <div

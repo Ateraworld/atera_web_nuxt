@@ -16,7 +16,8 @@
             class="cursor-pointer transition-all duration-200 ease-out hover:scale-[105%]"
             src="/logo_text.svg"
             alt="Atera logo"
-            width="128"
+            width="150px"
+            height="150px"
           />
         </NuxtLink>
         <div
@@ -35,7 +36,7 @@
           </NuxtLink>
         </div>
         <div ref="el" class="relative" v-else>
-          <button @click="menuOpened = !menuOpened">
+          <button aria-label="Navbar menu" @click="menuOpened = !menuOpened">
             <Icon
               class="icon-button"
               name="material-symbols:menu-rounded"
@@ -43,7 +44,7 @@
           </button>
           <Transition name="fade" appear>
             <div v-if="menuOpened" class="menu">
-              <button @click="menuOpened = false">
+              <button aria-label="Team section" @click="menuOpened = false">
                 <NuxtLink to="/team">
                   <PrimaryButton class="text-label">
                     La nostra idea

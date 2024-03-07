@@ -1,5 +1,5 @@
 <template>
-  <button class="btn group" @click="emit('click')">
+  <button aria-label="Primary button" class="btn group" @click="emit('click')">
     <div class="flex items-center justify-center space-x-2">
       <p><slot></slot></p>
       <AnimatedArrow></AnimatedArrow>

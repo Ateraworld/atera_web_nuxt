@@ -66,6 +66,7 @@
 
 @font-face {
   font-family: "montserrat-alt";
+  font-display: swap;
   src:
     local("montserrat-alt"),
     url("assets/fonts/MontserratAlt1-Regular.ttf") format("truetype");

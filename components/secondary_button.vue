@@ -1,5 +1,5 @@
 <template>
-  <button class="btn" @click="emit('click')">
+  <button aria-label="Secondary button" class="btn" @click="emit('click')">
     <p><slot></slot></p>
   </button>
 </template>
