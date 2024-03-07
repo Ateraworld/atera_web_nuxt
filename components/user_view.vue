@@ -24,8 +24,6 @@
             <div class="image-button">
               <img
                 src="/appstore.svg "
-                width="100px"
-                height="100px"
                 alt="Apple store link"
                 class="h-full w-full"
               />
@@ -39,8 +37,6 @@
           >
             <div class="image-button">
               <img
-                width="100px"
-                height="100px"
                 alt="Google Play Store link"
                 src="/google_play.svg"
                 class="h-full w-full"
@@ -128,13 +124,7 @@
       subtitle="Goditi la natura, sapendo di avere in tasca un fedele compagno"
     >
       <template #content>
-        <img
-          class="max-h-[34rem]"
-          width="100px"
-          height="100px"
-          alt="Offline maps"
-          src="/phone2.svg"
-        />
+        <img class="max-h-[34rem]" alt="Offline maps" src="/phone2.svg" />
       </template>
       <template #body>
         Atera ti fornisce l'essenziale per permetterti di godere al meglio la
@@ -158,8 +148,6 @@
       <template #content>
         <img
           class="max-h-[26rem]"
-          width="100px"
-          height="100px"
           alt="Activities attestation"
           src="/attestation.svg"
         />
@@ -183,8 +171,6 @@
         <div class="p-[4rem]">
           <img
             class="max-h-[16rem]"
-            width="100px"
-            height="100px"
             alt="Discounts and benefits"
             src="/coupon.svg"
           />

@@ -17,7 +17,6 @@
             src="/logo_text.svg"
             alt="Atera logo"
             width="150px"
-            height="150px"
           />
         </NuxtLink>
         <div

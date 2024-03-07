@@ -1,11 +1,6 @@
 <template>
   <div class="relative flex justify-center">
-    <img
-      src="/phone.svg"
-      alt="Phone contextualized notifications"
-      width="100px"
-      height="100px"
-    />
+    <img src="/phone.svg" alt="Phone contextualized notifications" />
     <div
       @click="click"
       class="absolute left-[13.5%] top-[11.5%] h-[80%] w-[60.5%] cursor-pointer overflow-clip rounded-[1rem]"
@@ -13,13 +8,7 @@
       <div id="animated" class="notification overflow-clip p-2 text-neutral/75">
         <div class="flex flex-row items-center justify-between">
           <div class="flex flex-row items-center space-x-1">
-            <img
-              src="/bianco.svg"
-              width="100px"
-              height="100px"
-              alt="Phone notification"
-              class="size-4"
-            />
+            <img src="/bianco.svg" alt="Phone notification" class="size-4" />
             <p class="text-[0.5rem]">Atera ● {{ currentNotification.time }}</p>
           </div>
           <div

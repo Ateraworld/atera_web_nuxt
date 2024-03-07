@@ -28,8 +28,6 @@
         <img
           src="/bianco.svg"
           alt="Logo"
-          width="100px"
-          height="100px"
           class="h-[8rem] w-[8rem]"
         />
         <NuxtPage v-show="false" class="flex-1"> </NuxtPage>

@@ -23,8 +23,6 @@
           <div class="h-0 w-full flex-1 p-0">
             <img
               src="/context.svg"
-              width="100px"
-              height="100px"
               alt="Contextualized marketing"
               class="h-full w-full object-contain"
             />
@@ -50,8 +48,6 @@
           <div class="h-0 w-full flex-1 p-4">
             <img
               src="/conversione.svg"
-              width="100px"
-              height="100px"
               alt="Conversions"
               class="h-full w-full object-contain"
             />
@@ -76,8 +72,6 @@
           <div class="h-0 w-full flex-1 p-0">
             <img
               src="/local_shelter.svg"
-              width="100px"
-              height="100px"
               alt="Visibility"
               class="h-full w-full scale-[110%] object-contain"
             />
