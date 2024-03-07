@@ -35,7 +35,6 @@ export default defineNuxtConfig({
     "nuxt-icon",
     "@vueuse/nuxt",
     "@pinia/nuxt",
-    "nuxt-purgecss",
     "@nuxtjs/robots",
   ],
 });
