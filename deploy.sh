@@ -1,5 +1,5 @@
 #! /bin/bash
-bun run generate
+npm run generate
 git checkout main
 git add --all
 git commit -m "Release"

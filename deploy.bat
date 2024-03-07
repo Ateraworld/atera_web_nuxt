@@ -1,5 +1,5 @@
 @echo off
-call bun run generate
+call npm run generate
 call git checkout main
 call git add --all
 call git commit -m "Release"
