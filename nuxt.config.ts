@@ -9,21 +9,7 @@ export default defineNuxtConfig({
       publicDir: "bundle/public",
     },
   },
-  app: {
-    head: {
-      meta: [
-        {
-          hid: "description",
-          name: "description",
-          content:
-            "Ferrate & Trekking, trova il tuo prossimo itinerario e riscatta sconti e benefici facendo ciò che ami",
-        },
-      ],
-      htmlAttrs: {
-        lang: "it",
-      },
-    },
-  },
+  app: {},
   tailwindcss: {
     exposeConfig: true,
   },

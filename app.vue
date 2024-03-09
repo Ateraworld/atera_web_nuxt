@@ -1,11 +1,5 @@
 <template>
-  <head></head>
-  <body
-    :class="{
-      business: mode.$state.businessMode,
-      user: !mode.$state.businessMode,
-    }"
-  >
+  <div>
     <div v-if="mounted" class="overscroll-none">
       <div class="gradient" :style="{ '--x': x + 'px' }"></div>
     </div>
@@ -25,17 +19,13 @@
         ></div>
       </div>
       <div v-else class="flex h-screen w-screen items-center justify-center">
-        <img
-          src="/bianco.svg"
-          alt="Logo"
-          class="h-[8rem] w-[8rem]"
-        />
-        <NuxtPage v-show="false" class="flex-1"> </NuxtPage>
+        <img src="/bianco.svg" alt="Logo" class="h-[8rem] w-[8rem]" />
+        <NuxtPage class="flex-1"> </NuxtPage>
       </div>
     </Transition>
 
     <!-- <NuxtPage class="flex-1"> </NuxtPage> -->
-  </body>
+  </div>
 </template>
 
 <script lang="ts" setup>
@@ -43,9 +33,9 @@ import { breakpointsTailwind } from "@vueuse/core";
 const { x, y } = useMouse();
 const breakpoints = useBreakpoints(breakpointsTailwind);
 const mode = useMode();
+
 const mounted = useMounted();
 const scroll = useScrollProgress();
-
 const scale = computed(() => scroll.y.value);
 
 useHead({
@@ -58,6 +48,11 @@ useHead({
         "Che tu sia un imprenditore on un appassionato, migliora la tua esperienza outdoor con Atera",
     },
   ],
+  bodyAttrs: {
+    class: computed(() => {
+      return mode.businessMode ? "business" : "user";
+    }),
+  },
   htmlAttrs: { lang: "it" },
 });
 
