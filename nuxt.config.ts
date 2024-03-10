@@ -22,5 +22,6 @@ export default defineNuxtConfig({
     "@vueuse/nuxt",
     "@pinia/nuxt",
     "@nuxtjs/robots",
+    "@nuxtjs/device",
   ],
 });

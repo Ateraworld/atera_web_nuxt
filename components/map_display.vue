@@ -99,7 +99,7 @@ const tw = useTailwind();
 
 function restartAnimation() {
   animatedSvg.animator.stop();
-  animatedSvg.animator.start({ currentDuration: 8000, easingCallback: ease });
+  animatedSvg.animator.start({ currentDuration: 7000 });
 }
 
 const keyPointsAnim = computed(() => {

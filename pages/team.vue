@@ -1,7 +1,7 @@
 <template>
   <div
     v-if="mounted"
-    class="flex w-full max-w-[110rem] flex-col place-items-center self-center p-4 md:p-12"
+    class="flex w-full max-w-[100rem] flex-col place-items-center self-center p-4 md:p-12"
   >
     <div class="relative">
       <div class="background">

@@ -30,8 +30,8 @@
           v-if="breakpoints.greaterOrEqual('lg').value"
           class="flex flex-row gap-12"
         >
-          <NuxtLink to="/team">
-            <PrimaryButton> La nostra idea </PrimaryButton>
+          <NuxtLink :to="to">
+            <PrimaryButton>{{ label }}</PrimaryButton>
           </NuxtLink>
         </div>
         <div ref="el" class="relative" v-else>
@@ -44,9 +44,9 @@
           <Transition name="fade" appear>
             <div v-if="menuOpened" class="menu">
               <button aria-label="Team section" @click="menuOpened = false">
-                <NuxtLink to="/team">
+                <NuxtLink :to="to">
                   <PrimaryButton class="text-label">
-                    La nostra idea
+                    {{ label }}
                   </PrimaryButton>
                 </NuxtLink>
               </button>
@@ -93,6 +93,22 @@ const breakpoints = useBreakpoints(breakpointsTailwind);
 const el = ref<HTMLElement | null>(null);
 const menuOpened = ref(false);
 const scroll = useScrollProgress();
+const route = useRoute();
+const label = ref("La nostra idea");
+const to = ref("/team");
+
+watch(
+  () => route.path,
+  () => {
+    if (route.path == "/team") {
+      label.value = "Home";
+      to.value = "/";
+    } else {
+      label.value = "La nostra idea";
+      to.value = "/team";
+    }
+  },
+);
 
 const shadowBlur = computed(() => {
   if (scroll.y.value > 0) {
@@ -125,7 +141,7 @@ onMounted(() => {
 
 .headline {
   z-index: 100;
-  @apply flex h-[6rem] w-full justify-center bg-background;
+  @apply flex h-[6rem] w-full justify-center bg-transparent;
 }
 
 .menu {

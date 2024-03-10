@@ -37,6 +37,9 @@ const mode = useMode();
 const mounted = useMounted();
 const scroll = useScrollProgress();
 const scale = computed(() => scroll.y.value);
+const modeClass = computed(() => {
+  return mode.businessMode ? "business" : "user";
+});
 
 useHead({
   title: "Atera",
@@ -49,9 +52,7 @@ useHead({
     },
   ],
   bodyAttrs: {
-    class: computed(() => {
-      return mode.businessMode ? "business" : "user";
-    }),
+    class: modeClass,
   },
   htmlAttrs: { lang: "it" },
 });

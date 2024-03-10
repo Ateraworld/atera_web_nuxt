@@ -23,14 +23,14 @@ export const useAnimator = (delta: number = 1000 / 60) => {
 
   const update = () => {
     t += delta;
-    if (params.easingCallback === null) {
-      p.value = t / getDuration();
+
+    if (params.easingCallback === undefined) {
+      p.value = Math.min(Math.max(t / getDuration(), 0), 1);
     } else {
       p.value = Math.min(
         Math.max(params.easingCallback!(t / getDuration()), 0),
         1,
       );
-      console.log(t / getDuration());
     }
     if (t > getDuration() && intervalId !== null) {
       clearInterval(intervalId);
@@ -44,6 +44,7 @@ export const useAnimator = (delta: number = 1000 / 60) => {
     t = 0;
     p.value = t;
     stop();
+
     intervalId = setInterval(update, delta);
   };
   const stop = () => {

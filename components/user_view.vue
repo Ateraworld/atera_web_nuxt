@@ -2,63 +2,74 @@
   <div
     class="flex w-full flex-col items-center justify-stretch gap-[var(--content-padding)]"
   >
-    <div class="w-[100%] lg:w-[48rem]">
-      <Transition name="join" appear mode="out-in">
-        <h2
-          :style="{
-            '--y-tr': '10px',
-            '--delay-tr': '200ms',
-            '--duration-tr': '500ms',
-          }"
-          class="text-center"
+    <!-- <Transition name="fade" appear mode="out-in">
+      <div
+        :style="{ '--duration-tr': '1000ms' }"
+        class="absolute left-[20%] top-[5%] h-[8rem] w-[32rem]"
+      >
+        <img width="100%" height="100%" src="/climber_stambecco.svg" />
+      </div>
+    </Transition> -->
+    <div class="flex w-[100%] flex-col justify-start gap-8 lg:w-[70rem]">
+      <div class="flex flex-col items-center">
+        <div
+          class="text-text flex flex-row items-center gap-2 pb-2 text-label font-bold text-neutral/50"
         >
-          Scarica ora Atera!
-        </h2>
-      </Transition>
-      <div class="flex flex-row flex-wrap justify-stretch gap-4 sm:gap-8">
-        <ParallaxCard class="flex-1" key="0" anim-x-trasl="-30px">
+          <icon
+            class="size-4"
+            name="material-symbols:photo-camera-rounded"
+          ></icon>
+          <p>Dolomiti di Brenta</p>
+        </div>
+
+        <div class="relative">
+          <ParallaxImage
+            class="rounded-card aspect-[1.25/1] overflow-clip sm:aspect-[2.5/1]"
+          >
+            <div
+              class="rounded-card relative translate-y-[-15%] scale-[120%] overflow-clip lg:scale-[100%]"
+            >
+              <img src="/brenta.webp" />
+            </div>
+          </ParallaxImage>
+        </div>
+      </div>
+
+      <h2 class="mb-0 text-center">Entra a far parte di Atera</h2>
+
+      <div class="relative flex flex-row justify-center gap-12">
+        <Transition name="join" appear>
           <a
             href="https://apps.apple.com/it/app/Atera-ferrate-trekking/id6449359062"
             target="_blank"
           >
-            <div class="image-button">
-              <img
-                src="/appstore.svg "
-                alt="Apple store link"
-                class="h-full w-full"
-              />
+            <div
+              class="accent-card group size-[8rem] items-center justify-center"
+              :style="{ '--y-tr': '0px', '--x-tr': '-30px' }"
+            >
+              <icon
+                class="size-[4rem] transition-all duration-200 ease-out group-hover:scale-[120%]"
+                name="ic:baseline-apple"
+              ></icon>
             </div>
           </a>
-        </ParallaxCard>
-        <ParallaxCard class="flex-1" key="0" anim-x-trasl="30px">
+        </Transition>
+        <Transition name="join" appear>
           <a
-            href="https://play.google.com/store/apps/details?id=com.Ateraworld.Atera"
+            href="https://play.google.com/store/apps/details?id=com.ateraworld.atera"
             target="_blank"
           >
-            <div class="image-button">
-              <img
-                alt="Google Play Store link"
-                src="/google_play.svg"
-                class="h-full w-full"
-              />
-            </div>
-          </a>
-        </ParallaxCard>
+            <div
+              :style="{ '--y-tr': '0px', '--x-tr': '30px' }"
+              class="accent-card group size-[8rem] items-center justify-center"
+            >
+              <icon
+                class="size-[3rem] transition-all duration-200 ease-out group-hover:scale-[120%]"
+                name="logos:google-play-icon"
+              ></icon>
+            </div> </a
+        ></Transition>
       </div>
-      <Transition name="join" appear>
-        <div class="accent-card group mt-10 w-full">
-          <h2>Hai gia scaricato Atera?</h2>
-          <p>
-            Compila ora il modulo di feedback per farci sapere cosa ne pensi.<br />
-            Il tuo aiuto è fondamentale per migliorare sempre di più Atera!
-          </p>
-          <AnimatedArrow class="pt-4"
-            ><p class="font-semibold text-accent">
-              Dicci ciò che pensi
-            </p></AnimatedArrow
-          >
-        </div>
-      </Transition>
     </div>
     <div class="w-full text-center">
       <h2>Per chi vuole di più, avendo solo l'essenziale</h2>
@@ -194,6 +205,6 @@
 
 <style lang="css" scoped>
 .image-button {
-  @apply flex h-[4rem] items-center justify-center rounded-xl transition-all duration-[150ms] ease-out md:h-[8rem];
+  @apply flex h-[4rem] items-center justify-center rounded-xl bg-yellow-50 transition-all duration-[150ms] ease-out md:h-[4rem];
 }
 </style>

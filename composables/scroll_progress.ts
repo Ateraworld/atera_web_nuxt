@@ -11,6 +11,8 @@ export const useScrollProgress = () => {
       document.documentElement.scrollLeft /
       (document.documentElement.scrollWidth -
         document.documentElement.offsetWidth);
+    x.value = Number.isNaN(x.value) ? 1 : x.value;
+    y.value = Number.isNaN(y.value) ? 1 : y.value;
   });
   return { x, y };
 };

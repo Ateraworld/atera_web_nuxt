@@ -1,5 +1,5 @@
 <template>
-  <div class="0 flex flex-row items-center">
+  <div class="flex flex-row items-center">
     <slot></slot>
     <div class="icon-wrapper">
       <div class="-translate-y-[0.15px]">

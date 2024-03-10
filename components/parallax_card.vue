@@ -1,7 +1,7 @@
 <template>
   <div @click="click" v-if="mounted" class="cursor-pointer">
     <Transition ref="el" name="join" appear tag="div">
-      <div class="card-wrapper" :style="rootStyle">
+      <div class="card-wrapper group" :style="rootStyle">
         <div
           :style="{
             '--rotate-x': renderingContext.rotateY + 'deg',
@@ -22,7 +22,7 @@
               }"
             ></div>
           </div>
-          <div class="content">
+          <div class="content group-hover:scale-[102%]">
             <slot></slot>
           </div>
         </div>
@@ -61,7 +61,6 @@ const props = defineProps({
   animDuration: { type: String, requirec: false, default: "400ms" },
   animXTrasl: { type: String, requirec: false, default: "0px" },
   animYTrasl: { type: String, requirec: false, default: "0px" },
-  padding: { type: String, required: false, default: "p-8" },
 });
 
 const emit = defineEmits<{
@@ -130,7 +129,7 @@ const rootStyle = computed(() => {
 
 .content {
   translate: 0 0 var(--parallax);
-  @apply flex h-full w-full flex-wrap items-start justify-center transition-all duration-150 ease-out hover:scale-[102%];
+  @apply flex h-full w-full flex-wrap items-start justify-center transition-all duration-300 ease-out;
 }
 
 .gradient {

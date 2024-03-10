@@ -40,7 +40,7 @@
           @toggle="onModeToggle"
         />
       </div>
-      <div class="flex w-full pt-12">
+      <div class="flex w-full pt-10">
         <BusinessView v-if="mode.$state.businessMode"></BusinessView>
         <UserView v-else></UserView>
       </div>
