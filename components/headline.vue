@@ -99,7 +99,7 @@ const label = ref("La nostra idea");
 const to = ref("/team");
 
 function updateButtonState() {
-  if (route.path == "/team") {
+  if (route.path.includes("/team")) {
     label.value = "Home";
     to.value = "/";
   } else {

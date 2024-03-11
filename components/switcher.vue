@@ -42,8 +42,9 @@
 <script lang="ts" setup>
 const props = defineProps<{ businessMode: boolean }>();
 const businessMode = ref(props.businessMode);
-
+const router = useRouter();
 const emit = defineEmits<{ toggle: [status: boolean] }>();
+
 function onClicked() {
   businessMode.value = !businessMode.value;
   emit("toggle", businessMode.value);

@@ -37,6 +37,12 @@ const mode = useMode();
 const mounted = useMounted();
 const scroll = useScrollProgress();
 const scale = computed(() => scroll.y.value);
+const route = useRoute();
+const router = useRouter();
+
+mode.businessMode =
+  route.query.mode === undefined || route.query.mode === "business";
+router.replace({ query: {} });
 
 useHead({
   title: "Atera",
@@ -49,7 +55,9 @@ useHead({
     },
   ],
   bodyAttrs: {
-    class: computed(() => (mode.businessMode ? "business" : "user")),
+    class: computed(() => {
+      return mode.businessMode ? "business" : "user";
+    }),
   },
   htmlAttrs: { lang: "it" },
 });
