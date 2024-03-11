@@ -40,9 +40,26 @@ const scale = computed(() => scroll.y.value);
 const route = useRoute();
 const router = useRouter();
 
-mode.businessMode =
-  route.query.mode === undefined || route.query.mode === "business";
-router.replace({ query: {} });
+function updateMode() {
+  if (mode.businessMode) {
+    document.body.classList.add("business");
+    document.body.classList.remove("user");
+  } else {
+    document.body.classList.add("user");
+    document.body.classList.remove("business");
+  }
+}
+
+watch(mode, updateMode);
+
+onMounted(() => {
+  if (process.client) {
+    mode.businessMode =
+      route.query.mode === undefined || route.query.mode === "business";
+    router.replace({ query: {} });
+  }
+  updateMode();
+});
 
 useHead({
   title: "Atera",
@@ -55,9 +72,7 @@ useHead({
     },
   ],
   bodyAttrs: {
-    class: computed(() => {
-      return mode.businessMode ? "business" : "user";
-    }),
+    class: "neutrals",
   },
   htmlAttrs: { lang: "it" },
 });
