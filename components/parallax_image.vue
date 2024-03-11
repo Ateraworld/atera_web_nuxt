@@ -127,7 +127,7 @@ const animStyle = computed(() => {
 }
 
 .card {
-  transition: all ease-out 180ms;
+  transition: all 100ms ease-out;
   position: relative;
   border: var(--border) solid;
   transform: translateY(var(--translate-y)) translateX(var(--translate-x));

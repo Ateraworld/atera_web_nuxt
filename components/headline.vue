@@ -89,6 +89,7 @@
 
 <script lang="ts" setup>
 import { breakpointsTailwind } from "@vueuse/core";
+
 const breakpoints = useBreakpoints(breakpointsTailwind);
 const el = ref<HTMLElement | null>(null);
 const menuOpened = ref(false);
@@ -97,18 +98,17 @@ const route = useRoute();
 const label = ref("La nostra idea");
 const to = ref("/team");
 
-watch(
-  () => route.path,
-  () => {
-    if (route.path == "/team") {
-      label.value = "Home";
-      to.value = "/";
-    } else {
-      label.value = "La nostra idea";
-      to.value = "/team";
-    }
-  },
-);
+function updateButtonState() {
+  if (route.path == "/team") {
+    label.value = "Home";
+    to.value = "/";
+  } else {
+    label.value = "La nostra idea";
+    to.value = "/team";
+  }
+}
+
+watch(() => route.path, updateButtonState);
 
 const shadowBlur = computed(() => {
   if (scroll.y.value > 0) {
@@ -125,12 +125,13 @@ function click(event: MouseEvent) {
 
 onMounted(() => {
   document.addEventListener("click", click);
+  updateButtonState();
 });
 </script>
 
 <style lang="css" scoped>
 .icon-button {
-  @apply rounded-default size-10 p-2 transition duration-150 hover:bg-neutral/10;
+  @apply size-10 rounded-[var(--border-radius)] p-2 transition duration-150 hover:bg-neutral/10;
 }
 
 .shadow {
@@ -146,6 +147,6 @@ onMounted(() => {
 
 .menu {
   z-index: 10;
-  @apply rounded-default absolute top-[100%] m-auto flex translate-x-[-80%] flex-col gap-4 text-nowrap border-[1.5px] border-outline bg-surface px-4 py-6;
+  @apply absolute top-[100%] m-auto flex translate-x-[-80%] flex-col gap-4 text-nowrap rounded-[var(--border-radius)] border-[1.5px] border-outline bg-surface px-4 py-6;
 }
 </style>

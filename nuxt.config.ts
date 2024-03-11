@@ -1,12 +1,23 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  devtools: { enabled: true },
+  devtools: {
+    enabled: true,
+
+    timeline: {
+      enabled: true,
+    },
+  },
   nitro: {
     compressPublicAssets: true,
     output: {
       dir: "bundle",
       serverDir: ".output/server",
       publicDir: "bundle/public",
+    },
+  },
+  postcss: {
+    plugins: {
+      "postcss-import": true,
     },
   },
   app: {},
@@ -23,5 +34,6 @@ export default defineNuxtConfig({
     "@pinia/nuxt",
     "@nuxtjs/robots",
     "@nuxtjs/device",
+    "@nuxt/image",
   ],
 });

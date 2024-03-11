@@ -1,19 +1,30 @@
 <template>
   <div
+    v-if="mounted"
     class="flex w-full flex-col items-center justify-stretch gap-[var(--content-padding)]"
   >
-    <!-- <Transition name="fade" appear mode="out-in">
-      <div
-        :style="{ '--duration-tr': '1000ms' }"
-        class="absolute left-[20%] top-[5%] h-[8rem] w-[32rem]"
-      >
-        <img width="100%" height="100%" src="/climber_stambecco.svg" />
-      </div>
-    </Transition> -->
-    <div class="flex w-[100%] flex-col justify-start gap-8 lg:w-[70rem]">
+    <div class="flex w-[100%] flex-col justify-start gap-8">
       <div class="flex flex-col items-center">
+        <h2 class="text-center">
+          Scarica ora Atera, il tuo fedele compagno di avventura
+        </h2>
+
+        <Transition name="fade" mode="out-in" appear>
+          <div
+            class="h-[20rem] max-w-[100%] md:h-[24rem] lg:w-[70rem]"
+            :style="{ '--duration-tr': '400ms' }"
+          >
+            <ParallaxImage class="rounded-card h-full w-full overflow-clip">
+              <div
+                class="rounded-card relative translate-y-[-15%] scale-[110%] overflow-clip"
+              >
+                <img src="/brenta.webp" />
+              </div>
+            </ParallaxImage>
+          </div>
+        </Transition>
         <div
-          class="text-text flex flex-row items-center gap-2 pb-2 text-label font-bold text-neutral/50"
+          class="text-text flex flex-row items-center gap-2 pt-2 text-label font-bold text-neutral/50"
         >
           <icon
             class="size-4"
@@ -21,31 +32,21 @@
           ></icon>
           <p>Dolomiti di Brenta</p>
         </div>
-
-        <div class="relative">
-          <ParallaxImage
-            class="rounded-card aspect-[1.25/1] overflow-clip sm:aspect-[2.5/1]"
-          >
-            <div
-              class="rounded-card relative translate-y-[-15%] scale-[120%] overflow-clip lg:scale-[100%]"
-            >
-              <img src="/brenta.webp" />
-            </div>
-          </ParallaxImage>
-        </div>
       </div>
 
-      <h2 class="mb-0 text-center">Entra a far parte di Atera</h2>
-
       <div class="relative flex flex-row justify-center gap-12">
-        <Transition name="join" appear>
+        <Transition name="join" appear mode="out-in">
           <a
             href="https://apps.apple.com/it/app/Atera-ferrate-trekking/id6449359062"
             target="_blank"
+            :style="{
+              '--y-tr': '0px',
+              '--x-tr': '-30px',
+              '--duration-tr': '400ms',
+            }"
           >
             <div
               class="accent-card group size-[8rem] items-center justify-center"
-              :style="{ '--y-tr': '0px', '--x-tr': '-30px' }"
             >
               <icon
                 class="size-[4rem] transition-all duration-200 ease-out group-hover:scale-[120%]"
@@ -54,13 +55,17 @@
             </div>
           </a>
         </Transition>
-        <Transition name="join" appear>
+        <Transition name="join" appear mode="out-in">
           <a
             href="https://play.google.com/store/apps/details?id=com.ateraworld.atera"
             target="_blank"
+            :style="{
+              '--y-tr': '0px',
+              '--x-tr': '30px',
+              '--duration-tr': '400ms',
+            }"
           >
             <div
-              :style="{ '--y-tr': '0px', '--x-tr': '30px' }"
               class="accent-card group size-[8rem] items-center justify-center"
             >
               <icon
@@ -201,7 +206,9 @@
   </div>
 </template>
 
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+const mounted = useMounted();
+</script>
 
 <style lang="css" scoped>
 .image-button {

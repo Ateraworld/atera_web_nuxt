@@ -48,7 +48,7 @@
     --y-tr: 30px;
     --duration-tr: 500ms;
     --delay-tr: 100ms;
-    @apply rounded-card flex cursor-pointer flex-col bg-accent/[.12] p-8;
+    @apply flex cursor-pointer flex-col rounded-[var(--card-border-radius)] bg-accent/[.12] p-8;
   }
 }
 
