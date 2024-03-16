@@ -16,7 +16,7 @@
           >
             <ParallaxImage class="rounded-card h-full w-full overflow-clip">
               <div
-                class="rounded-card relative translate-y-[-15%] scale-[110%] overflow-clip"
+                class="rounded-card relative translate-y-[-0%] scale-[125%] overflow-clip md:translate-y-[-5%] md:scale-[110%]"
               >
                 <img src="/brenta.webp" />
               </div>

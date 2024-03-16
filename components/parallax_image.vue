@@ -21,9 +21,8 @@
 <script lang="ts" setup>
 import { breakpointsTailwind } from "@vueuse/core";
 const breakpoints = useBreakpoints(breakpointsTailwind);
-const mouseTrMagnitude = 0;
+const mouseTrMagnitude = 16;
 const el = ref(null);
-const scrollControlled = ref(true);
 const size = useWindowSize();
 const initialPosition = ref(0);
 
@@ -58,8 +57,12 @@ onMounted(() => {
 });
 
 const style = computed(() => {
+  console.log({
+    "--translate-y": -mouseTranslateY.value + "px",
+    "--translate-x": mouseTranslateX.value + "px",
+  });
   return {
-    "--translate-y": -(translateY.value + mouseTranslateY.value) + "px",
+    "--translate-y": -mouseTranslateY.value + "px",
     "--translate-x": mouseTranslateX.value + "px",
   };
 });
@@ -88,16 +91,12 @@ const emit = defineEmits<{
   (e: "click", event: MouseEvent): void;
 }>();
 
-function mouseEnter(event: MouseEvent) {
-  scrollControlled.value = false;
-}
+function mouseEnter(event: MouseEvent) {}
 function mouseLeave(event: MouseEvent) {
   mouseTranslateX.value = 0;
   mouseTranslateY.value = 0;
-  scrollControlled.value = true;
 }
 function mouseMove(event: MouseEvent) {
-  if (scrollControlled.value) return;
   let centerX = x.value + width.value / 2;
   let centerY = y.value + height.value / 2;
   let offsetX = (event.x - centerX) / (width.value / 2);
