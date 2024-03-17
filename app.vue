@@ -62,13 +62,13 @@ onMounted(() => {
 });
 
 useHead({
-  title: "Atera",
+  title: "Wildspace",
   meta: [
     { charset: "utf-8" },
     {
       name: "subtitle",
       content:
-        "Che tu sia un imprenditore on un appassionato, migliora la tua esperienza outdoor con Atera",
+        "Che tu sia un imprenditore on un appassionato, migliora la tua esperienza outdoor con Wildspace",
     },
   ],
   bodyAttrs: {
@@ -78,14 +78,14 @@ useHead({
 });
 
 useSeoMeta({
-  title: "Atera",
-  ogTitle: "Atera",
+  title: "Wildspace",
+  ogTitle: "Wildspace",
   description:
     "Ferrate & Trekking, trova il tuo prossimo itinerario e riscatta sconti e benefici facendo ciò che ami",
   ogDescription:
     "Ferrate & Trekking, trova il tuo prossimo itinerario e riscatta sconti e benefici facendo ciò che ami",
   keywords: "Ferrate, Trekking, Avventura, Viaggi, Montagna, Outdoor",
-  author: "Ateraworld",
+  author: "Wildspace",
   viewport: "width=device-width, initial-scale=1.0",
 });
 </script>

@@ -15,7 +15,7 @@
           <img
             class="cursor-pointer transition-all duration-200 ease-out hover:scale-[105%]"
             src="/logo_text.svg"
-            alt="Atera logo"
+            alt="Wildspace logo"
             width="150px"
           />
         </NuxtLink>

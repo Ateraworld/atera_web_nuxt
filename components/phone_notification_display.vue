@@ -9,7 +9,9 @@
         <div class="flex flex-row items-center justify-between">
           <div class="flex flex-row items-center space-x-1">
             <img src="/bianco.svg" alt="Phone notification" class="size-4" />
-            <p class="text-[0.5rem]">Atera ● {{ currentNotification.time }}</p>
+            <p class="text-[0.5rem]">
+              Wildspace ● {{ currentNotification.time }}
+            </p>
           </div>
           <div
             class="mr-[0.3rem] h-[0.65rem] w-[0.65rem] animate-ping rounded-full bg-accent duration-700"

@@ -81,7 +81,7 @@
 
       <Transition name="join" appear>
         <div class="accent-card group">
-          <h2>Entra a far parte di Atera</h2>
+          <h2>Entra a far parte di Wildspace</h2>
           <p>
             Compila ora il modulo di contatto con le informazioni relative al
             tuo business.
@@ -103,12 +103,12 @@
         <PhoneNotificationDisplay></PhoneNotificationDisplay>
       </template>
       <template #body>
-        In Atera gli annunci sono contestualizzati. <br />
+        In Wildspace gli annunci sono contestualizzati. <br />
         Oltre alle preferenze dell'utente, ogni inserzione tiene conto anche
         degli itinerari svolti dall'utente in un determinato posto ad una
         specifica ora. Gli annunci emessi al termine di un escursione ad
         esempio, ottengono conversioni maggiori.<br /><br />
-        Atera integra perfettamente gli annunci con lo stile e l'esperienza
+        Wildspace integra perfettamente gli annunci con lo stile e l'esperienza
         d'uso dell'utente. <br />Niente più pubblicità fastidiosa ed intrusiva:
         gli annunci sono a tutti gli effetti dei consigli, sarà l'utente stesso
         a ricercarli.
@@ -167,7 +167,7 @@
     >
       <template #content><MapDisplay></MapDisplay> </template>
       <template #body>
-        In Atera sono disponibili spazi pubblicitari di vario tipo.<br />
+        In Wildspace sono disponibili spazi pubblicitari di vario tipo.<br />
         Ottenendo un piazzamento pubblicitario nella scheda di un itinerario
         vicino alla propria attività economica, è possibile aumentare la
         visibilità e raggiungere gli utenti di una specifica area.<br /><br />

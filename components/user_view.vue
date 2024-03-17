@@ -6,7 +6,7 @@
     <div class="flex w-[100%] flex-col justify-start gap-8">
       <div class="flex flex-col items-center">
         <h2 class="text-center">
-          Scarica ora Atera, il tuo fedele compagno di avventura
+          Scarica ora Wildspace, il tuo fedele compagno di avventura
         </h2>
 
         <Transition name="fade" mode="out-in" appear>
@@ -143,15 +143,15 @@
         <img class="max-h-[34rem]" alt="Offline maps" src="/phone2.svg" />
       </template>
       <template #body>
-        Atera ti fornisce l'essenziale per permetterti di godere al meglio la
-        natura.
+        Wildspace ti fornisce l'essenziale per permetterti di godere al meglio
+        la natura.
         <br />
         Le mappe disponibili sono estremamente semplici da usare.<br />
         All'interno puoi trovare tutti i punti d'interesse come rifugi,
         bivacchi, punti panoramici e perfino panchine e fonti d'acqua!<br />
         Le mappe sono scaricabili offline, così potrai utilizzarle in qualunque
         situazione.<br /><br />
-        Atera non pretende di digitalizzare tutto il mondo delle attività
+        Wildspace non pretende di digitalizzare tutto il mondo delle attività
         all'aperto, ma di integrarlo.
       </template>
       ></Topic
@@ -170,9 +170,9 @@
       </template>
       <template #body>
         Attesta il completamento delle attività e sali di livello! <br />
-        Con Atera salvi i tuoi itinerari preferiti cosi da poter accedere alle
-        informazioni ed alla mappa in qualunque situazione, anche in assenza di
-        rete.<br />
+        Con Wildspace salvi i tuoi itinerari preferiti cosi da poter accedere
+        alle informazioni ed alla mappa in qualunque situazione, anche in
+        assenza di rete.<br />
         Tieni traccia di tutte le attività che hai completato e trovane di nuove
         grazie ai sistemi di ricerca avanzati.<br />Porsi degli obiettivi è il
         primo passo per completarli!<br />
@@ -180,7 +180,7 @@
       ></Topic
     >
     <Topic
-      title="Fatti consigliare da Atera"
+      title="Fatti consigliare da Wildspace"
       subtitle="Scopri offerte personalizzate e riscatta sconti e benefici"
     >
       <template #content>
@@ -193,13 +193,14 @@
         </div>
       </template>
       <template #body>
-        Atera ti consiglia come concludere i tuoi itinerari al meglio. <br />
-        Grazie alla tecnologia di Atera, sei sempre a conoscenza delle migliori
-        offerte nei dintorni.<br /><br />
+        Wildspace ti consiglia come concludere i tuoi itinerari al meglio.
+        <br />
+        Grazie alla tecnologia di Wildspace, sei sempre a conoscenza delle
+        migliori offerte nei dintorni.<br /><br />
         Hai appena completato un itinerario faticoso?<br />
         Che sia il posto perfetto dove passare la notte, un ristorante tipico
         dove sfamarti o semplicemente il posto più panoramico dove fare
-        aperitivo, Atera ti suggerisce le opzioni migliori!
+        aperitivo, Wildspace ti suggerisce le opzioni migliori!
       </template>
       ></Topic
     >

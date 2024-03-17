@@ -136,12 +136,12 @@
     </div>
     <div class="rounded-default h-[2px] w-full bg-outline"></div>
     <section class="max-w-[48rem] pt-12">
-      <h1 class="text-center">La nascita di Atera</h1>
+      <h1 class="text-center">La nascita di Wildspace</h1>
       <p class="text-start">
         Già dopo la prima escursione assieme è nata l'idea di creare un progetto
         utile e innovativo assieme.<br /><br />
         La combinazione delle passioni per la montagna e per l'informatica ci ha
-        permesso di partire subito con lo sviluppo di Atera.<br />
+        permesso di partire subito con lo sviluppo di Wildspace.<br />
         La creazione della prima versione ha richiesto molta fatica e tempo, ma
         ci ha permesso di imparare molto e di portare avanti un progetto di cui
         andiamo molto fieri.<br /><br />
@@ -211,8 +211,8 @@ onMounted(() => {
 });
 
 useSeoMeta({
-  description: "Atera, la nascita della nostra idea e il team",
-  ogDescription: "Atera, la nascita della nostra idea e il team",
+  description: "Wildspace, la nascita della nostra idea e il team",
+  ogDescription: "Wildspace, la nascita della nostra idea e il team",
 });
 </script>
 
