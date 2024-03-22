@@ -18,7 +18,16 @@
               <div
                 class="rounded-card relative translate-y-[-0%] scale-[125%] overflow-clip md:translate-y-[-5%] md:scale-[110%]"
               >
-                <img src="/brenta.webp" />
+                <img
+                  :height="
+                    bp.smallerOrEqual('sm')
+                      ? '320px'
+                      : bp.smallerOrEqual('md')
+                        ? '384px'
+                        : '1120px'
+                  "
+                  src="/brenta.webp"
+                />
               </div>
             </ParallaxImage>
           </div>
@@ -140,7 +149,12 @@
       subtitle="Goditi la natura, sapendo di avere in tasca un fedele compagno"
     >
       <template #content>
-        <img class="max-h-[34rem]" alt="Offline maps" src="/phone2.svg" />
+        <img
+          class="max-h-[34rem]"
+          height="544px"
+          alt="Offline maps"
+          src="/phone2.svg"
+        />
       </template>
       <template #body>
         Wildspace ti fornisce l'essenziale per permetterti di godere al meglio
@@ -208,7 +222,9 @@
 </template>
 
 <script lang="ts" setup>
+import { breakpointsTailwind } from "@vueuse/core";
 const mounted = useMounted();
+const bp = useBreakpoints(breakpointsTailwind);
 </script>
 
 <style lang="css" scoped>

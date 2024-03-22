@@ -8,7 +8,11 @@
       <div id="animated" class="notification overflow-clip p-2 text-neutral/75">
         <div class="flex flex-row items-center justify-between">
           <div class="flex flex-row items-center space-x-1">
-            <img src="/bianco.svg" alt="Phone notification" class="size-4" />
+            <img
+              src="/logo_white.png"
+              alt="Phone notification"
+              class="size-4"
+            />
             <p class="text-[0.5rem]">
               Wildspace ● {{ currentNotification.time }}
             </p>

@@ -6,7 +6,12 @@ export default <Partial<Config>>{
   darkMode: "class",
 
   theme: {
-    fontFamily: { montserrat: ["montserrat-alt"], dm_sans: ["DM Sans"] },
+    fontFamily: {
+      montserrat: ["montserrat-alt"],
+      dm_sans: ["DM Sans"],
+      ubuntu: ["Ubuntu"],
+      poppins: ["Poppins"],
+    },
     fontSize: {
       label: [
         "0.75rem",

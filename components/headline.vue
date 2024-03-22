@@ -11,13 +11,12 @@
         ></div>
       </Transition> -->
       <div class="flex items-center">
-        <NuxtLink to="/">
-          <img
-            class="cursor-pointer transition-all duration-200 ease-out hover:scale-[105%]"
-            src="/logo_text.svg"
-            alt="Wildspace logo"
-            width="150px"
-          />
+        <NuxtLink
+          class="flex cursor-pointer flex-row items-center gap-2 transition-all duration-200 ease-out hover:scale-[105%]"
+          to="/"
+        >
+          <img class="w-[3rem]" src="/logo_white.png" alt="Wildspace logo" />
+          <p class="font-poppins text-[1.5rem] font-bold">Wildspace</p>
         </NuxtLink>
         <div
           class="mx-4 rounded-xl border-[2px] border-accent px-2 py-1 text-label text-accent hover:bg-accent hover:text-neutral"

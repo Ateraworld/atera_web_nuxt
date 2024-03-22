@@ -19,7 +19,7 @@
         ></div>
       </div>
       <div v-else class="flex h-screen w-screen items-center justify-center">
-        <img src="/bianco.svg" alt="Logo" class="h-[8rem] w-[8rem]" />
+        <img src="/logo_white.png" alt="Logo" class="h-[8rem] w-[8rem]" />
         <NuxtPage class="flex-1"> </NuxtPage>
       </div>
     </Transition>
