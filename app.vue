@@ -20,6 +20,7 @@
       </div>
       <div v-else class="flex h-screen w-screen items-center justify-center">
         <img src="/logo_white.png" alt="Logo" class="h-[8rem] w-[8rem]" />
+
         <NuxtPage class="flex-1"> </NuxtPage>
       </div>
     </Transition>
@@ -74,6 +75,14 @@ useHead({
   bodyAttrs: {
     class: "neutrals",
   },
+  // Preload assets
+  link: [
+    {
+      rel: "preload",
+      as: "image",
+      href: "/brenta.webp",
+    },
+  ],
   htmlAttrs: { lang: "it" },
 });
 
