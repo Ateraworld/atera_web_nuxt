@@ -155,6 +155,9 @@
         Proprio per questo motivo, ora il nostro obiettivo è portare questa
         piattaforma al livello successivo.
       </p>
+      <div class="my-8 flex w-full flex-col items-center justify-center gap-4">
+        <img class="rounded-card w-[100%]" src="/trat_rico_compressed.webp" />
+      </div>
       <div class="flex flex-row flex-wrap justify-center gap-16 py-16">
         <div class="flex flex-col justify-center gap-6 text-center">
           <div
@@ -173,6 +176,7 @@
             </p>
           </section>
         </div>
+
         <div class="flex flex-col justify-center gap-6 text-center">
           <div
             class="h-[10rem] w-[10rem] cursor-pointer overflow-clip rounded-full transition-all duration-300 ease-out hover:scale-[120%]"

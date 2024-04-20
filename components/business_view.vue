@@ -3,83 +3,86 @@
     v-if="mounted"
     class="flex w-full flex-col items-center gap-[var(--content-padding)]"
   >
-    <div class="flex w-full flex-row flex-wrap justify-center gap-8 sm:gap-12">
-      <ParallaxCard
-        class="card-size"
-        @click="(e) => cardClicked(e, 'context')"
-        key="0"
-        anim-delay="150ms"
-        anim-y-trasl="30px"
-        anim-x-trasl="0px"
+    <div class="flex flex-col justify-center gap-8 sm:gap-12">
+      <div
+        class="flex w-full flex-row flex-wrap justify-center gap-8 sm:gap-12"
       >
-        <div class="wrapper">
-          <div>
-            <h2>Contesto</h2>
-            <p>
-              Raggiungi gli appassionati durante le loro attività nel tuo
-              territorio, in modo efficace e non intrusivo
-            </p>
+        <ParallaxCard
+          class="card-size"
+          @click="(e) => cardClicked(e, 'context')"
+          key="0"
+          anim-delay="150ms"
+          anim-y-trasl="30px"
+          anim-x-trasl="0px"
+        >
+          <div class="wrapper">
+            <div>
+              <h2>Contesto</h2>
+              <p>
+                Raggiungi gli appassionati durante le loro attività nel tuo
+                territorio, in modo efficace e non intrusivo
+              </p>
+            </div>
+            <div class="h-0 w-full flex-1 p-0">
+              <img
+                src="/context.svg"
+                alt="Contextualized marketing"
+                class="h-full w-full object-contain"
+              />
+            </div>
           </div>
-          <div class="h-0 w-full flex-1 p-0">
-            <img
-              src="/context.svg"
-              alt="Contextualized marketing"
-              class="h-full w-full object-contain"
-            />
+        </ParallaxCard>
+        <ParallaxCard
+          class="card-size"
+          key="0"
+          @click="(e) => cardClicked(e, 'conversion')"
+          anim-delay="50ms"
+          anim-y-trasl="30px"
+          anim-x-trasl="0px"
+        >
+          <div class="wrapper">
+            <section>
+              <h2>Conversione</h2>
+              <p>
+                Incentiva le conversioni tramite promozioni contestualizzate ed
+                adattate al tuo business
+              </p>
+            </section>
+            <div class="h-0 w-full flex-1 p-4">
+              <img
+                src="/conversione.svg"
+                alt="Conversions"
+                class="h-full w-full object-contain"
+              />
+            </div>
+          </div> </ParallaxCard
+        ><ParallaxCard
+          class="card-size"
+          @click="(e) => cardClicked(e, 'visibility')"
+          key="0"
+          anim-delay="150ms"
+          anim-y-trasl="30px"
+          anim-x-trasl="0px"
+        >
+          <div class="wrapper">
+            <section>
+              <h2>Visibilità</h2>
+              <p>
+                Aumenta la visibiltà della tua realtà economica tramite
+                inserzioni personalizzate e perfettamente integrate
+              </p>
+            </section>
+            <div class="h-0 w-full flex-1 p-0">
+              <img
+                src="/local_shelter.svg"
+                alt="Visibility"
+                class="h-full w-full scale-[110%] object-contain"
+              />
+            </div>
           </div>
-        </div>
-      </ParallaxCard>
-      <ParallaxCard
-        class="card-size"
-        key="0"
-        @click="(e) => cardClicked(e, 'conversion')"
-        anim-delay="50ms"
-        anim-y-trasl="30px"
-        anim-x-trasl="0px"
-      >
-        <div class="wrapper">
-          <section>
-            <h2>Conversione</h2>
-            <p>
-              Incentiva le conversioni tramite promozioni contestualizzate ed
-              adattate al tuo business
-            </p>
-          </section>
-          <div class="h-0 w-full flex-1 p-4">
-            <img
-              src="/conversione.svg"
-              alt="Conversions"
-              class="h-full w-full object-contain"
-            />
-          </div>
-        </div> </ParallaxCard
-      ><ParallaxCard
-        class="card-size"
-        @click="(e) => cardClicked(e, 'visibility')"
-        key="0"
-        anim-delay="150ms"
-        anim-y-trasl="30px"
-        anim-x-trasl="0px"
-      >
-        <div class="wrapper">
-          <section>
-            <h2>Visibilità</h2>
-            <p>
-              Aumenta la visibiltà della tua realtà economica tramite inserzioni
-              personalizzate e perfettamente integrate
-            </p>
-          </section>
-          <div class="h-0 w-full flex-1 p-0">
-            <img
-              src="/local_shelter.svg"
-              alt="Visibility"
-              class="h-full w-full scale-[110%] object-contain"
-            />
-          </div>
-        </div>
-      </ParallaxCard>
-
-      <Transition name="join" appear>
+        </ParallaxCard>
+      </div>
+      <!-- <Transition name="join" appear>
         <div class="accent-card group">
           <h2>Entra a far parte di Wildspace</h2>
           <p>
@@ -92,7 +95,19 @@
             </p></AnimatedArrow
           >
         </div>
-      </Transition>
+      </Transition> -->
+      <div
+        class="flex w-full flex-row flex-wrap justify-center gap-4 opacity-60"
+      >
+        <img
+          class="h-[10rem] transition-all duration-200 ease-out hover:scale-[105%]"
+          src="/conf.png"
+        />
+        <img
+          class="h-[10rem] transition-all duration-200 ease-out hover:scale-[105%]"
+          src="/ttg.png"
+        />
+      </div>
     </div>
     <Topic
       id="context"
@@ -177,6 +192,23 @@
       </template>
       ></Topic
     >
+    <!-- <div
+      class="flex w-full flex-col items-center justify-stretch gap-2 lg:w-[60%]"
+    >
+      <h2>FAQ</h2>
+      <Accordion>
+        <template #title>Prova</template>
+        <template #content>Contenuto</template>
+      </Accordion>
+      <Accordion>
+        <template #title>Prova</template>
+        <template #content>Contenuto</template>
+      </Accordion>
+      <Accordion>
+        <template #title>Prova</template>
+        <template #content>Contenuto</template>
+      </Accordion>
+    </div> -->
   </div>
 </template>
 
