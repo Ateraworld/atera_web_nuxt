@@ -163,8 +163,8 @@
         Le mappe disponibili sono estremamente semplici da usare.<br />
         All'interno puoi trovare tutti i punti d'interesse come rifugi,
         bivacchi, punti panoramici e perfino panchine e fonti d'acqua!<br />
-        Le mappe sono scaricabili offline, così potrai utilizzarle in qualunque
-        situazione.<br /><br />
+        Le mappe sono scaricabili per utilizzo offline, così potrai utilizzarle
+        in qualunque situazione.<br /><br />
         Wildspace non pretende di digitalizzare tutto il mondo delle attività
         all'aperto, ma di integrarlo.
       </template>
@@ -234,7 +234,7 @@
                   >Wildspace è molto di più di una semplice applicazione di
                   itinerari. </span
                 ><br /><br />In Wildspace, ogni funzionalità viene introdotta
-                nell'applicazione solo a seguito di attente analisi, questo per
+                nell'applicazione solo a seguito di attente analisi per
                 mantenere l'applicazione snella e funzionale.<br />
                 <span class="font-semibold"
                   >La nostra visione non è quella di digitalizzare le attività
@@ -248,7 +248,7 @@
                 faticosissima ferrata in una zona di montagna che hai deciso di
                 esplorare. Proprio durante il rientro, Wildspace ti propone in
                 maniera non invasiva e personalizzata un rinfresco in un locale
-                tipico vicino, con sconto annesso: che fai rifiuti 😁?<br /><br />Infine,
+                tipico vicino, con sconto annesso: che fai rifiuti 😁?<br /><br />Inoltre,
                 in Wildspace gli utenti non possono inserire itinerari in
                 autonomia, le informazioni degli itinerari sono curate ed
                 aggiornate dal team e da un gruppo selezionato di collaboratori:
@@ -312,8 +312,8 @@
               ><br />
               I Contributori hanno la possibilità di accedere ad una piattaforma
               web dedicata che può essere usata per integrare le informazioni
-              esistenti aggiustando le relazioni, aggiungendo foto o scrivendo
-              una nuova relazione da zero.<br />
+              esistenti aggiustando le relazioni ed aggiungendo foto oppure
+              scrivendo relazioni di nuovi itinerari.<br />
               I Contributori ottengono dei benefici come ringraziamento del loro
               aiuto. In particolare, in base alle contribuzioni effettuate, sarà
               possibile riscattare periodi gratuiti di Wildspace Premium.<br />
@@ -361,9 +361,9 @@
                 punti di immersione subacquea nei laghi e in mare, per i nostri
                 amici subacquei.</span
               ><br />
-              Essendo anche noi stessi subacquei, sappiamo che al momento
-              informazioni relative ad itinerari di questo tipo sono veramente
-              difficili da reperire.<br />
+              Essendo anche noi subacquei, sappiamo che al momento informazioni
+              relative ad itinerari di questo tipo sono veramente difficili da
+              reperire.<br />
               Proprio per questo motivo siamo coscienti dell'incredibile utilità
               che l'integrazione di questo tipo di attività porterebbe ai nostri
               utenti sportivi.

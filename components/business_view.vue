@@ -235,7 +235,7 @@
           </template>
           <template #content>
             <p>
-              Wildpsace permette agli imprenditori di raggiungere potenziali
+              Wildspace permette agli imprenditori di raggiungere potenziali
               clienti interessati e nel momento più opportuno.<br />
               Il prodotto per le attività economiche permette di effettuare
               campagne marketing all’interno della piattaforma per far conoscere
@@ -300,17 +300,17 @@
               turistico sportivo o che comunque si trovano in località ricche di
               itinerari.<br />
               Un utente che ha appena completato un itinerario faticoso, sarà
-              certamente più incline nell'aquistare un rinfresco in un locale
-              vicino, soprattutto se viene annesso uno sconto. La capacità di
-              proporre ciò che l'utente sta cercando e nel momento più
-              opportuno, è la forza di Wildspace. Da questo esempio di comprende
-              il beneficio che si ottiene quando ci si trova in aree con molti
-              itinerari vicino.<br /><br />Wildspace però permette anche a chi
-              ha un e-commerce di entrare a far parte del proprio ecosistema. I
-              sistemi di ottimizzazione delle campagne di offerte e del
-              marketing interno alla piattaforma sono fondamentali per far
-              conoscere la propria attività ad un comparto utenti mirato e con
-              alte conversioni.
+              certamente più incline ad aquistare un rinfresco in un locale
+              vicino, soprattutto se la proposta è accompagnata da uno sconto.
+              La capacità di proporre ciò che l'utente sta cercando e nel
+              momento più opportuno, è la forza di Wildspace. Da questo esempio
+              di comprende il beneficio che si ottiene quando ci si trova in
+              aree con molti itinerari vicino.<br /><br />Wildspace però
+              permette anche a chi ha un e-commerce di entrare a far parte del
+              proprio ecosistema. I sistemi di ottimizzazione delle campagne di
+              offerte e del marketing interno alla piattaforma sono fondamentali
+              per far conoscere la propria attività ad un comparto utenti mirato
+              e con alte conversioni.
             </p>
           </template>
         </Accordion>
