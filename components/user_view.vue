@@ -218,6 +218,160 @@
       </template>
       ></Topic
     >
+    <div
+      class="flex w-full flex-col items-center justify-stretch gap-2 lg:w-[65%]"
+    >
+      <h2>FAQ</h2>
+      <ul class="flex w-full flex-col gap-2">
+        <Accordion>
+          <template #title>
+            <p>Ancora un'altra applicazione di mappe e itinerari outdoor?</p>
+          </template>
+          <template #content>
+            <div class="flex flex-col gap-4">
+              <p>
+                <span class="font-semibold text-accent"
+                  >Wildspace è molto di più di una semplice applicazione di
+                  itinerari. </span
+                ><br /><br />In Wildspace, ogni funzionalità viene introdotta
+                nell'applicazione solo a seguito di attente analisi, questo per
+                mantenere l'applicazione snella e funzionale.<br />
+                <span class="font-semibold"
+                  >La nostra visione non è quella di digitalizzare le attività
+                  all'aperto, ma di integrarle fornendo all'utente una
+                  piattaforma che possa aiutarlo nei momenti di bisogno.</span
+                >
+                <br />Il sistema di contesto funziona a tutti gli effetti come
+                una guida per l'utente che si avventura in zone nuove. Wildspace
+                propone opportunità vicine all'utente in base alle sue
+                attività.<br />Immagina di aver appena completato una
+                faticosissima ferrata in una zona di montagna che hai deciso di
+                esplorare. Proprio durante il rientro, Wildspace ti propone in
+                maniera non invasiva e personalizzata un rinfresco in un locale
+                tipico vicino, con sconto annesso: che fai rifiuti 😁?<br /><br />Infine,
+                in Wildspace gli utenti non possono inserire itinerari in
+                autonomia, le informazioni degli itinerari sono curate ed
+                aggiornate dal team e da un gruppo selezionato di collaboratori:
+                i Contributori Wildspace. Seppur possa sembrare una limitazione
+                a prima vista, questa scelta permette di
+                <span class="font-semibold"
+                  >mantenere una coerenza e omogeneità delle informazioni senza
+                  precedenti.</span
+                >
+              </p>
+            </div>
+          </template>
+        </Accordion>
+        <Accordion>
+          <template #title>
+            <p>Che tipi di sconti posso ottenere?</p>
+          </template>
+          <template #content>
+            <p>
+              I partner di Wildspace possono comprendere varie categorie: hotel,
+              rifugi, ristoranti tipici, negozi di attrezzatura e molto altro.
+              <br />
+              Gli sconti disponibili nell'applicazione sono di varia natura. Ci
+              sono offerte messe a disposizione degli utenti per un periodo di
+              tempo limitato dai partner di Wildspace ma anche offerte che
+              vengono proposte agli utenti che completano un itinerario nella
+              zona di un'attività economica.<br />
+              Ad esempio, in base agli interessi degli utenti, un ristorante
+              tipico potrebbe decidere di mandare offerte mirate a coloro che
+              completano un itinerario vicino. Di solito questo tipo di offerte
+              permette di ottenere benefici economici maggiori.<br /><br />Su
+              Wildspace sono presenti anche sconti su e-commerce partner, in
+              modo tale di permettere agli utenti di rinnovare la propria
+              attrezzatura ad un prezzo vantaggioso.<br /><br /><span
+                class="font-semibold text-accent"
+                >In Wildspace più attività completi mettendoti in gioco, più
+                scopri nuove opportunita e benefici!</span
+              >
+            </p>
+          </template>
+        </Accordion>
+        <Accordion>
+          <template #title>
+            <p>
+              È possibile contribuire inserendo itinerari, informazioni e foto?
+            </p>
+          </template>
+          <template #content>
+            <p>
+              Assolutamente si, ci sono varie metodologie per aiutarci a
+              costruire il database di attività in maniera curata e controllata.
+              <br />Ad esempio, per contribuire con delle foto, è possibile
+              contattare il team e mandare le foto tramite email. Inoltre, i
+              sistemi di segnalazione di inagibilità o consigli sono già
+              presenti in app. <br /><br />
+              Tuttavia, se sei un appassionato e vuoi condividere informazioni
+              più dettagliate come relazioni di attività non ancora presenti,
+              puoi contattarci per diventare un
+              <span class="font-semibold text-accent"
+                >Contributore Wildspace. </span
+              ><br />
+              I Contributori hanno la possibilità di accedere ad una piattaforma
+              web dedicata che può essere usata per integrare le informazioni
+              esistenti aggiustando le relazioni, aggiungendo foto o scrivendo
+              una nuova relazione da zero.<br />
+              I Contributori ottengono dei benefici come ringraziamento del loro
+              aiuto. In particolare, in base alle contribuzioni effettuate, sarà
+              possibile riscattare periodi gratuiti di Wildspace Premium.<br />
+              Inoltre, a coloro che forniranno un contributo sostanziale al
+              database di Wildspace, sarà riconosciuto l'abbonamento
+              <span class="font-semibold">
+                Wildspace Premium a vita gratuitamente</span
+              >.
+            </p>
+          </template>
+        </Accordion>
+        <Accordion>
+          <template #title>
+            <p>Che tipi di itinerari posso trovare su Wildspace?</p>
+          </template>
+          <template #content>
+            <p>
+              Su Wildspace sono presenti itinerari di tutti i tipi.<br />
+              Ovviamente con il passare del tempo, grazie all'aiuto dei
+              Contributori Wildspace, il database crescerà e verranno introdotte
+              nuove categorie di attività.<br />
+              Partendo da attività più tecniche come
+              <span class="font-semibold">
+                vie ferrate, vie normali, falesie fino ad arrivare ad attività
+                più turistiche come trekking di tutti i tipi e punti di
+                interesse come punti panoramici e punti di interesse
+                culturale</span
+              >, su Wildspace ogni utente può trovare l'attività più
+              adeguata.<br />
+              I sistemi di ricerca avanzati permettono di filtrare per
+              caratteristiche dell'attività, utilizzando la difficoltà e le
+              altre metriche disponibili.<br /><br /><span
+                class="font-semibold text-accent"
+              >
+                Wildspace punta in alto.</span
+              ><br />
+              Abbiamo già in piano di integrare altre categorie di attività come
+              <span class="font-semibold">
+                percorsi di sci alpino e di fondo, trekking invernali e
+                ciaspolate.</span
+              ><br />
+              Wildspace non punta solo alla montagna. Tra i nostri piani a lungo
+              termine, c'è anche l'idea di integrare i
+              <span class="font-semibold">
+                punti di immersione subacquea nei laghi e in mare, per i nostri
+                amici subacquei.</span
+              ><br />
+              Essendo anche noi stessi subacquei, sappiamo che al momento
+              informazioni relative ad itinerari di questo tipo sono veramente
+              difficili da reperire.<br />
+              Proprio per questo motivo siamo coscienti dell'incredibile utilità
+              che l'integrazione di questo tipo di attività porterebbe ai nostri
+              utenti sportivi.
+            </p>
+          </template>
+        </Accordion>
+      </ul>
+    </div>
   </div>
 </template>
 
