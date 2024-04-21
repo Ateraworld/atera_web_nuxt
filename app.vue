@@ -118,6 +118,6 @@ useSeoMeta({
   z-index: 0;
   transform: translateX(calc(var(--x) - var(--size) * 0.5));
   filter: blur(var(--blur));
-  @apply rounded-full bg-accent/20;
+  @apply pointer-events-none rounded-full bg-accent/20;
 }
 </style>
