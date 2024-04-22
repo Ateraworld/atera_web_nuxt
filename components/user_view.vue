@@ -225,7 +225,7 @@
       <ul class="flex w-full flex-col gap-2">
         <Accordion>
           <template #title>
-            <p>Ancora un'altra applicazione di mappe e itinerari outdoor?</p>
+            <p>Perchè scegliere Wildspace?</p>
           </template>
           <template #content>
             <div class="flex flex-col gap-4">

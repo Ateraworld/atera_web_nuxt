@@ -292,7 +292,8 @@
             <p>
               In linea di massima ogni attività che opera nel
               <span class="font-semibold"
-                >mercato dell'accomodazione, dello sport e dei servizi</span
+                >mercato dell'ospitalità e della ristorazione, dello sport e dei
+                servizi</span
               >
               è adeguata ad entrare a far parte di Wildspace.<br />
               Tuttavia, è importante tenere conto che le attività economiche che
