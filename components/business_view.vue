@@ -305,7 +305,7 @@
               vicino, soprattutto se la proposta è accompagnata da uno sconto.
               La capacità di proporre ciò che l'utente sta cercando e nel
               momento più opportuno, è la forza di Wildspace. Da questo esempio
-              di comprende il beneficio che si ottiene quando ci si trova in
+              si comprende il beneficio che si ottiene quando ci si trova in
               aree con molti itinerari vicino.<br /><br />Wildspace però
               permette anche a chi ha un e-commerce di entrare a far parte del
               proprio ecosistema. I sistemi di ottimizzazione delle campagne di
